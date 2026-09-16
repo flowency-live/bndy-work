@@ -1,4 +1,4 @@
-<!-- Copy of WORKBOARD.md from flowency-live/bndy-ops, taken 16/09/2026. Change the contract there, then copy it here. -->
+<!-- Copy of WORKBOARD.md from flowency-live/bndy-ops, updated 16/09/2026. Change the contract there, then copy it here. -->
 
 # BNDY workboard: agent contract
 
@@ -148,6 +148,20 @@ gh project item-edit --id "$ITEM" --project-id "$PROJECT_ID" --field-id <Status 
   ```
 
 - Tick a task item in an initiative body only after a comment on that issue links its evidence.
+
+## Rolling API work requests
+
+Jason authorised [API Work Requests #58](https://github.com/flowency-live/bndy-work/issues/58) as one standing issue for API requests across bndy. This is an explicit exception to creating a separate backlog issue for each API request: the request and its delivery updates live in comments with a stable ID. Existing implementation issues stay linked and are not duplicated. The rolling issue remains open and is not itself a delivery milestone.
+
+- Requesters name the target repo/service, consumer, contract requirements, acceptance checks and existing dependencies.
+- Relevant stack agents read the latest comments, claim work by request ID and agent/session, then update on material scope/blocker changes, implementation, deployment and handback.
+- Status progresses Requested → Claimed → Implemented → Deployed → Verified. Blocked, Declined and Superseded require a reason. The latest ID-tagged update is authoritative.
+- A deployment update includes environment, deployed commit/version, UTC time, evidence and focused runtime checks. The consumer records verification separately. A merge alone is not deployment.
+- Link the request from the consuming initiative and relevant existing implementation work. Keep one request/delivery log; do not copy API status ledgers into several initiatives.
+- Existing stack ownership, architecture, execution and cost limits continue to apply. This issue makes the request/claim channel available to agents; it does not transfer backend ownership to a UI agent.
+- Follow the public-data rules below. Keep private runtime receipts and sensitive material in the appropriate private repo, linked from the comment.
+
+The issue body contains the request/update templates and a linked index. Normal feature backlog items continue to follow the rules below. Creating or commenting on this rolling issue does not claim that Project fields changed.
 
 ## Adding work
 

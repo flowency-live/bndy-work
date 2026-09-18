@@ -1,3 +1,39 @@
+# Backline source delivery: current execution contract
+
+## Effective 18 September 2026 — supersedes conflicting historical instructions below
+
+Jason has restarted baseline ingestion and governed canonical delivery, with a shared **$500 gross AWS ceiling for September including accrued usage**, then economical daily BAU. Crossing a free-tier allowance alone does not require stopping. This is not a per-agent allowance or permission for unrelated expansion.
+
+The current CTO executes shared code directly; the AWS CLI helper performs specifically scoped AWS investigation/deployment only. Jason may start an independent agent for each source family. Issue creation does not start a worker. The old two-agent/sequential publisher arrangement is superseded. Source-ready work does not wait for full Lemonrock profile polishing, optional enrichment or reporting/UI rebuilds.
+
+| Priority | Independent work | Issue |
+| --- | --- | --- |
+| P0 shared | Checkpoint-read reliability, current CTO claim | #69 |
+| P0 shared | Canonical creation/application dependency, CTO coordination | #58 |
+| P0 shared | Bounded current runtime preflight, AWS helper task | #40 |
+| P0 | Music Live family | #32 |
+| P0 | Lemonrock | #59 |
+| P0 | BandForge | #33 |
+| P0 | Live Band Photos | #22 |
+| P0 | KLMA / Fizgig / Gigs News / OnTheCase, one issue per family | #72 / #70 / #71 / #73 |
+| P0 | Venue websites | #23 |
+| P1, can begin independently | Fantastic All Library / Scenic Eye / Insangel acquisition recovery | #30 / #74 / #75 |
+
+#7 is the ordered programme queue. Native Project Status/Rank/Health and sub-issue fields have not been changed by these document/issue updates.
+
+Before editing, read the source issue/latest comments, bndy-enrichment AGENTS.md and docs/BACKLINE-STATUS.md. Verify the latest source commit and current runtime separately. Claim an isolated branch/base SHA and exact files; reconcile an existing active claim. Source agents own their source-local adapters, fixtures/tests and handovers. CTO retains shared runner, registration/scheduling, stores/projection/identity/policy, API integration, infrastructure and cross-source docs. Offer a narrow patch for shared dependencies. Do not fork a shared engine inside an adapter or overwrite another worker's changes.
+
+Use small commits with [skip ci], focused tests and a first useful checkpoint within about 20 minutes. No Actions/full-suite or broad deployment. Only reviewed exact runtime packages go to the AWS helper, compared against the current live baseline to preserve unrelated deployed changes. No parallel main pushes or source self-deployment.
+
+Every source first preserves/resumes its initial gig baseline, then publishes eligible canonical records under existing identity, ownership, provenance and cancellation safeguards. Distinguish source listings, Claims, canonical entities and operations. Report coverage horizon and complete/partial/unknown separately; sample successes are not complete coverage. Preserve existing imports and human decisions. No false cancellations from incomplete or rolling omissions. Daily BAU means listing/delta discovery plus only required changed/new/stale detail, with bounded retries, concurrency and fanout. Report and tune idle polling/tracing separately; do not slow useful ingestion merely to stay inside a free allowance.
+
+Music Live currently has three verified configured domains: musicliveeast.com, musiclivecolchester.com and musiclivecambridge.com. The requested fourth domain is unresolved: identify it from evidence without guessing or blocking the three. BandForge access permission is already confirmed in retained evidence; preserve copied-source attribution. Live Band Photos must reuse prior canonical import lineage.
+
+Keep private implementation details and runtime receipts in the private repository. Public issues contain scope, status and private evidence links. End each session with commit, tests, implemented/deployed/accepted state, coverage, remaining dependency and exact next action. No stopped worker claims to continue in the background.
+
+<details>
+<summary>17 September contract: retained source-specific context; superseded on priority, roles and budget above</summary>
+
 # Backline source-agent coordination and handovers
 
 17 September 2026. Authorised by Jason in the Backline CTO conversation. This is an execution/ownership contract, not a board snapshot, runtime configuration change or claim that an agent has started.
@@ -91,3 +127,5 @@ CTO serialises reviewed code and policy/configuration activation, preserving cur
 This public contract and source issues hold role/scope/acceptance. `bndy-enrichment/docs/BACKLINE-STATUS.md` holds the operational checkpoint; source-local docs hold reproducible technical evidence. CTO edits shared Status and cross-source entry documents to avoid concurrent overwrites. Each agent updates its issue and own technical checkpoint with base/commit, tests, coverage, cost, unresolved items and exact next command at session end.
 
 Use current bndy-work issues. Project fields and sub-issue links require distinct verified operations; no claim of setting Status/Health/Rank follows from a comment. The board contract still contains an older Project URL: resolve the current @bndy-work Project rather than mutate two projects. The source agents are ready to be started by Jason; posting these assignments alone does not launch them.
+
+</details>

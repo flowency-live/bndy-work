@@ -1,15 +1,19 @@
-<!-- Copy of WORKBOARD.md from flowency-live/bndy-ops, updated 16/09/2026. Change the contract there, then copy it here. -->
+<!-- Copy of flowency-live/bndy-ops/WORKBOARD.md, reconciled 21 September 2026. -->
 
 # BNDY workboard: agent contract
 
 GitHub Issues in the public repo `flowency-live/bndy-work` plus the "@bndy-work" GitHub Project are the only BNDY workboard and backlog. This contract is kept in `flowency-live/bndy-ops`, with a copy in `flowency-live/bndy-work`. This file is for Claude and ChatGPT agents that read or change the board with gh or the GitHub API. Jason ruled the move on 15/09/2026 (`docs/d0/DECISIONS-2026-09-15.md`, M26 as amended that day).
+
+## Current Backline coordination, 21 September 2026
+
+Read [programme #7](https://github.com/flowency-live/bndy-work/issues/7) and [source-agent contract](https://github.com/flowency-live/bndy-work/blob/main/docs/backline/SOURCE-AGENT-COORDINATION-2026-09-17.md). Source agents report shared dependencies on their own issues; CTO alone coordinates Backline #58 requests. Other lanes keep their existing ownership. Music Live launch orders are parked; Fantastic All Library is manual-assisted. Keep current issue bodies/checklists accurate and preserve historical/import records. Implemented/deployed/verified are separate. Resolve the current Project before field changes; issue edits do not set native fields.
 
 ## Where the board lives
 
 | Thing | Where |
 | --- | --- |
 | Issues | `flowency-live/bndy-work` (public) |
-| Project | "@bndy-work" (https://github.com/users/flowency-live/projects/1), owned by `flowency-live` and linked to `flowency-live/bndy-work` |
+| Project | Current "@bndy-work" (resolve by title; do not hardcode a historical Project number), owned by `flowency-live` and linked to `flowency-live/bndy-work` |
 | A lane | One issue labelled `initiative` and `lane:<laneId>`. Its body holds the objective, the target state, the lane's repos as plain text, a `## Now` task list and a `## Next` task list. |
 | A backlog item | A sub-issue of its lane's initiative, labelled `lane:<laneId>`, with a Rank. |
 | Done cards from the website board, and what triage closed | `docs/workboard/ARCHIVE.md`. They are not issues. |

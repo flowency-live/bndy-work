@@ -33,7 +33,7 @@ Updated 26 September 2026. Accountable technical owner: current ChatGPT session,
 
 | ID | State | Work and acceptance | Dependency / evidence |
 | --- | --- | --- | --- |
-| V1-01 | Partial — reader integration next | Canonical lookup correctness: conflict-aware identity; rename/delete invalidation; bounded retry of incomplete writes; human corrections precede cached matches. Positive and negative regression cases must prove the decision. | Backline-owned. Inspect current code before design; preserve canonical API resolution where context cannot decide. |
+| V1-01 | Partial — reader/migration implemented | Canonical lookup correctness: conflict-aware identity; rename/delete invalidation; bounded retry of incomplete writes; human corrections precede cached matches. Positive and negative regression cases must prove the decision. | Backline-owned. Inspect current code before design; preserve canonical API resolution where context cannot decide. |
 | V1-02 | Partial: source attribution implemented | Billing and title interpretation: one decision per bill; preserve real composite acts and evidenced lineups; no invented fragment acts; stamp source on creation. | Existing billing containment policy; any model activation remains separately bounded/approved. |
 | V1-03 | Pending | Existing event identity across import keys; explicit traced lookup before creation; preserve distinct performances and bill relationships. | Reuse existing API deduplication, do not duplicate it. API gaps become work orders. |
 | V1-04 | Pending | P3 accounting: complete entity inventory; existing/new/unknown separate from canonical effects; partial successes retained; retries/pages/parent-child totals reconcile. | #82 backend contract, #79 UI. Backline producer here; API portion via VSCode work order. |
@@ -115,9 +115,21 @@ Updated 26 September 2026. Accountable technical owner: current ChatGPT session,
 - Updated ADR-124 and Status. No deployment, AWS mutation, API repository edit, new infrastructure, migration, replay or cleanup.
 - Deployment is not blocking further owned implementation. Remaining coding, API coordination and live qualification are separate gates.
 
+### 26 September: staged human-memory writer and reader committed
+
+- Stage A writer/migration pin: [c36ce685efd984ebf9695f625a08c4bd92bbe871](https://github.com/flowency-live/bndy-enrichment/commit/c36ce685efd984ebf9695f625a08c4bd92bbe871). Existing-table transactional human-write fence; bounded resumable inventory/hydration/verification/certification/release/abort CLI. Two requests reserved for safe abort; SDK retries disabled; unknown cost retained. Maintenance reads serialize checkpoints. No AWS operations performed.
+- Stage B reader pin: [956fc0c62a30d658a5f587825d89148db627df3c](https://github.com/flowency-live/bndy-enrichment/commit/956fc0c62a30d658a5f587825d89148db627df3c). Human decisions read separately from automatic history; missing global coverage fails explicitly. Venue withdrawal invalidates remembered choices, tied choices hold, selected Artist avoids automatic-history exhaustion; human revision/coverage/evidence retained in trace.
+- **Order is mandatory: deploy A, verify all writers, complete and certify migration, then deploy B. Never deploy latest main directly without coverage.** [Rollout guide](https://github.com/flowency-live/bndy-enrichment/blob/main/docs/BACKLINE-HUMAN-MEMORY-ROLLOUT.md). Managed releases remain #80; no live execution authorized.
+- Each exact pin passed npm run check by exit code: A 197 files / 2560 Vitest passed / 5 skipped / 56 recovery passed; B 197 / 2566 / 5 / 56. Vitest ~12 seconds. Compiled CLI help and offline plan checked, zero AWS calls.
+- Same main checkout, two sequential commits; no branches/PRs/worktrees. Reader WIP was backed up while checking exact A, then restored and committed as B.
+- Still open: whole HTTP action identity/outbox recovery, automatic verification history, cross-system human update race, canonical new-Artist once-only #37, billing/accounting and live qualification. This is not Curator V1 acceptance.
+- Continuing immediately into V1-02 shared billing containment and V1-04 producer accounting under [file claim](https://github.com/flowency-live/bndy-work/issues/7#issuecomment-5848566096). No deployment needed to code these changes.
+
+## Previous restart instructions (superseded by checkpoint above)
+
 ## Exact next session
 
-1. Confirm enrichment main remains 1eb1b7e or inspect subsequent commits. Read latest #7/#80/#37 comments, this handover and ADR-124. Preserve the single main checkout.
+1. Confirm enrichment main remains 956fc0c or inspect subsequent commits. Preserve current billing/accounting WIP in the single checkout before making changes. Read latest #7/#80/#37 comments, this handover and ADR-124. Preserve the single main checkout.
 2. Continue V1-01 reader integration and legacy coverage from the implemented current-human storage. Do not recreate the store or assume a newly written current record proves complete historical coverage. Claim exact additional files before editing.
 3. Design and implement a finite, resumable legacy inventory/hydration proposal with explicit requests/pages/bytes/retries, manifest reconciliation and checkpoints. Settle the writer fence and completeness proof before supplying coverage-publication tooling. A partial/cohort inventory cannot certify the current global coverage contract. No migration execution is authorised.
 4. Whole-action/alias Claim publication is now implemented. Continue stable request identity and recovery for the remaining evidence/queue/audit boundaries: facts can commit before queue publication fails, and group queue sends can be partial. Retain actor/Observation provenance and avoid relabelling a transport retry as a newer human decision. Coordinate the canonical new-Artist once-only dependency with the existing #37 API work order, not an enrichment workaround.

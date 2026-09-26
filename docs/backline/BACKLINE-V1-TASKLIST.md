@@ -9,6 +9,7 @@ Updated 26 September 2026. Accountable technical owner: current ChatGPT session,
 - Keep this document current at meaningful checkpoints and before ending a session. Link evidence and exact next steps on #7. Never imply an inactive worker is running.
 - V1 enables a stable curator rollout. Urgency must not produce bypasses, name-specific exceptions or weaker safety gates.
 - No graph database is proposed. Assemble connected evidence, scoped authority, identity, history and human decisions using the existing stores.
+- A commit checkpoint is not a deployment dependency. Continue unblocked enrichment implementation; distinguish coding, API integration and live acceptance gates explicitly.
 - Current deployment queue is #80. Production deployments and data recovery remain separately scoped; no cleanup, redrive or replay follows from coding authority.
 
 ## Start/resume here
@@ -49,6 +50,7 @@ Updated 26 September 2026. Accountable technical owner: current ChatGPT session,
 - This continuation also claimed src/projection/bndy-api.ts, its existing tests, and test/bandforge.test.ts, test/livebandphotos.test.ts and test/music-live-east.test.ts for read-port fixture typing only.
 - Additional claimed files: src/knowledge/stores/clients.ts (transaction command type), src/cli/canonical-lookup-backfill.ts (retire obsolete unversioned writes), test/projection-bndy-api.test.ts (test-token isolation), test/canonical-context-integrity.test.ts (new integration regressions), and entry/status/plan documents.
 - Current human persistence checkpoint additionally claims src/knowledge/stores/current-human-claims.ts, src/knowledge/stores/claim-store.ts, test/current-human-claims.test.ts, docs/adr/ADR-124-current-human-claims.md and docs/BACKLINE-STATUS.md.
+- Whole-action publication additionally claims src/projection/hold-actions.ts, src/handlers/backline-admin-api.ts, test/hold-actions.test.ts, test/hold-retry.test.ts and test/backline-explorer.test.ts; it extends the existing current-human store and tests.
 - No API files claimed. No source worker launched.
 - Before expanding scope, record exact additional files and why on #7.
 
@@ -101,12 +103,24 @@ Updated 26 September 2026. Accountable technical owner: current ChatGPT session,
 - **Staged storage only:** projection has NOT switched to this read method. No legacy coverage assertion has been written and no migration tool/execution is included. The existing 300-Claim Venue gap and Artist automatic-verification bound remain open. Whole-action/alias atomicity, human trace provenance and reader integration are also still required.
 - No API implementation, new infrastructure, deployment, AWS mutation, bulk migration, replay or cleanup.
 
+### 26 September: complete curator fact actions committed
+
+- Enrichment main [1eb1b7ee69fed81414d0d8399ad5997ed474429c](https://github.com/flowency-live/bndy-enrichment/commit/1eb1b7ee69fed81414d0d8399ad5997ed474429c), parent 9fca094. Ten files; remote ref and file list verified, local main clean at the same real commit/tree. No branches/PRs/worktrees added.
+- A tell action now collects all facts and all selected act aliases and atomically publishes their immutable Claims/current references in one transaction. Publication failure queues no retry; a new fact subset cannot leak from a failed action. Existing single-Claim writes delegate to the same store logic.
+- Batches deduplicate identical Claim IDs, reject conflicting reused IDs, respect 100 transaction items and a conservative 3 MiB serialized request budget, and never split one action into partial commits. Strong reads run with at most eight requests concurrently; CAS retries remain bounded.
+- Conflicting facts within a request are rejected before changes. Venue corrections require the individual gig route; an act-group action cannot silently apply a Venue fact to only its first gig. Venue holds cannot become Artist identity/ignore rules. Group act facts cover every selected alias, not only the first hold's spelling.
+- Different decisions in the same millisecond now retain different observation and retry identities. This is not stable HTTP retry identity across later requests.
+- Focused tests: 69 passed across four files. Full npm run check exited 0: build, 196 Vitest files (2552 passed, 5 skipped), 56 recovery tests. Vitest 11.85 seconds. Nine new behavioural cases; existing admin HTTP error checks extended.
+- **Remaining:** accepted facts followed by failed/partial queue publication still need durable recovery and stable request identity. S3 Observation persistence, hold action audit append and queue sends are outside the Claim transaction. Projection's durable-human reader and bounded migration are not activated. No claim of complete Curator V1 readiness.
+- Updated ADR-124 and Status. No deployment, AWS mutation, API repository edit, new infrastructure, migration, replay or cleanup.
+- Deployment is not blocking further owned implementation. Remaining coding, API coordination and live qualification are separate gates.
+
 ## Exact next session
 
-1. Confirm enrichment main remains 9fca094 or inspect subsequent commits. Read latest #7/#80/#37 comments, this handover and ADR-124. Preserve the single main checkout.
+1. Confirm enrichment main remains 1eb1b7e or inspect subsequent commits. Read latest #7/#80/#37 comments, this handover and ADR-124. Preserve the single main checkout.
 2. Continue V1-01 reader integration and legacy coverage from the implemented current-human storage. Do not recreate the store or assume a newly written current record proves complete historical coverage. Claim exact additional files before editing.
 3. Design and implement a finite, resumable legacy inventory/hydration proposal with explicit requests/pages/bytes/retries, manifest reconciliation and checkpoints. Settle the writer fence and completeness proof before supplying coverage-publication tooling. A partial/cohort inventory cannot certify the current global coverage contract. No migration execution is authorised.
-4. Settle coherent multi-fact/alias action publication and stable request identity in hold actions. The current transaction is per Claim/current subject, not an entire action. Retain actor/Observation provenance; do not send a retry before its accepted facts are durably available. Coordinate the canonical new-Artist once-only dependency with the existing #37 API work order, not an enrichment workaround.
+4. Whole-action/alias Claim publication is now implemented. Continue stable request identity and recovery for the remaining evidence/queue/audit boundaries: facts can commit before queue publication fails, and group queue sends can be partial. Retain actor/Observation provenance and avoid relabelling a transport retry as a newer human decision. Coordinate the canonical new-Artist once-only dependency with the existing #37 API work order, not an enrichment workaround.
 5. Integrate current human reads separately from bounded automatic evidence. Missing coverage must fail explicitly. Preserve withdrawals, tied-conflict handling for both Artist and Venue, mapping invalidation and canonical target validation. Include the actual human Claim/Observation references in resolution traces. Consider corrections arriving between decision read and canonical mutation.
 6. Resolve the separate Artist automatic-verification history bound without a silent smaller window or unbounded per-gig scan. Storage read-port tests do not close this requirement. Acceptance must demonstrate end-to-end old corrections survive repeated source observations and incomplete coverage cannot create false absence.
 7. Integrate the VSCode agent's new-Artist decision contract only after request/response and idempotency tests exist. Do not enable force-creation or interpret an unrelated uniqueness collision as human acceptance.

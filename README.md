@@ -11,6 +11,7 @@ This repo is public. Never put secrets, personal data or details of unfixed secu
 
 ## Backline entry points
 
+- [Technical handover, single entry point](docs/backline/BACKLINE-TECHNICAL-HANDOVER.md) (26/09/2026)
 - [Programme #7](https://github.com/flowency-live/bndy-work/issues/7)
 - [Source-agent contract](docs/backline/SOURCE-AGENT-COORDINATION-2026-09-17.md)
 - [Operational evidence and remaining gaps](https://github.com/flowency-live/bndy-enrichment/blob/main/docs/BACKLINE-STATUS.md)

@@ -33,7 +33,7 @@ Updated 26 September 2026. Accountable technical owner: current ChatGPT session,
 | ID | State | Work and acceptance | Dependency / evidence |
 | --- | --- | --- | --- |
 | V1-01 | Partial — next | Canonical lookup correctness: conflict-aware identity; rename/delete invalidation; bounded retry of incomplete writes; human corrections precede cached matches. Positive and negative regression cases must prove the decision. | Backline-owned. Inspect current code before design; preserve canonical API resolution where context cannot decide. |
-| V1-02 | Pending | Billing and title interpretation: one decision per bill; preserve real composite acts and evidenced lineups; no invented fragment acts; stamp source on creation. | Existing billing containment policy; any model activation remains separately bounded/approved. |
+| V1-02 | Partial: source attribution implemented | Billing and title interpretation: one decision per bill; preserve real composite acts and evidenced lineups; no invented fragment acts; stamp source on creation. | Existing billing containment policy; any model activation remains separately bounded/approved. |
 | V1-03 | Pending | Existing event identity across import keys; explicit traced lookup before creation; preserve distinct performances and bill relationships. | Reuse existing API deduplication, do not duplicate it. API gaps become work orders. |
 | V1-04 | Pending | P3 accounting: complete entity inventory; existing/new/unknown separate from canonical effects; partial successes retained; retries/pages/parent-child totals reconcile. | #82 backend contract, #79 UI. Backline producer here; API portion via VSCode work order. |
 | V1-05 | API work order issued; implementation pending | Curator V1: authorised immediate canonical edits, durable actor/scope/provenance, feedback convergence, stable human memory, delete/ownership protection. | [#37 API work order](https://github.com/flowency-live/bndy-work/issues/37#issuecomment-5846352119), coordinated with #87. No API worker is assumed active. |
@@ -46,6 +46,7 @@ Updated 26 September 2026. Accountable technical owner: current ChatGPT session,
 ## Current implementation claim
 
 - V1-01: src/projection/context.ts; src/projection/engine.ts as necessary for evidence/human precedence; src/bndy-baseline/lookup.ts, change.ts and change-store.ts; their existing tests; minimal related handover/status documentation.
+- This continuation also claimed src/projection/bndy-api.ts, its existing tests, and test/bandforge.test.ts, test/livebandphotos.test.ts and test/music-live-east.test.ts for read-port fixture typing only.
 - Additional claimed files: src/knowledge/stores/clients.ts (transaction command type), src/cli/canonical-lookup-backfill.ts (retire obsolete unversioned writes), test/projection-bndy-api.test.ts (test-token isolation), test/canonical-context-integrity.test.ts (new integration regressions), and entry/status/plan documents.
 - No API files claimed. No source worker launched.
 - Before expanding scope, record exact additional files and why on #7.
@@ -75,14 +76,28 @@ Updated 26 September 2026. Accountable technical owner: current ChatGPT session,
 - [Curator feedback API work order](https://github.com/flowency-live/bndy-work/issues/37#issuecomment-5846352119) issued for the VSCode agent under #87. Reuses the existing issue and requires route coverage, server-authenticated actor/scope, durable versioned feedback, outage/retry/ordering proofs and echo suppression. This is an assignment, not a claim of execution.
 - **Not deployed. No AWS mutation, API edit, redrive, cleanup or graph infrastructure. V1 acceptance remains open.**
 
+### 26 September: Artist corrections and creation attribution committed
+
+- Enrichment main: [a97af880b78f31a0eab906ad536da1f784fd41cf](https://github.com/flowency-live/bndy-enrichment/commit/a97af880b78f31a0eab906ad536da1f784fd41cf), parent 204e043. Remote ref/files verified and local main clean at the same actual commit/tree. Eight changed files, no new branch/PR/worktree.
+- Human Artist evidence is read before remembered mappings and automatic context. Identity decisions supersede across same-act/new-act predicates; contradictory same-time decisions hold instead of depending on query order. Latest withdrawn decisions do not revive older facts, including in source-evidenced creation.
+- A human-selected Artist is checked through the existing canonical GET endpoint. Missing, hidden or deleted targets hold without an automatic replacement. Human location/link facts outrank newer automated testimony. Match-only and dry-run protections remain.
+- Each performer carries its own asserted native identity; support acts no longer inherit the headliner's identity in the canonical candidate.
+- Permitted Artist and Venue creation requests now carry `source: candidate.sourceId` on both HTTP paths. Read-only requests retain their write-free contract. No canonical API implementation changed.
+- New-Artist instructions do not silently accept a contradictory ordinary canonical match. They do not bypass a match-only source policy. **Per-decision creation idempotency is NOT solved**: reviewed API code uses ordinary identity uniqueness, not a retained association between a human decision and its result. The [specific #37 API work order](https://github.com/flowency-live/bndy-work/issues/37#issuecomment-5847071704) covers concurrent calls, timeout/retry, later gigs, changed region and explicit supersession. VSCode agent owns this under #87.
+- Existing HTTP port tests and three source test fixtures gained the required GET Artist stub. No production source adapter changed.
+- Verification: focused engine/HTTP/source-evidence tests during development; **one full `npm run check` gate** before commit, exit 0. Build passed; 195 Vitest files, 2530 tests passed, 5 skipped; 56 recovery tests passed. Vitest wall time 11.56 seconds. Thirteen new cases cover the changed behaviour; the thousands are the existing repository suite. No paid CI dispatch or AWS operation.
+- Persistent human history remains open. Reading evidence before a cached Artist mapping increases history-read demand. The Artist bound fails explicitly; the event-candidate 300-claim window can silently omit older human facts. Do not mark V1-01 complete or release this as full Curator readiness.
+- No deployment, bulk hydration, replay, cleanup or API mutation.
+
 ## Exact next session
 
-1. Confirm enrichment main remains 204e043 or inspect subsequent commits before editing. Read latest #7/#80/#37 comments. The completed code checkpoint is durable; do not redo its audit or create a new branch.
-2. Finish V1-01 Artist human-decision precedence in `src/projection/engine.ts` with existing engine tests: a remembered one-act mapping currently bypasses `verificationEvidence`; `humanConfirmedNew` is evaluated after automatic context; a stale resolvesTo can outrank a later confirmed-new decision. Current human name/identity decisions must precede cache and context without relaxing source creation policy.
-3. Test corrections against an existing mapping, contradictory automatic context, superseded human decisions, missing/deleted canonical targets, retry/idempotency and additive-only protections. Keep canonical validation authoritative; inspect existing API contracts before asking for an API addition.
-4. Check whether event-candidate human decisions can be pushed outside the bounded 300-claim materialisation window. Do not declare persistent human memory solved merely because the latest small fixture passes.
-5. Continue V1-02/03 and #82 producer work in order, claiming exact additional files on #7 before expanding scope. Coordinate the #37 feedback payload with the VSCode agent's refactored boundary; do not implement API changes here.
-6. Update this file and #7 at the next meaningful checkpoint. No background coding worker remains active when this session ends.
+1. Confirm enrichment main remains a97af88 or inspect subsequent commits. Read latest #7/#80/#37 comments. Preserve the single main checkout.
+2. Implement durable current-human-fact retrieval in enrichment using the existing state table and retained Claim/Observation provenance. Separate current human decisions from the rolling automatic-evidence window. Do not fix the 300-row gap by scanning an unbounded history on every gig.
+3. Before coding that store change, claim exact files on #7 and settle the coverage contract: atomic publication with the human Claim, strong reads of current references, field/identity scope, supersession/withdrawal, explicit tied conflicts, and recorded legacy coverage. Missing/unmigrated coverage must not be interpreted as “no human decision”. Review existing hold-action writers and all call sites; Claim V2 ownership assertions are a separate concern, not a substitute for these candidate decisions.
+4. Specify a bounded, reviewable legacy migration and mixed-writer rollout. Acceptance: an old correction survives thousands of later automatic observations; concurrent/newer decisions win without partial publication; withdrawal never revives older authority; incomplete/missing coverage fails explicitly; read cost scales with current decisions rather than source history. No bulk migration is authorised.
+5. Integrate the VSCode agent's new-Artist decision contract only after the request/response and idempotency tests are available. Keep retained human authority and source creation policy distinct. Do not enable force-creation or treat an unrelated uniqueness collision as acceptance of the human decision.
+6. Continue remaining billing/title interpretation, per-bill admission, event identity and #82 producer accounting. Source attribution is implemented, not a claim that billing admission is complete. Preserve actor/scope provenance and canonical ownership protections; API changes remain work orders.
+7. Use focused checks while developing; the current AGENTS requirement still mandates build and the full suite before a behavioural commit. Run the full gate once when ready, unless an actual failure requires another run. Update this file/#7 at material checkpoints. No background worker remains active when this session ends.
 
 ## Deployment and acceptance dependencies
 

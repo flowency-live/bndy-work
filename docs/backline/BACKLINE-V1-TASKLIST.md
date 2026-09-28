@@ -26,25 +26,25 @@ Tie technical subtasks to an existing user outcome. If a task cannot explain tha
 
 ## Active user story and task
 
-**User story:** As the owner, I want Backline to investigate uncertain Artist matches and remember new decisions, so I only review genuine uncertainty.
+**User story:** As the owner, I want Backline to remember a real correction so I do not repeat it.
 
-**Task now:** [Managed release order #80/5875121025](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5875121025) is issued for exact enrichment commit **fadcb8ae525afe8d040a2ac90841f5c7cc520dc8**. AWSCLI first closes the specific missing Lemonrock gig-source compatibility entry, then proceeds directly to reviewed memory initialization and managed deployment if clear. No further owner round trip between successful stages.
+**Task now:** The release is complete according to the AWSCLI handback. Make one genuine fact/identity correction through the normal hold UI, then inspect its retained current-human decision and reprocessing outcome. The owner should identify the act/hold and the fact entered. No bulk review or synthetic canonical fact is needed.
 
-**Done when:** The exact stack update completes, version-2 memory initialization is verified and bounded admin/source/current-human read checks pass without new coverage or transition failures. Real investigation quality and seven-day V1 acceptance remain subsequent evidence.
+**Done when:** A post-cutoff correction is retained and used on reprocessing, or a specific unresolved conflict is explained. This is a live behavioural check, not another deployment task.
 
-**Backline impact:** Activates evidence gathering, reusable investigation results and reliable current human memory. Supporting bill/outcome changes preserve identity and reporting.
+**Backline impact:** Demonstrates dependable human memory. Artist evidence investigation/reuse is also deployed, but no natural investigation was observed during smoke checks; its live quality remains unproven.
 
-**Owner decision:** Earlier hold instructions are disposable tests. Ignore through **2026-09-28T16:23:54Z**, preserve all later decisions. No human-history scan/migration, canonical deletion, hold reset, mapping reset or ignore-rule deletion.
-
-**Evidence boundary:** The owner supplied four baseline results: three empty Lemonrock root feeds, one single-act LBP event. These do not establish absence of gig history. Actual Lemonrock gigs are on lemonrock-gig-hydration, missing from that report. Per-act expansion already existed at A; the new change stops speculative splitting and preserves native composite identities. The release order corrects the interpretation and includes a targeted preflight, not a global clearance claim.
-
-**Owner action:** Invoke the AWSCLI worker on the linked release order. It may proceed when the stated conditions pass; stop only for a concrete affected/missing baseline, writer/coverage incompatibility, unexpected managed delta or execution failure. No AWS worker is assumed active here.
+**Owner decision:** Earlier hold instructions are disposable tests. The applied cutoff is **2026-09-28T16:23:54.000Z**. Later decisions are retained. Original Claims/canonical records were not deleted; no migration, hold reset or ignore-rule reset was required.
 
 ## Current state, 28 September
 
-**Stage A c36ce685efd984ebf9695f625a08c4bd92bbe871 remains reported live.** Target fadcb8a is checked/committed, not reported deployed. No fresh-memory initialization has been reported.
+**Reported live implementation: fadcb8ae525afe8d040a2ac90841f5c7cc520dc8.** BndyEnrichmentStack UPDATE_COMPLETE at **18:05:13Z**, eleven code-only Lambda updates. The corrected Stage A predecessor time is **13:10:01Z**, superseding the earlier 14:11:11Z report.
 
-The next execution is the conditional managed release order #80/5875121025. It supersedes previous no-deploy/no-marker instructions only for its exact scope: targeted retained-baseline preflight, explicit disposable-test cutoff, compatible CDK deployment and bounded read-only smoke checks. Whole-table migration, historical-manifest reconstruction and fresh cost audits remain out of scope.
+Version-2 owner-test-reset initialized in four calls. Ten verification reads reported health OK, a valid empty current-human read on an unused subject and no observed coverage-unavailable or billing-transition errors. Full private coverage identity/receipt remains with AWSCLI; the owner summary truncates that ID.
+
+Examined baselines: three empty Lemonrock root feeds; lemonrock-gig-hydration run-b71207a9, one single-act event; LBP run-6f5b37a7, one single-act event. No expansion metadata in those examined artifacts. This is not a full historical-import inventory. No additional audit follows from release acceptance.
+
+Accepted handback: [#80/5875912460](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5875912460). Enrichment main is now documentation-only **833ab8455896ea1b014e9dcbf3f864422c9ba213** over the live implementation pin; no redeploy is required for that Status update. This session has not independently queried AWS.
 
 ## Start/resume here
 
@@ -67,7 +67,7 @@ The next execution is the conditional managed release order #80/5875121025. It s
 
 | ID | State | Work and acceptance | Dependency / evidence |
 | --- | --- | --- | --- |
-| V1-01 | Partial — A live; investigation and test-memory transition implemented; compatible release pending | Canonical lookup correctness: conflict-aware identity; rename/delete invalidation; bounded retry of incomplete writes; human corrections precede cached matches. Positive and negative regression cases must prove the decision. | Backline-owned. Inspect current code before design; preserve canonical API resolution where context cannot decide. |
+| V1-01 | Deployed at fadcb8a; live correction/investigation demonstration pending | Canonical lookup correctness: conflict-aware identity; rename/delete invalidation; bounded retry of incomplete writes; human corrections precede cached matches. Positive and negative regression cases must prove the decision. | Backline-owned. Inspect current code before design; preserve canonical API resolution where context cannot decide. |
 | V1-02 | Partial: bill containment and attribution implemented | Billing and title interpretation: one decision per bill; preserve real composite acts and evidenced lineups; no invented fragment acts; stamp source on creation. | Existing billing containment policy; any model activation remains separately bounded/approved. |
 | V1-03 | Partial: trace/owner guard; API contract pending | Existing event identity across import keys; explicit traced lookup before creation; preserve distinct performances and bill relationships. | Reuse existing API deduplication, do not duplicate it. API gaps become work orders. |
 | V1-04 | Partial: producer attribution/retry repair; API work order issued | P3 accounting: complete entity inventory; existing/new/unknown separate from canonical effects; partial successes retained; retries/pages/parent-child totals reconcile. | #82 backend contract, #79 UI. Backline producer here; API portion via VSCode work order. |
@@ -242,10 +242,18 @@ The next execution is the conditional managed release order #80/5875121025. It s
 - Post-release application smoke: at most twelve reads / 8 MiB / ten minutes. Normal managed deployment polling is separately covered. No replay, provider allowance increase, new crawl or fabricated canonical test data. Natural investigation absence is reported as not demonstrated.
 - Previous missing historical-manifest gate remains waived. Owner test-memory disposition is settled. Stage A remains the reported live pin until an actual completion handback.
 
+### 28 September: fadcb8a deployment accepted from AWSCLI handback
+
+- Owner reports exact fadcb8ae525afe8d040a2ac90841f5c7cc520dc8 live, stack UPDATE_COMPLETE 18:05:13Z, eleven code-only updates. Corrected predecessor Stage A time 13:10:01Z. No actual deployment was performed by this ChatGPT session.
+- Missing Lemonrock gig-source entry supplied: run-b71207a9, one single-act event with no expansion metadata. Other examined artifacts: three empty Lemonrock roots and LBP run-6f5b37a7, one single-act event. Preserve the stated scope; no claim of universal historical compatibility.
+- Memory initialization completed in four calls, version 2, status owner-test-reset, cutoff 16:23:54.000Z. No test-history migration. Ten smoke reads passed health/current-human read and found no specified recent errors.
+- No BAU Artist investigation observed. Release completion accepted; intelligence-quality and seven-day V1 acceptance are not implied. A genuine post-cutoff human correction also remains to be demonstrated.
+- [Accepted handback and next task](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5875912460). Status updated at doc-only main 833ab8455896ea1b014e9dcbf3f864422c9ba213; local/remote tree matched. No runtime code change, test rerun, new AWS order or audit.
+
 ## Current stop and exact restart
 
-1. Owner invokes AWSCLI on #80/5875121025. Receive its complete result or the exact preflight/managed-delta failure. Do not ask the owner again whether test decisions need preserving.
-2. If the missing gig-source check and retained active-scope evidence are clear, the existing order already permits memory initialization, the reviewed managed deployment and bounded smoke checks. No extra approval loop. If blocked, inspect the specific returned keys or change set; do not request another general audit.
-3. Record actual deployed SHA, cutoff, stack/smoke results and limits. No completed deployment or cleared global baseline is claimed yet. No AWS worker is assumed active.
-4. Once live, demonstrate a small named investigation cohort and a real new owner correction/read/retry. No bulk hold review or manufactured success; distinguish implemented, deployed and demonstrated.
-5. API #37/#81/#82 contracts, whole-action recovery, field-clear semantics, complete accounting, profiles, daily freshness and seven-day V1 acceptance remain separate programme work. Continue unblocked owned work; this release is not full V1 acceptance.
+1. Ask the owner for **one** genuine fact/identity correction via the normal hold UI, with act/hold and fact entered. Do not ask again about disposable tests or request bulk hold processing.
+2. Use the resulting hold/action evidence to identify the current-human Claim/Observation, post-cutoff timing and reprojection outcome. Read retained receipts first. A new AWS evidence request, if needed, must name that exact case and remain bounded; no general audit or invented live success.
+3. Separately demonstrate Artist investigation with a naturally occurring or explicitly scoped real case: inspect actual booking-linked citations, canonical match or specific question, and result reuse. No observation during smoke is acceptable for release, but does not prove this behaviour.
+4. No new deployment is currently requested. Live implementation is fadcb8a; main 833ab84 only updates Status. Do not reopen migration, historic-manifest or compatibility audits without a concrete new failure.
+5. Other V1 work remains: API #37/#81/#82 contracts, whole-action recovery, field-clear semantics, complete accounting, profiles, daily freshness and seven-day acceptance. Continue owned unblocked implementation as appropriate; do not declare all V1 work complete from this handback.

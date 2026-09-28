@@ -26,21 +26,25 @@ Tie technical subtasks to an existing user outcome. If a task cannot explain tha
 
 ## Active user story and task
 
-**Owner clarification, 28 September:** No live curators; only the owner has processed a handful of holds. Do not assume a large human-decision history. A processed hold is not necessarily a saved fact correction.
+**User story:** As the owner, I want Backline to use source evidence and existing bndy knowledge to resolve an Artist, so I only review uncertainty that actually needs me.
 
-**User story:** As the owner, I want Backline to keep the useful corrections I have already made.
+**Task now:** Next build scope is [evidence-based investigation of uncertain Artist identity before a human hold](https://github.com/flowency-live/bndy-work/issues/7#issuecomment-5871400567). Extend the existing verification flow; do not build another independent matcher.
 
-**Task now:** Reassess the transition of existing owner fact/identity decisions to current-human memory. [Migration-plan preparation paused on #80](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5871268129); use retained evidence first.
+**Done when:** A small retained case set demonstrates supported matches, preserved genuine conflicts and specific evidence-backed questions. Outcomes must cite supporting facts; repeated unchanged work must not repeat the investigation. Offline checks and live acceptance remain distinct.
 
-**Done when:** We identify what actually needs preserving and the smallest supported transition with a clear completion check.
+**Backline impact:** Adds evidence-seeking reasoning to the decision loop. Source/canonical facts and relevant history should resolve supported cases; genuine uncertainty gets a useful human question.
 
-**Backline impact:** Preserve useful human knowledge without unnecessary migration work. B currently requires a global coverage record; do not bypass it, declare existing history empty, discard corrections or promise a small transfer is complete without establishing that.
+**Observed implementation gap:** engine.ts queues verify-before-create work but returns canonical Artist near-tie/location review directly as unresolved-entity; the existing test explicitly expects no verification job. src/enrichment/worker.ts already retains corroborated verification facts. Reuse these capabilities with bounded work and canonical write integrity.
+
+**Owner input:** No bulk hold review needed. Use retained Lemonrock cases first; ask only specific unresolved questions with the checked evidence and recommendation.
+
+**Separate memory task:** There are no live curators, only the owner's handful of hold decisions. The migration plan remains paused under #80/5871268129. Reassess the smallest supported preservation path before B deployment; do not discard decisions, assert empty coverage or let this become the only development task.
 
 ## Current state, 28 September
 
 **Stage A c36ce685efd984ebf9695f625a08c4bd92bbe871 is reported deployed successfully by the owner's AWSCLI worker.** Eleven Lambda updates completed; the A deployment asset manifest is retained. The old reader is still active. No migration or certified coverage has been reported.
 
-Next: reassess the transition for the owner's small history under [the latest scope correction](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5871268129). The earlier migration-plan preparation is paused. Use retained deployment evidence; do not reopen the missing historical-manifest investigation. The owner's accepted deployment risk still stands. Migration execution and B/C deployment need their separately scoped orders.
+Next owned development: the Artist evidence/reasoning task above. The small owner-memory transition remains a separate release dependency under [the scope correction](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5871268129); AWS migration-plan preparation stays paused. Use retained deployment evidence; do not reopen the missing historical-manifest investigation. The owner's accepted deployment risk still stands. Migration execution and B/C deployment need their separately scoped orders.
 
 ## Start/resume here
 
@@ -210,9 +214,9 @@ Next: reassess the transition for the owner's small history under [the latest sc
 
 ## Current stop and exact restart
 
-**A is reported live. Next is technical-owner reassessment for the owner's handful of hold decisions**, under [the #80 scope correction](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5871268129). Earlier AWS migration preparation is paused; return already collected evidence only. No historical-manifest reconstruction. This session has no AWS execution connection and no AWS agent is assumed active.
+**A is reported live. Next owned build task is evidence-based Artist investigation before human holds**, under [#7/5871400567](https://github.com/flowency-live/bndy-work/issues/7#issuecomment-5871400567). This does not require the owner to bulk-review holds. The small memory transition remains a separate release dependency; earlier AWS migration preparation is paused. No historical-manifest reconstruction. This session has no AWS execution connection and no AWS agent is assumed active.
 
-1. Read this current state and latest #80 execution results. Preserve the single enrichment checkout and all newer work; main was last verified at ffe3b7112d8e8554ff8288eedebc3350185eafe8, while deployed A is c36ce685efd984ebf9695f625a08c4bd92bbe871.
+1. Read the active story, latest #7/#80 and current repository state. Main is at documentation commit 5202e9961def455a9b4b4b341746e315789d603d over implementation ffe3b71; deployed A is c36ce685efd984ebf9695f625a08c4bd92bbe871. Use one clean checkout. For the next build, select retained representative cases, trace existing resolver/verification behaviour, record exact file edits and implement the missing evidence flow with focused regressions.
 2. Use retained evidence to distinguish saved owner facts/identity decisions from other hold actions, and determine what the new reader needs. The current migration CLI scans the whole table; a small direct transfer is not yet proven complete. Reassess a proportionate supported path before requesting further AWS work. No new scan, fence, migration, coverage publication or B deployment under the scope correction.
 3. Complete inventory, hydration, verification, certification and release before B 956fc0c. C ffe3b71 also requires retained billing-key qualification. Latest main must not replace A before these prerequisites.
 4. Review API command-identity/actor/new-Artist contracts (#37) before implementing the remaining whole-action recovery/outbox boundary in enrichment. Current Claim publication is atomic; S3 Observation, audit append and queue sends are not.

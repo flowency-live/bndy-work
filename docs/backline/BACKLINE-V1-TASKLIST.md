@@ -26,19 +26,21 @@ Tie technical subtasks to an existing user outcome. If a task cannot explain tha
 
 ## Active user story and task
 
-**User story:** As a curator, I want Backline to remember my corrections so I do not repeatedly resolve the same identity problem.
+**Owner clarification, 28 September:** No live curators; only the owner has processed a handful of holds. Do not assume a large human-decision history. A processed hold is not necessarily a saved fact correction.
 
-**Task now:** Verify the deployed Stage A writer and prepare the bounded migration of existing curator decisions. AWS execution is with the AWSCLI worker under #80; no background worker is assumed active.
+**User story:** As the owner, I want Backline to keep the useful corrections I have already made.
 
-**Done when:** Writer verification is complete and a concrete migration plan states its scope, cost, duration and completion checks. This preparation task does not migrate data or activate the reader.
+**Task now:** Reassess the transition of existing owner fact/identity decisions to current-human memory. [Migration-plan preparation paused on #80](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5871268129); use retained evidence first.
 
-**Backline impact:** Prepares reliable long-term human memory. The full story is delivered after historical decisions are migrated, B's reader is deployed, and retained corrections are shown to affect matching correctly.
+**Done when:** We identify what actually needs preserving and the smallest supported transition with a clear completion check.
+
+**Backline impact:** Preserve useful human knowledge without unnecessary migration work. B currently requires a global coverage record; do not bypass it, declare existing history empty, discard corrections or promise a small transfer is complete without establishing that.
 
 ## Current state, 28 September
 
 **Stage A c36ce685efd984ebf9695f625a08c4bd92bbe871 is reported deployed successfully by the owner's AWSCLI worker.** Eleven Lambda updates completed; the A deployment asset manifest is retained. The old reader is still active. No migration or certified coverage has been reported.
 
-Next: [verify the deployed curator writer and prepare the finite migration plan](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5870631793). Use retained deployment evidence; do not reopen the missing historical-manifest investigation. The owner's accepted deployment risk still stands. Migration execution and B/C deployment need their separately scoped orders.
+Next: reassess the transition for the owner's small history under [the latest scope correction](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5871268129). The earlier migration-plan preparation is paused. Use retained deployment evidence; do not reopen the missing historical-manifest investigation. The owner's accepted deployment risk still stands. Migration execution and B/C deployment need their separately scoped orders.
 
 ## Start/resume here
 
@@ -208,10 +210,10 @@ Next: [verify the deployed curator writer and prepare the finite migration plan]
 
 ## Current stop and exact restart
 
-**A is reported live. Next is existing curator-decision migration preparation**, under [#80](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5870631793). No historical-manifest reconstruction. This session has no AWS execution connection and no AWS agent is assumed active.
+**A is reported live. Next is technical-owner reassessment for the owner's handful of hold decisions**, under [the #80 scope correction](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5871268129). Earlier AWS migration preparation is paused; return already collected evidence only. No historical-manifest reconstruction. This session has no AWS execution connection and no AWS agent is assumed active.
 
 1. Read this current state and latest #80 execution results. Preserve the single enrichment checkout and all newer work; main was last verified at ffe3b7112d8e8554ff8288eedebc3350185eafe8, while deployed A is c36ce685efd984ebf9695f625a08c4bd92bbe871.
-2. AWSCLI returns the writer/lifecycle/permissions and smoke evidence plus the finite offline migration plan. Technical owner reviews and issues the exact maintenance execution order. Do not start the fence or scan under the preparation order.
+2. Use retained evidence to distinguish saved owner facts/identity decisions from other hold actions, and determine what the new reader needs. The current migration CLI scans the whole table; a small direct transfer is not yet proven complete. Reassess a proportionate supported path before requesting further AWS work. No new scan, fence, migration, coverage publication or B deployment under the scope correction.
 3. Complete inventory, hydration, verification, certification and release before B 956fc0c. C ffe3b71 also requires retained billing-key qualification. Latest main must not replace A before these prerequisites.
 4. Review API command-identity/actor/new-Artist contracts (#37) before implementing the remaining whole-action recovery/outbox boundary in enrichment. Current Claim publication is atomic; S3 Observation, audit append and queue sends are not.
 5. Other owned V1 work remains: automatic verification history bounds, field-clear semantics, complete early-source entity inventory and run-counter failure/concurrency accounting, profile integration, daily discovery/cancellation coverage and bounded recovery. Event distinct-performance and complete API window/pagination depend on #81/#82.

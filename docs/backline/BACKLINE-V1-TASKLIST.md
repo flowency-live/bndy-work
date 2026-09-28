@@ -26,25 +26,27 @@ Tie technical subtasks to an existing user outcome. If a task cannot explain tha
 
 ## Active user story and task
 
-**User story:** As the owner, I want Backline to investigate uncertain Artist matches, so I only answer questions the available evidence cannot settle.
+**User story:** As the owner, I want to start making real Backline decisions without carrying forward earlier tests.
 
-**Task now:** Implementation completed on enrichment/main at [b333b4788b52f774350de106957be5e13562daf4](https://github.com/flowency-live/bndy-enrichment/commit/b333b4788b52f774350de106957be5e13562daf4). Existing verification now accepts canonical Artist reviews, retains booking-linked evidence and returns it to the canonical resolver. Not deployed.
+**Task now:** The fresh-memory transition is implemented at [fadcb8ae525afe8d040a2ac90841f5c7cc520dc8](https://github.com/flowency-live/bndy-enrichment/commit/fadcb8ae525afe8d040a2ac90841f5c7cc520dc8), not applied/deployed. The next single AWSCLI task is [retained multi-act gig compatibility](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5874307544).
 
-**Done when:** The offline outcome is demonstrated: supported match, genuine ambiguity retained, specific question, unchanged investigation reused. Live acceptance still needs a small named cohort after a supported managed release.
+**Done when:** The compatible deployed reader ignores owner-test instructions through 2026-09-28T16:23:54Z and retains later decisions. The next release also preserves existing multi-act gig identities.
 
-**Backline impact:** Evidence gathering and scoped memory before a human decision. No separate matcher, new graph service or model-selected canonical ID.
+**Backline impact:** Removes the historical-test migration dependency and supports reliable future corrections. This is release support; the evidence-seeking Artist investigation already implemented at b333b47 remains included.
 
-**Owner input:** No bulk hold review needed. The retained The Mon0s / The Vinyl Frontier cases exercise existing native identity reuse; synthetic collision cases exercise investigation. These are not live adjudications.
+**Owner decision:** At 17:23:54 BST on 28 September the owner confirmed all prior hold decisions were disposable tests and will process more when ready. No live curators. No migration of those test instructions is required. The cutoff is the decision time, not a future deployment time. No canonical record deletion, undo of previous edits, hold reset or ignore-rule deletion is implied.
 
-**Next release work:** Resolve the inherited release prerequisites proportionately: preserve the owner's handful of saved decisions for the new reader and qualify retained billing-key transitions. The broad migration preparation remains paused under #80/5871268129. No table scan, discarded decisions, invented coverage or deployment of latest main is authorised here. This is a release dependency, not a reason to stop all enrichment development.
+**Implementation:** Explicit version-2 reset coverage, at most four keyed/transaction calls, no scan or deletion. Stage A's atomic current-reference writers must predate the cutoff, evidenced from retained release receipts. Intermediate B/C readers do not support this marker; use a compatible descendant. Original Claims remain in audit history.
 
-**Limits:** The cache is booking/context-specific. Provider failure remains uncertainty; a reserved attempt interrupted before result persistence needs targeted technical recovery, not an automatic paid repeat. Live citations still need inspection. [Implementation and bounds](https://github.com/flowency-live/bndy-enrichment/blob/main/docs/BACKLINE-ARTIST-INVESTIGATION.md).
+**Owner input:** No additional product decision is currently needed. Activate the AWSCLI worker for the one linked compatibility task. No bulk hold review needed.
+
+**Investigation limits:** The cache is booking/context-specific; provider failures remain uncertainty and interrupted reservations need targeted technical recovery. Live citations still need inspection after release. [Investigation contract](https://github.com/flowency-live/bndy-enrichment/blob/main/docs/BACKLINE-ARTIST-INVESTIGATION.md), [fresh-memory contract](https://github.com/flowency-live/bndy-enrichment/blob/main/docs/BACKLINE-HUMAN-MEMORY-ROLLOUT.md).
 
 ## Current state, 28 September
 
 **Stage A c36ce685efd984ebf9695f625a08c4bd92bbe871 is reported deployed successfully by the owner's AWSCLI worker.** Eleven Lambda updates completed; the A deployment asset manifest is retained. The old reader is still active. No migration or certified coverage has been reported.
 
-Artist evidence/reasoning is now implemented and checked at b333b47, not live. The small owner-memory transition remains a separate release dependency under [the scope correction](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5871268129); AWS migration-plan preparation stays paused. Use retained deployment evidence; do not reopen the missing historical-manifest investigation. The owner's accepted deployment risk still stands. Migration execution and B/C deployment need their separately scoped orders.
+Artist investigation is implemented at b333b47. The owner-approved disposable-test transition is now implemented at fadcb8a; both are undeployed. This supersedes the historical preservation/migration requirement for these tests. Initialization has not run. Use retained Stage A writer evidence; do not reopen historical-manifest or cost audits. The remaining concrete release dependency is compatibility of retained multi-act gig baselines, requested under #80/5874307544. No AWS agent is assumed active.
 
 ## Start/resume here
 
@@ -67,7 +69,7 @@ Artist evidence/reasoning is now implemented and checked at b333b47, not live. T
 
 | ID | State | Work and acceptance | Dependency / evidence |
 | --- | --- | --- | --- |
-| V1-01 | Partial — A live; investigation implemented; reader release pending | Canonical lookup correctness: conflict-aware identity; rename/delete invalidation; bounded retry of incomplete writes; human corrections precede cached matches. Positive and negative regression cases must prove the decision. | Backline-owned. Inspect current code before design; preserve canonical API resolution where context cannot decide. |
+| V1-01 | Partial — A live; investigation and test-memory transition implemented; compatible release pending | Canonical lookup correctness: conflict-aware identity; rename/delete invalidation; bounded retry of incomplete writes; human corrections precede cached matches. Positive and negative regression cases must prove the decision. | Backline-owned. Inspect current code before design; preserve canonical API resolution where context cannot decide. |
 | V1-02 | Partial: bill containment and attribution implemented | Billing and title interpretation: one decision per bill; preserve real composite acts and evidenced lineups; no invented fragment acts; stamp source on creation. | Existing billing containment policy; any model activation remains separately bounded/approved. |
 | V1-03 | Partial: trace/owner guard; API contract pending | Existing event identity across import keys; explicit traced lookup before creation; preserve distinct performances and bill relationships. | Reuse existing API deduplication, do not duplicate it. API gaps become work orders. |
 | V1-04 | Partial: producer attribution/retry repair; API work order issued | P3 accounting: complete entity inventory; existing/new/unknown separate from canonical effects; partial successes retained; retries/pages/parent-child totals reconcile. | #82 backend contract, #79 UI. Backline producer here; API portion via VSCode work order. |
@@ -222,13 +224,23 @@ Artist evidence/reasoning is now implemented and checked at b333b47, not live. T
 - File claim/result: #7/5872530212 and checkpoint #7/5872801535. Source implementation and limits documented in BACKLINE-ARTIST-INVESTIGATION.md; Status updated. No AWS/API changes, live model calls, paid CI, deployment, migration or replay.
 - The new commit inherits B's current-human coverage prerequisite and C's retained billing-key transition. A remains the reported live pin. Broad migration preparation stays paused; no new execution order is implied.
 
+### 28 September: owner-approved disposable-test memory transition
+
+- Owner clarification: previous holds were disposable tests; cutoff 2026-09-28T16:23:54Z. Decision/file claim [#7/5874185210](https://github.com/flowency-live/bndy-work/issues/7#issuecomment-5874185210).
+- Enrichment main [fadcb8ae525afe8d040a2ac90841f5c7cc520dc8](https://github.com/flowency-live/bndy-enrichment/commit/fadcb8ae525afe8d040a2ac90841f5c7cc520dc8), parent b333b47. Six files, one main checkout, exact local/remote commit/tree matched; no branch/PR/worktree.
+- Reader accepts explicit version-2 owner-test-reset coverage, separate from version-1 migrated history. Filters current references at/before the cutoff; later atomic writes, withdrawals and tied conflicts remain available. Historical Claims stay stored. No canonical edits, mappings, holds or ignore rules are undone.
+- New human-memory-start CLI: offline plan; apply uses at most four strong keyed/conditional transaction calls, no SDK retries, ten-second per-call timeout. Refuses different existing coverage and maintenance; same-plan rerun reconciles lost response. Requires retained proof that all human publishers had the atomic writer before the cutoff. No marker was applied in this session.
+- Build/focused checks passed (204 cases across three files). Required npm run check exited 0: 198 Vitest files, 2611 passed / 5 skipped, 56 recovery passed, Vitest 13.45 seconds. Five targeted additions. Compiled help/offline plan passed, zero network calls.
+- Rollout and Status updated. Broad migration is unnecessary for this owner choice. Do not deploy the older B/C reader against the version-2 marker. Next release must use a compatible descendant and cover the cumulative managed delta.
+- Remaining specific input: saved multi-act gig baseline compatibility. [One AWSCLI read/offline order](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5874307544): retained evidence first, at most 20 exact read attempts / 16 MiB / five minutes collection if needed; no scans, fresh source crawl, mutation or deployment.
+
 ## Current stop and exact restart
 
-**Artist investigation is committed and checked at b333b47, not deployed.** A c36ce68 remains reported live. The owner does not need to bulk-review holds. This session has no AWS execution connection and no AWS agent is assumed active.
+**Enrichment main is fadcb8ae525afe8d040a2ac90841f5c7cc520dc8, committed and checked; Stage A c36ce68 remains reported live.** No AWS execution connection here. The owner has settled test-memory disposition; do not ask again or commission a migration.
 
-1. Read this active story, latest #7/#80 and repository state. Main is b333b4788b52f774350de106957be5e13562daf4; local checkout is clean at the exact same commit/tree. Implementation for the investigation story is complete. Do not repeat the build or create another branch to rediscover its status.
-2. Prepare the smallest supported release path for the existing owner decisions and retained billing keys. Use retained evidence first. Broad migration preparation remains paused; no historical-manifest search, new scan, fence, migration or coverage publication under this checkpoint. Missing human coverage is an actual reader prerequisite in current main, not proof that the owner's data is broken.
-3. Issue an exact managed deployment/cohort order through #80 only after that path is concrete. Latest main is not a substitute for deployed A. Live acceptance should inspect a small named cohort's actual citations, matches/questions and repeat behaviour; do not claim success from offline synthetic identities.
-4. Review API command-identity/actor/new-Artist contracts (#37) before implementing whole-action recovery/outbox boundaries. API implementation remains with the VSCode agent under #87. Current Claim publication is atomic; S3 Observation, audit append and queue sends are not.
+1. Activate/receive the AWSCLI worker's single retained multi-act gig compatibility result from #80/5874307544. The request is a technical release input, not another owner policy question. Missing baselines must be named; no broad audit or history reset.
+2. If compatible, prepare one exact managed release order including the reviewed fresh-memory plan at cutoff 2026-09-28T16:23:54Z, writer evidence predating it, at most four initialization calls (plus explicitly bounded reconciliation only if required), and the version-2-compatible commit. Review complete managed delta and preserve existing API dependencies. If actual affected keys exist, resolve those exact keys before changing baselines; do not blanket-replay or delete gigs.
+3. After deployment, inspect a small named cohort's actual citations, matches/questions and repeat behaviour, plus a new human decision/read/retry. No bulk owner review or live success claim from synthetic fixtures.
+4. API command identity/actor/new-Artist contracts remain #37 with VSCode/#87. Current Claim publication is atomic; S3 Observation, audit append and queue sends still have separate failure boundaries.
 5. Other owned V1 work remains: automatic verification history bounds, field-clear semantics, complete early-source entity inventory and run-counter failure/concurrency accounting, profile integration, daily discovery/cancellation coverage and bounded recovery. Event distinct-performance and complete API window/pagination depend on #81/#82.
-6. Seven complete daily acceptance cycles follow the relevant release, provenance, accounting, freshness and budget gates. Judge progress by retained/applied corrections and explained outcomes, not deployment/test counts.
+6. Seven complete daily acceptance cycles follow the relevant release, provenance, accounting, freshness and budget gates. Judge progress by applied corrections and explained outcomes.

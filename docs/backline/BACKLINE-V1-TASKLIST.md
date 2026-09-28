@@ -12,6 +12,28 @@ Updated 28 September 2026. Accountable technical owner: current ChatGPT session,
 - A commit checkpoint is not a deployment dependency. Continue unblocked enrichment implementation; distinguish coding, API integration and live acceptance gates explicitly.
 - Current deployment queue is #80. Production deployments and data recovery remain separately scoped; no cleanup, redrive or replay follows from coding authority.
 
+## Task communication, owner instruction 28 September 2026
+
+For every task, including AWS/API work orders and handoffs, tell the owner briefly:
+- **User story:** As a [user], I want [capability], so that [benefit].
+- **Task now:** The precise work being done, including whether it is coding, deployment, verification or preparation.
+- **Done when:** The observable result that completes this task.
+- **Backline impact:** How it improves evidence, memory, reasoning, decisions or curator experience. Label supporting infrastructure work honestly; do not present it as delivered intelligence.
+
+Use clean, succinct language, normally four short lines. At completion or a blocker, report against that same outcome and state the next step. Distinguish implemented, deployed and demonstrated behaviour. Keep the active story and outcome in the shared tasklist so a new session can resume it.
+
+Tie technical subtasks to an existing user outcome. If a task cannot explain that connection, reconsider its scope before expanding it. Tests, code volume, audits and deployments are evidence or means, not the product outcome. This communication rule creates no new approval gate or document workflow.
+
+## Active user story and task
+
+**User story:** As a curator, I want Backline to remember my corrections so I do not repeatedly resolve the same identity problem.
+
+**Task now:** Verify the deployed Stage A writer and prepare the bounded migration of existing curator decisions. AWS execution is with the AWSCLI worker under #80; no background worker is assumed active.
+
+**Done when:** Writer verification is complete and a concrete migration plan states its scope, cost, duration and completion checks. This preparation task does not migrate data or activate the reader.
+
+**Backline impact:** Prepares reliable long-term human memory. The full story is delivered after historical decisions are migrated, B's reader is deployed, and retained corrections are shown to affect matching correctly.
+
 ## Current state, 28 September
 
 **Stage A c36ce685efd984ebf9695f625a08c4bd92bbe871 is reported deployed successfully by the owner's AWSCLI worker.** Eleven Lambda updates completed; the A deployment asset manifest is retained. The old reader is still active. No migration or certified coverage has been reported.

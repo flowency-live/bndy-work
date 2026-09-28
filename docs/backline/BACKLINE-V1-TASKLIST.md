@@ -26,25 +26,25 @@ Tie technical subtasks to an existing user outcome. If a task cannot explain tha
 
 ## Active user story and task
 
-**User story:** As the owner, I want Backline to use source evidence and existing bndy knowledge to resolve an Artist, so I only review uncertainty that actually needs me.
+**User story:** As the owner, I want Backline to investigate uncertain Artist matches, so I only answer questions the available evidence cannot settle.
 
-**Task now:** Next build scope is [evidence-based investigation of uncertain Artist identity before a human hold](https://github.com/flowency-live/bndy-work/issues/7#issuecomment-5871400567). Extend the existing verification flow; do not build another independent matcher.
+**Task now:** Implementation completed on enrichment/main at [b333b4788b52f774350de106957be5e13562daf4](https://github.com/flowency-live/bndy-enrichment/commit/b333b4788b52f774350de106957be5e13562daf4). Existing verification now accepts canonical Artist reviews, retains booking-linked evidence and returns it to the canonical resolver. Not deployed.
 
-**Done when:** A small retained case set demonstrates supported matches, preserved genuine conflicts and specific evidence-backed questions. Outcomes must cite supporting facts; repeated unchanged work must not repeat the investigation. Offline checks and live acceptance remain distinct.
+**Done when:** The offline outcome is demonstrated: supported match, genuine ambiguity retained, specific question, unchanged investigation reused. Live acceptance still needs a small named cohort after a supported managed release.
 
-**Backline impact:** Adds evidence-seeking reasoning to the decision loop. Source/canonical facts and relevant history should resolve supported cases; genuine uncertainty gets a useful human question.
+**Backline impact:** Evidence gathering and scoped memory before a human decision. No separate matcher, new graph service or model-selected canonical ID.
 
-**Observed implementation gap:** engine.ts queues verify-before-create work but returns canonical Artist near-tie/location review directly as unresolved-entity; the existing test explicitly expects no verification job. src/enrichment/worker.ts already retains corroborated verification facts. Reuse these capabilities with bounded work and canonical write integrity.
+**Owner input:** No bulk hold review needed. The retained The Mon0s / The Vinyl Frontier cases exercise existing native identity reuse; synthetic collision cases exercise investigation. These are not live adjudications.
 
-**Owner input:** No bulk hold review needed. Use retained Lemonrock cases first; ask only specific unresolved questions with the checked evidence and recommendation.
+**Next release work:** Resolve the inherited release prerequisites proportionately: preserve the owner's handful of saved decisions for the new reader and qualify retained billing-key transitions. The broad migration preparation remains paused under #80/5871268129. No table scan, discarded decisions, invented coverage or deployment of latest main is authorised here. This is a release dependency, not a reason to stop all enrichment development.
 
-**Separate memory task:** There are no live curators, only the owner's handful of hold decisions. The migration plan remains paused under #80/5871268129. Reassess the smallest supported preservation path before B deployment; do not discard decisions, assert empty coverage or let this become the only development task.
+**Limits:** The cache is booking/context-specific. Provider failure remains uncertainty; a reserved attempt interrupted before result persistence needs targeted technical recovery, not an automatic paid repeat. Live citations still need inspection. [Implementation and bounds](https://github.com/flowency-live/bndy-enrichment/blob/main/docs/BACKLINE-ARTIST-INVESTIGATION.md).
 
 ## Current state, 28 September
 
 **Stage A c36ce685efd984ebf9695f625a08c4bd92bbe871 is reported deployed successfully by the owner's AWSCLI worker.** Eleven Lambda updates completed; the A deployment asset manifest is retained. The old reader is still active. No migration or certified coverage has been reported.
 
-Next owned development: the Artist evidence/reasoning task above. The small owner-memory transition remains a separate release dependency under [the scope correction](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5871268129); AWS migration-plan preparation stays paused. Use retained deployment evidence; do not reopen the missing historical-manifest investigation. The owner's accepted deployment risk still stands. Migration execution and B/C deployment need their separately scoped orders.
+Artist evidence/reasoning is now implemented and checked at b333b47, not live. The small owner-memory transition remains a separate release dependency under [the scope correction](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5871268129); AWS migration-plan preparation stays paused. Use retained deployment evidence; do not reopen the missing historical-manifest investigation. The owner's accepted deployment risk still stands. Migration execution and B/C deployment need their separately scoped orders.
 
 ## Start/resume here
 
@@ -67,7 +67,7 @@ Next owned development: the Artist evidence/reasoning task above. The small owne
 
 | ID | State | Work and acceptance | Dependency / evidence |
 | --- | --- | --- | --- |
-| V1-01 | Partial — A writer reported live; migration/B pending | Canonical lookup correctness: conflict-aware identity; rename/delete invalidation; bounded retry of incomplete writes; human corrections precede cached matches. Positive and negative regression cases must prove the decision. | Backline-owned. Inspect current code before design; preserve canonical API resolution where context cannot decide. |
+| V1-01 | Partial — A live; investigation implemented; reader release pending | Canonical lookup correctness: conflict-aware identity; rename/delete invalidation; bounded retry of incomplete writes; human corrections precede cached matches. Positive and negative regression cases must prove the decision. | Backline-owned. Inspect current code before design; preserve canonical API resolution where context cannot decide. |
 | V1-02 | Partial: bill containment and attribution implemented | Billing and title interpretation: one decision per bill; preserve real composite acts and evidenced lineups; no invented fragment acts; stamp source on creation. | Existing billing containment policy; any model activation remains separately bounded/approved. |
 | V1-03 | Partial: trace/owner guard; API contract pending | Existing event identity across import keys; explicit traced lookup before creation; preserve distinct performances and bill relationships. | Reuse existing API deduplication, do not duplicate it. API gaps become work orders. |
 | V1-04 | Partial: producer attribution/retry repair; API work order issued | P3 accounting: complete entity inventory; existing/new/unknown separate from canonical effects; partial successes retained; retries/pages/parent-child totals reconcile. | #82 backend contract, #79 UI. Backline producer here; API portion via VSCode work order. |
@@ -212,13 +212,23 @@ Next owned development: the Artist evidence/reasoning task above. The small owne
 - [Next #80 task](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5870631793): complete the existing limited smoke check, verify fence-aware deployed writers/lifecycle/permissions, and return a concrete finite migration plan with cost and maintenance duration. Use existing receipts and offline plan mode first; at most 12 additional keyed/configuration read attempts / 32 MiB / ten minutes if needed. No scan, fence acquisition or migration under this preparation order.
 - Product outcome remains dependable curator memory: migrate historical godmode:human decisions, verify complete coverage, then deploy B's reader. A alone does not complete this story or V1 acceptance. Keep source billing C and API work orders separate.
 
+### 28 September: Artist investigation implemented and checked
+
+- Enrichment main [b333b4788b52f774350de106957be5e13562daf4](https://github.com/flowency-live/bndy-enrichment/commit/b333b4788b52f774350de106957be5e13562daf4), parent 5202e99. Ten files; exact local/remote commit tree matched, clean main checkout. No branch, PR or worktree.
+- Extends the existing queue/worker with verify-identity. Candidate context, source/native identity and partial Venue history are retained with grounded discovery evidence. Supported official profile facts require an exact booking cited on that profile's own pages, independently of supplied publisher hosts. Separate same-name pages are insufficient.
+- Canonical resolution remains responsible, with no creation/external lookup for the evidence result and no selection outside the reviewed candidates. Human decisions and existing native bindings precede discovery. Incomplete lookup stays a technical gap. No broad Artist/name Claim or profile mutation.
+- Retained scoped result prevents unchanged paid investigation repeats; queue-send failure is repaired from that result. Provider outage is retained as uncertainty. Interrupted reservations without a result require targeted technical recovery and never silently repeat provider work.
+- Validation: npm run check exited 0; build, 198 Vitest files / 2606 passed / 5 skipped, plus 56 recovery passes. Thirty added behavioural cases, Vitest 13.83 seconds. Retained cases and synthetic collision checks are offline evidence, not proof of live provider citation quality.
+- File claim/result: #7/5872530212 and checkpoint #7/5872801535. Source implementation and limits documented in BACKLINE-ARTIST-INVESTIGATION.md; Status updated. No AWS/API changes, live model calls, paid CI, deployment, migration or replay.
+- The new commit inherits B's current-human coverage prerequisite and C's retained billing-key transition. A remains the reported live pin. Broad migration preparation stays paused; no new execution order is implied.
+
 ## Current stop and exact restart
 
-**A is reported live. Next owned build task is evidence-based Artist investigation before human holds**, under [#7/5871400567](https://github.com/flowency-live/bndy-work/issues/7#issuecomment-5871400567). This does not require the owner to bulk-review holds. The small memory transition remains a separate release dependency; earlier AWS migration preparation is paused. No historical-manifest reconstruction. This session has no AWS execution connection and no AWS agent is assumed active.
+**Artist investigation is committed and checked at b333b47, not deployed.** A c36ce68 remains reported live. The owner does not need to bulk-review holds. This session has no AWS execution connection and no AWS agent is assumed active.
 
-1. Read the active story, latest #7/#80 and current repository state. Main is at documentation commit 5202e9961def455a9b4b4b341746e315789d603d over implementation ffe3b71; deployed A is c36ce685efd984ebf9695f625a08c4bd92bbe871. Use one clean checkout. For the next build, select retained representative cases, trace existing resolver/verification behaviour, record exact file edits and implement the missing evidence flow with focused regressions.
-2. Use retained evidence to distinguish saved owner facts/identity decisions from other hold actions, and determine what the new reader needs. The current migration CLI scans the whole table; a small direct transfer is not yet proven complete. Reassess a proportionate supported path before requesting further AWS work. No new scan, fence, migration, coverage publication or B deployment under the scope correction.
-3. Complete inventory, hydration, verification, certification and release before B 956fc0c. C ffe3b71 also requires retained billing-key qualification. Latest main must not replace A before these prerequisites.
-4. Review API command-identity/actor/new-Artist contracts (#37) before implementing the remaining whole-action recovery/outbox boundary in enrichment. Current Claim publication is atomic; S3 Observation, audit append and queue sends are not.
+1. Read this active story, latest #7/#80 and repository state. Main is b333b4788b52f774350de106957be5e13562daf4; local checkout is clean at the exact same commit/tree. Implementation for the investigation story is complete. Do not repeat the build or create another branch to rediscover its status.
+2. Prepare the smallest supported release path for the existing owner decisions and retained billing keys. Use retained evidence first. Broad migration preparation remains paused; no historical-manifest search, new scan, fence, migration or coverage publication under this checkpoint. Missing human coverage is an actual reader prerequisite in current main, not proof that the owner's data is broken.
+3. Issue an exact managed deployment/cohort order through #80 only after that path is concrete. Latest main is not a substitute for deployed A. Live acceptance should inspect a small named cohort's actual citations, matches/questions and repeat behaviour; do not claim success from offline synthetic identities.
+4. Review API command-identity/actor/new-Artist contracts (#37) before implementing whole-action recovery/outbox boundaries. API implementation remains with the VSCode agent under #87. Current Claim publication is atomic; S3 Observation, audit append and queue sends are not.
 5. Other owned V1 work remains: automatic verification history bounds, field-clear semantics, complete early-source entity inventory and run-counter failure/concurrency accounting, profile integration, daily discovery/cancellation coverage and bounded recovery. Event distinct-performance and complete API window/pagination depend on #81/#82.
-6. Live qualification/recovery and seven complete daily acceptance cycles follow the relevant safety, provenance, accounting, freshness and budget gates. Judge curator memory by retained/applied corrections and explained outcomes, not deployment/test counts.
+6. Seven complete daily acceptance cycles follow the relevant release, provenance, accounting, freshness and budget gates. Judge progress by retained/applied corrections and explained outcomes, not deployment/test counts.

@@ -1,6 +1,6 @@
 # Backline V1 working tasklist and session handover
 
-Updated 26 September 2026. Accountable technical owner: current ChatGPT session, programme [#7](https://github.com/flowency-live/bndy-work/issues/7).
+Updated 28 September 2026. Accountable technical owner: current ChatGPT session, programme [#7](https://github.com/flowency-live/bndy-work/issues/7).
 
 ## Owner instructions, 26 September
 
@@ -27,7 +27,7 @@ Updated 26 September 2026. Accountable technical owner: current ChatGPT session,
 - R2 5974843 is recorded as pending owner go, with no concurrent API cleanup deployment.
 - API #87 reports local successful build at 132e02d, not deployment. PR111 profile integration remains draft/unmerged.
 - Review reproduced context/index defects offline against R1 code. This is not proof of specific production corruption.
-- No current production count or remaining monthly budget has been independently measured by this session.
+- 28 September: owner supplied an AWS qualification report (~6 GB / 6.85 million StateTable items; 32 attempts). This session has not inspected raw AWS receipts. Claimed live 5974843 conflicts with the earlier R1/R2 release record; exact live revision, gross pre-credit headroom and human-writer coverage remain unverified. See the correction checkpoint below.
 
 ## Working tasklist
 
@@ -140,12 +140,23 @@ Updated 26 September 2026. Accountable technical owner: current ChatGPT session,
 - Next critical release sequence: A c36ce68 writer → verified finite human-history migration/certification → B 956fc0c reader → C ffe3b71 only after retained billing-key qualification. Latest main cannot replace old R2. Full managed delta, live writer population, IAM/cost and rollback must be reviewed first.
 - No production change, API implementation, paid CI dispatch, new resources, graph service, source crawl, migration or cleanup. **V1 remains unaccepted.**
 
+### 28 September: read-only qualification reviewed; corrections issued
+
+- Reviewed the owner's pasted #80 report against current source, rollout requirements, issue history and latest API #87 activity. Remote enrichment main and local clean checkout remain ffe3b7112d8e8554ff8288eedebc3350185eafe8. No code edits or test reruns were needed for this evidence review.
+- **Stage A is not cleared.** The report assumes R2 5974843 live without proving the change from recorded R1; gives truncated hashes; and places some evidence after its stated completion time. Require full artifact/configuration identity and corrected observation timestamps.
+- CONTROL#PROJECTION/GLOBAL is not the human writer fence or coverage key. Require strong keyed presence/absence evidence for CONTROL#HUMAN_CLAIMS/GLOBAL and CURRENT_HUMAN_COVERAGE/VERSION#1, deployed/alternative writer population and existing transaction permissions. Global TTL metadata does not establish immutable/no-TTL human Claim history.
+- Gross spend remains unknown: credits-offset ~$0 cannot qualify the pre-credit $500 ceiling/BAU reserve. The report's scan price calculation is unsupported. Approximate item count implies at least ~6,853 inventory pages at the implemented 1,000-item limit, plus one fence read/page, before hydration/verification. Migration needs a separate finite budget and maintenance plan.
+- No-CDK-source-change does not prove a complete managed deployment delta. Require A synthesis/configuration/asset comparison against verified live resources and retained live rollback artifacts. Reverting only c36ce68 does not undo the cumulative A package. API #87 Lambda-name separation alone is insufficient release coordination; latest source-runs fix 1ee95d7 has no verified deployment receipt here.
+- Empty shadow parity/diff evidence does not qualify C's retained billing keys. Four artifacts claimed/three listed and missing LBP remain C evidence gaps, **not independent prerequisites for A**. B still requires complete certified human history after separately approved migration.
+- [Targeted #80 correction order](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5867210518) published. Use retained receipts first; explicitly permits up to ten additional minutes read-only execution, at most residual 28 AWS attempts and a cumulative 32 MiB across both qualification passes, with exact ledger reconciliation, retries disabled and per-call <=60 seconds. No scan/deployment/migration/mutation, implicit renewal, source crawl or API implementation authorized.
+- No AWS agent is assumed running. Next action is the AWS agent returning the corrected Stage A evidence under this order. Technical owner reviews before an exact managed A release order; B/C gates stay separate. V1 remains unaccepted.
+
 ## Current stop and exact restart
 
-The current implementation package is complete and retained. The next critical-path action is the owner activating the VSCode/AWS agent for [#80's concrete read-only readiness brief](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5848715123), plus the API work orders. This ChatGPT session has no AWS execution connection and must not impersonate an active deployment agent. This is a deployment/integration handoff, not a claim that all V1 coding is finished.
+The current implementation package is retained. The owner's first AWS qualification report was reviewed on 28 September and is partial evidence, not release clearance. The next critical-path action is the VSCode/AWS agent completing [#80's targeted correction order](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5867210518), plus the existing API work orders. This ChatGPT session has no AWS execution connection and must not impersonate an active deployment agent. This is a deployment/integration handoff, not a claim that all V1 coding is finished.
 
 1. Confirm main ffe3b7112d8e8554ff8288eedebc3350185eafe8 or inspect subsequent commits. Read this tasklist, latest #7/#80/#37/#81/#82 and enrichment AGENTS.md. Use the same main checkout and preserve any newer work.
-2. Obtain #80's bounded readiness response. Review actual deployed pins, managed delta, human writer population, table/TTL/lifecycle, budget and rollback. Do not deploy latest main blindly or write coverage from a sample. Do not run old backfill apply, reset snapshots or replay holds.
+2. Obtain the corrected #80 response, preserving the cumulative request/byte ledger. Resolve actual deployed pins/timestamps, managed delta, correct human control/coverage keys, writer population, permissions, gross budget, rollback and #87 coordination. Use existing receipts first; do not restart a broad audit. Do not deploy latest main blindly or write coverage from a sample. Do not run old backfill apply, reset snapshots or replay holds.
 3. Issue an exact managed A release order only after reviewing that evidence and coordinating with API refactor #87. Migration approval is separate, finite and based on measured table size/headroom; B requires completed global coverage. C additionally requires retained billing-key compatibility/reconciliation.
 4. Review the API command-identity/actor/new-Artist contract (#37) before implementing the remaining whole-action recovery/outbox boundary in enrichment. Current action Claim publication is atomic; S3 Observation, audit append and queue sends are not. Never deduplicate a transport retry by inventing a newer human decision or a body/time heuristic.
 5. Other owned work remains explicit: non-human automatic verification history bounds, field-clear semantics, complete early-source entity inventory and run-counter failure/concurrency accounting, profile application integration, daily discovery/cancellation coverage and bounded recovery. Current fixes are partial gates, not proof these are solved.

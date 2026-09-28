@@ -12,6 +12,10 @@ Updated 28 September 2026. Accountable technical owner: current ChatGPT session,
 - A commit checkpoint is not a deployment dependency. Continue unblocked enrichment implementation; distinguish coding, API integration and live acceptance gates explicitly.
 - Current deployment queue is #80. Production deployments and data recovery remain separately scoped; no cleanup, redrive or replay follows from coding authority.
 
+## Current owner decision, 28 September 13:52 BST
+
+**Stage A deployment is authorised.** The owner accepts proceeding without the historical release manifest/verified backup. [Exact #80 execution order](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5870249194) supersedes the earlier NOT CLEARED checkpoints and requests to reconstruct the old release. Use normal CDK synth/diff/deploy for A c36ce685efd984ebf9695f625a08c4bd92bbe871. Actual unexpected managed changes/errors still require integration. No further owner confirmation for this release. Migration and B/C are not authorised by this decision.
+
 ## Start/resume here
 
 1. Read this file, the latest #7 and #80 comments, and bndy-enrichment AGENTS.md.
@@ -162,14 +166,22 @@ Updated 28 September 2026. Accountable technical owner: current ChatGPT session,
 - Migration lifecycle/TTL proof remains a maintenance prerequisite; C billing artifacts remain a later gate. No AWS mutation, deployment, scan, migration, API edits, enrichment edits or test reruns by this session. Enrichment main remains verified clean at ffe3b7112d8e8554ff8288eedebc3350185eafe8.
 - Next: AWS agent returns the concrete evidence packages or identifies missing artifact/access and stops. Technical owner reviews before release; no agent is assumed active.
 
+### 28 September: owner authorises Stage A deployment
+
+- Owner explicitly directed “We can just deploy as is” after discussion of the missing historical manifest/backup. [Deployment order issued on #80](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5870249194); earlier readiness blocks on recovering the historical package are superseded.
+- Deploy only A c36ce685efd984ebf9695f625a08c4bd92bbe871 using normal CDK/CloudFormation, with normal rollback enabled, existing configuration preserved and the complete managed change set reviewed. No additional permission is required if the intended A delta is clean. Stop only for an actual unexpected destructive/IAM/configuration/dependency change or execution failure.
+- Latest main includes the B reader and must not be deployed before migration. No migration, fence acquisition, coverage marker, replay, cleanup, API edit or source activation accompanies A.
+- Final AWS report supplied by owner: 54 cumulative qualification calls/~110 KB; live function identities retained but no historical commit mapping; SourceRunsFunc's Backline dependency confirmed; estimated gross September spend $130.30, $369.70 headroom, proposed $150 BAU reserve. Claimed API fix identity remains a report, not independent proof from timestamps.
+- End the historical-manifest search and repeated cost/source qualification. New authorisation covers one normal managed release attempt and limited verification, separately from the exhausted qualification time windows. Retain the new A release assets/commit/results.
+- Enrichment implementation is unchanged. No deployment has been executed by this ChatGPT session and no AWS agent is assumed active. Await actual release completion before claiming A is live.
+
 ## Current stop and exact restart
 
-The current implementation package is retained. Two AWS qualification reports have been reviewed on 28 September; readiness remains partial. The next critical-path action is the VSCode/AWS agent returning actual deployment artifacts, managed delta and gross budget evidence under [#80's final targeted evidence order](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5869472472), plus the existing API work orders. This ChatGPT session has no AWS execution connection and must not impersonate an active deployment agent. This is a deployment/integration handoff, not a claim that all V1 coding is finished.
+**The owner has authorised Stage A.** Give the AWSCLI agent the [exact release order](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5870249194). No further manifest reconstruction or owner approval is required. This session has no AWS execution connection and does not claim deployment completion.
 
-1. Confirm main ffe3b7112d8e8554ff8288eedebc3350185eafe8 or inspect subsequent commits. Read this tasklist, latest #7/#80/#37/#81/#82 and enrichment AGENTS.md. Use the same main checkout and preserve any newer work.
-2. Obtain the corrected #80 response, preserving the cumulative request/byte ledger. Resolve actual deployed pins/timestamps, managed delta, correct human control/coverage keys, writer population, permissions, gross budget, rollback and #87 coordination. Use existing receipts first; do not restart a broad audit. Do not deploy latest main blindly or write coverage from a sample. Do not run old backfill apply, reset snapshots or replay holds.
-3. Issue an exact managed A release order only after reviewing that evidence and coordinating with API refactor #87. Migration approval is separate, finite and based on measured table size/headroom; B requires completed global coverage. C additionally requires retained billing-key compatibility/reconciliation.
-4. Review the API command-identity/actor/new-Artist contract (#37) before implementing the remaining whole-action recovery/outbox boundary in enrichment. Current action Claim publication is atomic; S3 Observation, audit append and queue sends are not. Never deduplicate a transport retry by inventing a newer human decision or a body/time heuristic.
-5. Other owned work remains explicit: non-human automatic verification history bounds, field-clear semantics, complete early-source entity inventory and run-counter failure/concurrency accounting, profile application integration, daily discovery/cancellation coverage and bounded recovery. Current fixes are partial gates, not proof these are solved.
-6. Event distinct-performance behavior and complete API window/pagination depend on #81/#82 response contracts. Preserve canonical uniqueness; do not add an enrichment matcher or bypass the one-day sentinel.
-7. Live qualification/recovery and seven complete daily acceptance cycles follow the relevant safety, provenance, accounting, freshness and budget gates. Never substitute test counts or decreased holds for verified canonical outcomes.
+1. Read the current owner decision above and latest #80 execution results. Preserve the single enrichment checkout and all newer work; main was last verified at ffe3b7112d8e8554ff8288eedebc3350185eafe8.
+2. AWSCLI builds and deploys exact A c36ce685efd984ebf9695f625a08c4bd92bbe871 through normal CDK/CloudFormation after reviewing the actual managed delta. Stop for concrete unexpected changes/errors, not the missing historical manifest. Retain the new release assets and limited smoke-check evidence.
+3. After A is confirmed live, qualify the deployed human writers/lifecycle and prepare the separately bounded migration/maintenance plan. Complete inventory, hydration, verification and certification are prerequisites for B 956fc0c. C ffe3b71 also requires retained billing-key qualification. Latest main is not a substitute for A.
+4. Review API command-identity/actor/new-Artist contracts (#37) before implementing the remaining whole-action recovery/outbox boundary in enrichment. Current Claim publication is atomic; S3 Observation, audit append and queue sends are not.
+5. Other owned V1 work remains: automatic verification history bounds, field-clear semantics, complete early-source entity inventory and run-counter failure/concurrency accounting, profile integration, daily discovery/cancellation coverage and bounded recovery. Event distinct-performance and complete API window/pagination depend on #81/#82.
+6. Live qualification/recovery and seven complete daily acceptance cycles follow the relevant safety, provenance, accounting, freshness and budget gates. Stage A deployment alone does not complete curator-memory learning or V1 acceptance.

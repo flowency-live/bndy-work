@@ -28,13 +28,17 @@ Tie technical subtasks to an existing user outcome. If a task cannot explain tha
 
 **User story:** As a curator, I want Backline to interpret ambiguous listings using the evidence bndy has accumulated, so I only answer questions that evidence cannot settle.
 
-**Task now:** Implement one bounded contextual Artist reasoning step in bndy-enrichment using the existing provider/worker/evidence infrastructure. This implementation is outstanding, not running in the background. API support work must not become the whole programme.
+**Task now:** Contextual reasoning is implemented on main at **6632b28eb0c8f581fd67769b681a878fa697675f**, proposal-only and default off. The next task is bounded real-model qualification using the reviewed worker locally, ordered in [#80/5900192251](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5900192251). No deployment or automatic matching activation is needed for that trial. No executor is assumed running.
 
 **Done when:** The actual reasoning path assembles available canonical candidates, gig/venue history, native identities, source provenance and current human decisions; produces an evidence-referenced existing-act/different-act/unresolved proposal; validates authority, IDs and contradictions before any application; retains the result for reuse. Demonstrate a supported alias, a genuine competing act and insufficient/conflicting evidence. Distinguish real provider output from mocked/offline tests and deployed behaviour.
 
 **Backline impact:** Connected evidence influences an explained decision. Website discovery, test counts and safe holds alone are not acceptance.
 
-**Immediate implementation sequence:** Inspect/reuse existing structured reasoner and projection/worker hooks; assemble one bounded evidence context; produce a structured proposal and validate it; persist/reuse evidence and result; evaluate the three contrasting cases. Missing live evidence remains explicit. Request only demonstrated API dependencies; do not invent the held bands' histories.
+**Current checkpoint:** The existing structured provider receives listing/native identity, canonical cards/aliases, referenced gigs and active supporting Claims. It returns a cited existing-act/different-act/unresolved proposal with candidate comparisons and contradictions. Schema/reference checks validate integrity, not prose truth. Results and raw responses/usage are retained and reused; invalid/unavailable attempts do not cause another paid call. Current human decisions run before automatic investigation. Every version-3 proposal remains a hold, with details in its exception/run trace; Ops UI rendering and automatic application are not delivered.
+
+**Verification:** Required `npm run check` exited 0: build, 199 Vitest files, 2625 passed/5 skipped and 56 recovery passes. Ten focused additions exercise the real transport/worker/projection with simulated responses. No actual provider or AWS call was made. Real model quality and the three contrasting acceptance cases remain open.
+
+**Next:** #80 is limited to up to three real-provider attempts ($0.12 total estimated within existing daily caps), named retained inputs, no reprojection/canonical writes and no cloud deployment/configuration change. Review actual explanations before application work. If contrasting evidence is unavailable, retain that gap; do not fabricate histories or add more name/venue rules.
 
 ## Mandatory delivery and delegation check
 
@@ -62,7 +66,7 @@ Version-2 owner-test-reset initialized in four calls. Ten verification reads rep
 
 Examined baselines: three empty Lemonrock root feeds; lemonrock-gig-hydration run-b71207a9, one single-act event; LBP run-6f5b37a7, one single-act event. No expansion metadata in those examined artifacts. This is not a full historical-import inventory. No additional audit follows from release acceptance.
 
-Accepted handback: [#80/5875912460](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5875912460). Enrichment main subsequently advanced to **9e6bbefa8b2fe3d2c8930d29abefba93f069c387**, an undeployed behavioural change. The live pin remains fadcb8a; see the current API dependency above. This session has not independently queried AWS.
+Accepted handback: [#80/5875912460](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5875912460). Enrichment main subsequently advanced through 9e6bbef to **6632b28eb0c8f581fd67769b681a878fa697675f**, with contextual proposal reasoning implemented and undeployed. The live pin remains fadcb8a. API 6239ffb was source-reviewed; its removal of the same-venue requirement and retention of candidates are accepted. A narrow response-evidence/assertion gap is recorded in [#81/5899963128](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5899963128), without further resolver-policy expansion. This session has not independently queried AWS.
 
 ## Start/resume here
 
@@ -85,7 +89,7 @@ Accepted handback: [#80/5875912460](https://github.com/flowency-live/bndy-work/i
 
 | ID | State | Work and acceptance | Dependency / evidence |
 | --- | --- | --- | --- |
-| V1-01 | fadcb8a live; 9e6bbef enrichment correction ready; API history correction #81 pending | Canonical lookup correctness: conflict-aware identity; rename/delete invalidation; bounded retry of incomplete writes; human corrections precede cached matches. Positive and negative regression cases must prove the decision. | Backline-owned. Inspect current code before design; preserve canonical API resolution where context cannot decide. |
+| V1-01 | fadcb8a live; 6632b28 contextual proposals implemented/off; real-model qualification #80 next | Canonical lookup correctness: conflict-aware identity; rename/delete invalidation; bounded retry of incomplete writes; human corrections precede cached matches. Positive and negative regression cases must prove the decision. | Backline-owned. Inspect current code before design; preserve canonical API resolution where context cannot decide. |
 | V1-02 | Partial: bill containment and attribution implemented | Billing and title interpretation: one decision per bill; preserve real composite acts and evidenced lineups; no invented fragment acts; stamp source on creation. | Existing billing containment policy; any model activation remains separately bounded/approved. |
 | V1-03 | Partial: trace/owner guard; API contract pending | Existing event identity across import keys; explicit traced lookup before creation; preserve distinct performances and bill relationships. | Reuse existing API deduplication, do not duplicate it. API gaps become work orders. |
 | V1-04 | Partial: producer attribution/retry repair; API work order issued | P3 accounting: complete entity inventory; existing/new/unknown separate from canonical effects; partial successes retained; retries/pages/parent-child totals reconcile. | #82 backend contract, #79 UI. Backline producer here; API portion via VSCode work order. |

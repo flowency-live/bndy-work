@@ -1,6 +1,6 @@
 # Backline V1 working tasklist and session handover
 
-Updated 28 September 2026. Accountable technical owner: current ChatGPT session, programme [#7](https://github.com/flowency-live/bndy-work/issues/7).
+Updated 29 September 2026. Accountable technical owner: current ChatGPT session, programme [#7](https://github.com/flowency-live/bndy-work/issues/7).
 
 ## Owner instructions, 26 September
 
@@ -26,15 +26,15 @@ Tie technical subtasks to an existing user outcome. If a task cannot explain tha
 
 ## Active user story and task
 
-**User story:** As the owner, I want Backline to remember a real correction so I do not repeat it.
+**User story:** As a curator, I want Backline to distinguish a shortened name from a different act, so I only answer genuine identity questions.
 
-**Task now:** The release is complete according to the AWSCLI handback. Make one genuine fact/identity correction through the normal hold UI, then inspect its retained current-human decision and reprocessing outcome. The owner should identify the act/hold and the fact entered. No bulk review or synthetic canonical fact is needed.
+**Task now:** Diagnose the owner's Originals and Undercovers holds. Read-only code/public-evidence review found an exact-name restriction and evidence that the suggested Sussex act is different from the booked Undercovers. No correction has been reported submitted.
 
-**Done when:** A post-cutoff correction is retained and used on reprocessing, or a specific unresolved conflict is explained. This is a live behavioural check, not another deployment task.
+**Done when:** The exact live investigation outcome explains the holds, and supported aliases can be used without conflating distinct acts.
 
-**Backline impact:** Demonstrates dependable human memory. Artist evidence investigation/reuse is also deployed, but no natural investigation was observed during smoke checks; its live quality remains unproven.
+**Backline impact:** Better identity reasoning and useful curator questions. An investigation-pending message is not proof of completed reasoning.
 
-**Owner decision:** Earlier hold instructions are disposable tests. The applied cutoff is **2026-09-28T16:23:54.000Z**. Later decisions are retained. Original Claims/canonical records were not deleted; no migration, hold reset or ignore-rule reset was required.
+**Owner decision unchanged:** Earlier hold instructions are disposable tests. Applied cutoff **2026-09-28T16:23:54.000Z**; later decisions retained. Human-memory demonstration remains open.
 
 ## Current state, 28 September
 
@@ -252,8 +252,29 @@ Accepted handback: [#80/5875912460](https://github.com/flowency-live/bndy-work/i
 
 ## Current stop and exact restart
 
+Current priority: trace the existing Undercovers / Knaphill WMC / 2026-11-28 investigation result and reprojection, then address a demonstrated general evidence/alias gap. See [29 September diagnosis](https://github.com/flowency-live/bndy-work/issues/7#issuecomment-5889170776). Do not instruct the owner to confirm Sussex Undercover Band: public evidence points to a separate Hartley Wintney act. Originals is a plausible alias, not independently booking-verified. No production read/replay order or code change issued at this checkpoint.
+
+Earlier memory-acceptance task remains pending:
+
 1. Ask the owner for **one** genuine fact/identity correction via the normal hold UI, with act/hold and fact entered. Do not ask again about disposable tests or request bulk hold processing.
 2. Use the resulting hold/action evidence to identify the current-human Claim/Observation, post-cutoff timing and reprojection outcome. Read retained receipts first. A new AWS evidence request, if needed, must name that exact case and remain bounded; no general audit or invented live success.
 3. Separately demonstrate Artist investigation with a naturally occurring or explicitly scoped real case: inspect actual booking-linked citations, canonical match or specific question, and result reuse. No observation during smoke is acceptable for release, but does not prove this behaviour.
 4. No new deployment is currently requested. Live implementation is fadcb8a; main 833ab84 only updates Status. Do not reopen migration, historic-manifest or compatibility audits without a concrete new failure.
 5. Other V1 work remains: API #37/#81/#82 contracts, whole-action recovery, field-clear semantics, complete accounting, profiles, daily freshness and seven-day acceptance. Continue owned unblocked implementation as appropriate; do not declare all V1 work complete from this handback.
+
+### 29 September — owner hold examples: diagnosis checkpoint
+
+**User story:** As a curator, I want Backline to distinguish a shortened artist name from a different act, so I only answer genuine identity questions.
+**Task now:** Read-only code/evidence review of The Originals (Marple Conservative Club, 2026-10-03) and Undercovers (Cove Ivy Leaf Club 2026-10-10; Knaphill WMC 2026-11-28; Odiham & Greywell Cricket Club 2026-12-18).
+**Done when:** Identify supported identity evidence and the actual reason investigation did not resolve each case.
+**Backline impact:** Evidence-based identity reasoning; avoid both unnecessary holds and incorrect merges.
+
+Findings:
+- Originals: owner identifies The Originals Sixties Band as the local existing act. Plausible shortened-name case; this session has not independently verified the exact booking/profile link.
+- Undercovers: do NOT treat Sussex Undercover Band as a confirmed match. Official https://www.undercovers.me.uk/ describes a Hartley Wintney act established 2007, working Hampshire/Surrey/Berkshire. Its band description matches the retrieved Lemonrock Cove listing. https://undercoverband.live/ describes a different four-piece formed 2018, with different members; its gig list is Sussex-based. Strong evidence of separate acts, but exact held dates/current canonical profiles still need linking. Official booking source: https://www.undercovers.band/index.php/home/gigs/ .
+- Code at live fadcb8a / main 833ab84: src/enrichment/artist-investigation.ts rejects artist and booking names unless they exactly equal the incoming normalized name. This can discard official full-name evidence for a shortened listing. It is a general limitation, NOT yet proven to be the executed cause of these holds.
+- Knaphill wording comes from the investigation-pending path. It shows an investigation was requested, not that it completed or remains active. Other two retain generic canonical-review text; deployment does not itself replay old holds.
+- Resolver only accepts initial canonical candidates. A discovery identifying a different band cannot silently select/create it. Preserve this safety boundary while making the evidence and next decision useful.
+- No owner correction has been reported submitted; current-human memory demonstration remains pending.
+
+Next: obtain the existing Knaphill investigation result/reprojection receipt for this exact booking, then address any evidenced general alias/evidence gap. Do not merge these acts on name/region, add artist-specific exceptions, replay all holds or expand crawls. No AWS calls, code changes, test rerun, canonical writes or deployment this session. Main remains clean at 833ab8455896ea1b014e9dcbf3f864422c9ba213.

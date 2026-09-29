@@ -28,7 +28,7 @@ Tie technical subtasks to an existing user outcome. If a task cannot explain tha
 
 **User story:** As a curator, I want Backline to interpret the listing alongside bndy's established identities, gig history and human decisions, so I only answer genuine unresolved questions.
 
-**Task now:** API handback a2fb8ef reviewed and returned for specific corrections in [#81/5899010360](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5899010360). Enrichment 9e6bbef remains committed/tested but undeployed. Contextual AI reasoning in enrichment remains outstanding and is NOT blocked wholesale on API work.
+**Task now:** API revision **615138ca999190cf22d3c2bf7a68a0f3731f3611** reviewed. Guard-order/read-error repairs accepted; remaining finite evidence corrections are in [#81/5899575531](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5899575531). Enrichment 9e6bbef remains committed/tested but undeployed. Contextual AI reasoning in enrichment remains outstanding and is NOT blocked wholesale on API work.
 
 **Done when:** A connected-evidence decision demonstrates a supported existing match, a justified different-act conclusion or a precise remaining question; safe application and live verification remain separate gates.
 
@@ -256,12 +256,12 @@ Accepted handback: [#80/5875912460](https://github.com/flowency-live/bndy-work/i
 
 ## Current stop and exact restart
 
-1. API agent continues [the precise #81 correction request](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5899010360), coordinated with #87. Do not repeat the original handback as completion. The same name filter still precedes history; its long-name test permits old containment to pass; unique history can return before the failed-read guard; venue failures/partial samples are not fully represented.
-2. #87 owns the reported 26 write-suite failures. Establish intended auth behaviour and fix the integration; no skipping tests or weakening membership checks. No deployment is cleared.
-3. ChatGPT-owned next implementation: inspect/reuse the existing structured reasoner for bounded interpretation of assembled canonical/source/human evidence. Keep a cited proposal, contradictions and explicit unresolved questions; validate authority/application separately. Do not build a second string-scoring matcher or another mandatory official-profile gate. This is outstanding work, not a claim it is running or implemented.
-4. Enrichment main/local remain clean at 9e6bbefa8b2fe3d2c8930d29abefba93f069c387; prior required check passed. API reviewed master a2fb8ef6dd2ea5d7156b15e38683d1b3778ecd9d; reported 146 resolution passes were not rerun here.
-5. Before deployment, review exact integrated changes and issue managed release through #80. Live remains reported fadcb8a. No migration, reset, historical-manifest search, broad audit or bulk replay.
-6. Keep the user's original decision outcome visible. Neither the API safeguards nor enrichment 9e6bbef yet demonstrate contextual identity intelligence. No owner band adjudication is required to fix the implementation.
+1. API agent addresses only the remaining [615138c review](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5899575531): remove the unintended same-venue prerequisite; propagate partial history/Event evidence into decisions; preserve plausible candidates instead of returning likely-new with an empty list. Guard ordering and read-error propagation are accepted. Do not restart them or add more name-specific scoring.
+2. Technical owner correction: the previous history-removal test request was too broad. Evidence contribution must be demonstrated without manufacturing a policy that every act must already have played each venue.
+3. Return exact scope/command/exit result behind the reported 509 passes, including the former write/auth failures. No new broad audit or test programme. Deployment is not cleared.
+4. ChatGPT owns bounded contextual AI interpretation over canonical/source/human evidence in enrichment. Inspect/reuse the existing structured reasoner; retain cited proposals and contradictions, validate authority/application separately. The API support work does not block all owned reasoning work and is not intelligence completion.
+5. Enrichment remains 9e6bbefa8b2fe3d2c8930d29abefba93f069c387, tested but undeployed. API reviewed 615138c, not claimed live. Reported live enrichment remains fadcb8a. No migration/reset/bulk replay.
+6. User outcome: supported existing act, justified different act, or a precise unresolved question based on connected evidence. Neither passing safeguards nor safer holds establishes this.
 
 ### 29 September — owner hold examples: diagnosis checkpoint
 
@@ -304,3 +304,7 @@ Next: obtain the existing Knaphill investigation result/reprojection receipt for
 - Core candidate filter remains before history. New long-name assertion accepts containment, so it does not establish history participation. Unique venue-history can return before completeness guard; inner Venue read failure remains swallowed; history pagination remains unlabelled.
 - [Specific correction #81/5899010360](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5899010360), [auth integration #87/5899012507](https://github.com/flowency-live/bndy-work/issues/87#issuecomment-5899012507). Revise existing proof cases rather than adding a large test programme. Reported 26 write failures are not independently reproduced or dismissed as unrelated.
 - Owner's constitutional correction recorded above: real decision improvement is the acceptance unit; contextual AI reasoning remains ChatGPT-owned enrichment work, not blocked wholesale on API. No new runtime edits, test rerun, AWS calls, deployment or live identity adjudication this review.
+
+### 29 September late evening: 615138c review
+
+Accepted: Backline guard now precedes venue-history decisions; Venue read exceptions mark incomplete; descriptor containment joins the history cohort; tests assert Event reads. Remaining: the new same-venue restriction is an unintended policy; partial is assigned but discarded before scoring/response; a later read-only branch can erase known containment candidates as likely-new. [Finite follow-up #81/5899575531](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5899575531). Prior counterfactual-test instruction corrected by technical owner. 509 passes reported, command/suite scope and resolution of prior auth failures not yet supplied. No code changes, test rerun, AWS calls or deployment in this review; contextual AI remains owned enrichment work.

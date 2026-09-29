@@ -26,15 +26,17 @@ Tie technical subtasks to an existing user outcome. If a task cannot explain tha
 
 ## Active user story and task
 
-**User story:** As a curator, I want Backline to distinguish a shortened name from a different act, so I only answer genuine identity questions.
+**User story:** As a curator, I want Backline to recognise an existing act from bndy's established gig history without requiring a website.
 
-**Task now:** Diagnose the owner's Originals and Undercovers holds. Read-only code/public-evidence review found an exact-name restriction and evidence that the suggested Sussex act is different from the booked Undercovers. No correction has been reported submitted.
+**Task now:** Enrichment portion committed and checked at **9e6bbefa8b2fe3d2c8930d29abefba93f069c387**. The primary resolver correction is in the API repository and has an executable [VSCode work order #81/5889481419](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5889481419), coordinated with #87. No API worker is assumed active.
 
-**Done when:** The exact live investigation outcome explains the holds, and supported aliases can be used without conflating distinct acts.
+**Done when:** The API considers history before excluding plausible full/short names, explains supported matches/contradictions, and the integrated release demonstrates that behaviour on named holds.
 
-**Backline impact:** Better identity reasoning and useful curator questions. An investigation-pending message is not proof of completed reasoning.
+**Backline impact:** Uses accumulated bndy knowledge in identity decisions. This enrichment patch alone does not complete history-based matching; it preserves useful evidence, accepts supported names in the external fallback and removes the website-demand question.
 
-**Owner decision unchanged:** Earlier hold instructions are disposable tests. Applied cutoff **2026-09-28T16:23:54.000Z**; later decisions retained. Human-memory demonstration remains open.
+**Owner correction, 29 September:** Canonical gig history is admissible identity evidence. Public web searches did not adjudicate Undercovers and must not displace existing bndy knowledge by default. No owner correction has yet been reported submitted; the separate current-human memory demonstration remains open.
+
+**Memory decision unchanged:** Earlier holds are disposable tests. Applied cutoff **2026-09-28T16:23:54.000Z**; later decisions retained. No migration.
 
 ## Current state, 28 September
 
@@ -44,7 +46,7 @@ Version-2 owner-test-reset initialized in four calls. Ten verification reads rep
 
 Examined baselines: three empty Lemonrock root feeds; lemonrock-gig-hydration run-b71207a9, one single-act event; LBP run-6f5b37a7, one single-act event. No expansion metadata in those examined artifacts. This is not a full historical-import inventory. No additional audit follows from release acceptance.
 
-Accepted handback: [#80/5875912460](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5875912460). Enrichment main is now documentation-only **833ab8455896ea1b014e9dcbf3f864422c9ba213** over the live implementation pin; no redeploy is required for that Status update. This session has not independently queried AWS.
+Accepted handback: [#80/5875912460](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5875912460). Enrichment main subsequently advanced to **9e6bbefa8b2fe3d2c8930d29abefba93f069c387**, an undeployed behavioural change. The live pin remains fadcb8a; see the current API dependency above. This session has not independently queried AWS.
 
 ## Start/resume here
 
@@ -67,7 +69,7 @@ Accepted handback: [#80/5875912460](https://github.com/flowency-live/bndy-work/i
 
 | ID | State | Work and acceptance | Dependency / evidence |
 | --- | --- | --- | --- |
-| V1-01 | Deployed at fadcb8a; live correction/investigation demonstration pending | Canonical lookup correctness: conflict-aware identity; rename/delete invalidation; bounded retry of incomplete writes; human corrections precede cached matches. Positive and negative regression cases must prove the decision. | Backline-owned. Inspect current code before design; preserve canonical API resolution where context cannot decide. |
+| V1-01 | fadcb8a live; 9e6bbef enrichment correction ready; API history correction #81 pending | Canonical lookup correctness: conflict-aware identity; rename/delete invalidation; bounded retry of incomplete writes; human corrections precede cached matches. Positive and negative regression cases must prove the decision. | Backline-owned. Inspect current code before design; preserve canonical API resolution where context cannot decide. |
 | V1-02 | Partial: bill containment and attribution implemented | Billing and title interpretation: one decision per bill; preserve real composite acts and evidenced lineups; no invented fragment acts; stamp source on creation. | Existing billing containment policy; any model activation remains separately bounded/approved. |
 | V1-03 | Partial: trace/owner guard; API contract pending | Existing event identity across import keys; explicit traced lookup before creation; preserve distinct performances and bill relationships. | Reuse existing API deduplication, do not duplicate it. API gaps become work orders. |
 | V1-04 | Partial: producer attribution/retry repair; API work order issued | P3 accounting: complete entity inventory; existing/new/unknown separate from canonical effects; partial successes retained; retries/pages/parent-child totals reconcile. | #82 backend contract, #79 UI. Backline producer here; API portion via VSCode work order. |
@@ -252,15 +254,12 @@ Accepted handback: [#80/5875912460](https://github.com/flowency-live/bndy-work/i
 
 ## Current stop and exact restart
 
-Current priority: trace the existing Undercovers / Knaphill WMC / 2026-11-28 investigation result and reprojection, then address a demonstrated general evidence/alias gap. See [29 September diagnosis](https://github.com/flowency-live/bndy-work/issues/7#issuecomment-5889170776). Do not instruct the owner to confirm Sussex Undercover Band: public evidence points to a separate Hartley Wintney act. Originals is a plausible alias, not independently booking-verified. No production read/replay order or code change issued at this checkpoint.
-
-Earlier memory-acceptance task remains pending:
-
-1. Ask the owner for **one** genuine fact/identity correction via the normal hold UI, with act/hold and fact entered. Do not ask again about disposable tests or request bulk hold processing.
-2. Use the resulting hold/action evidence to identify the current-human Claim/Observation, post-cutoff timing and reprojection outcome. Read retained receipts first. A new AWS evidence request, if needed, must name that exact case and remain bounded; no general audit or invented live success.
-3. Separately demonstrate Artist investigation with a naturally occurring or explicitly scoped real case: inspect actual booking-linked citations, canonical match or specific question, and result reuse. No observation during smoke is acceptable for release, but does not prove this behaviour.
-4. No new deployment is currently requested. Live implementation is fadcb8a; main 833ab84 only updates Status. Do not reopen migration, historic-manifest or compatibility audits without a concrete new failure.
-5. Other V1 work remains: API #37/#81/#82 contracts, whole-action recovery, field-clear semantics, complete accounting, profiles, daily freshness and seven-day acceptance. Continue owned unblocked implementation as appropriate; do not declare all V1 work complete from this handback.
+1. **Activate the owner's VSCode API implementation agent on [#81/5889481419](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5889481419).** Coordinate files with #87 and use current master. This is the actual implementation dependency, not an owner decision about the band and not an AWS audit.
+2. Review its code/test handback. Preserve the existing canonical resolver; no second matcher or name rewrite in enrichment. Ask for existing bndy history/provenance on the named cases, without broad scans.
+3. Enrichment main/local checkout are clean at 9e6bbefa8b2fe3d2c8930d29abefba93f069c387. Required check passed; no need to rerun unless changed. Implementation details in [#7/5889585025](https://github.com/flowency-live/bndy-work/issues/7#issuecomment-5889585025).
+4. Issue exact managed release order through #80 once the API delta is reviewed. [Dependency handoff #80/5889587941](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5889587941) is not permission to deploy an unreviewed API pin or replay holds. No AWS worker is assumed active.
+5. Current live remains reported fadcb8a. No migration, test reset, historic-manifest search or new compatibility audit. Named-case investigation/canonical receipts are still needed before claiming live intelligence quality.
+6. Current-human correction demonstration and other V1 API/accounting/profile/freshness/acceptance work remain open. No further owner hold processing is needed to implement this fix.
 
 ### 29 September — owner hold examples: diagnosis checkpoint
 
@@ -278,3 +277,21 @@ Findings:
 - No owner correction has been reported submitted; current-human memory demonstration remains pending.
 
 Next: obtain the existing Knaphill investigation result/reprojection receipt for this exact booking, then address any evidenced general alias/evidence gap. Do not merge these acts on name/region, add artist-specific exceptions, replay all holds or expand crawls. No AWS calls, code changes, test rerun, canonical writes or deployment this session. Main remains clean at 833ab8455896ea1b014e9dcbf3f864422c9ba213.
+
+### 29 September — canonical history correction implemented in enrichment; API dependency issued
+
+**User story:** As a curator, I want Backline to recognise an existing act using established bndy gig history without needing a website.
+**Task now:** Enrichment portion committed on main at 9e6bbefa8b2fe3d2c8930d29abefba93f069c387; API resolver correction assigned to the owner's VSCode agent.
+**Done when:** The API uses that history for plausible full/short names and returns an explained match or remaining contradiction; combined release and named-case evidence then demonstrate it.
+**Backline impact:** Canonical knowledge participates in identity. External-profile evidence remains a fallback, not the only admissible evidence.
+
+- Ten files, one main checkout; exact local/remote tree b4aa9f355b235d77a2b72cf20700f57c51e164ee matched, local clean. No branches, PRs or worktrees.
+- HTTP reader preserves canonical Event IDs and venue names/localities. Investigation carries up to eight referenced gigs across venues, plus existing exact-venue dates, and records partial coverage/Event IDs in its trace.
+- Supported full canonical names/recorded aliases can pass external-profile assessment when linked through a unique already-known cited profile. Text resemblance alone and conflicting/shared profiles do not establish the alias. Assessment v2 is fingerprinted; outstanding v1 jobs keep their original policy and ID. Existing caps/reservation/reuse remain.
+- Removed the curator-facing demand for an official profile. Constitution and investigation docs now state canonical history is positive identity evidence and a website is not required.
+- Main cause needs API code: similarity filtering precedes footprint assessment; later containment candidates can miss history, and footprint read errors silently become empty evidence. API source reviewed at 907330bf861ab59de083f620dafbc18927168066, not claimed live.
+- Exact executable implementation order: [#81/5889481419](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5889481419); refactor coordination [#87/5889564970](https://github.com/flowency-live/bndy-work/issues/87#issuecomment-5889564970). No API file edited here. Do not add a second enrichment matcher or force full-name substitutions into the resolver.
+- Three read-only BNDY searches confirmed Originals 0574ef35-82c5-40a9-98f3-22b7628a8698 and Sussex Undercover Band a25b2473-1190-4132-a94b-6c5cd1390377. Exact Undercovers search returned no matches, which is not identity disproof. Tools do not expose history; actual held identities/pending Knaphill result remain unverified. Earlier public-web comparison did not supersede bndy's own evidence.
+- Focused three-file checks passed. Required npm run check exited 0: build, 198 Vitest files, 2615 passed /5 skipped, 56 recovery passed. Four new focused regressions; existing projection/HTTP tests extended. No paid CI or live model discovery; no direct AWS calls.
+- Enrichment alone does NOT deliver history-based matching. Stop on the API implementation boundary, not on owner hold review. Activate the API agent with the linked work order; after handback technical owner reviews exact integrated pins and issues #80 managed release/limited named-case checks. No new audit, migration, bulk replay or deployment has been ordered.
+

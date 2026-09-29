@@ -58,6 +58,27 @@ Keep updates succinct: implemented / verified / deployed / demonstrated, actual 
 
 **Memory unchanged:** Applied disposable-test cutoff 2026-09-28T16:23:54.000Z; later human decisions retained. No migration.
 
+## Owner priority, 29 September: source health and daily delivery
+
+**User story:** As the owner, I want to see which sources operate reliably and how many gigs they add, update and cancel each day, so I can leave Backline running and spot problems.
+
+**Task now:** Prioritise the existing #82 accounting and #79 source overview while the contextual reasoning trial awaits its executor. Do not wait for every source to be enabled and do not activate parked/manual sources for the dashboard.
+
+**Done when:** One family/source view shows effective mode, last attempt/success/next due, first observed run, successful scheduled days versus expected days, current blocker, and daily confirmed Added/Updated/Cancelled gigs with matching records and coverage. Use Europe/London operation dates, not gig dates. Unknown history is not zero or an assumed success streak.
+
+**Backline impact:** Operational visibility and evidence of canonical delivery; supporting work, not a substitute for the intelligence task above.
+
+Ready assignments:
+- [#82 API/accounting](https://github.com/flowency-live/bndy-work/issues/82#issuecomment-5900303684): finish bounded complete-window accounting and stable pagination, separate creations/updates/cancellations, correct sampled verified totals and last-publication semantics. VSCode API agent owns implementation under #87; enrichment owns any demonstrated producer dependency.
+- [#79 UI](https://github.com/flowency-live/bndy-work/issues/79#issuecomment-5900314166): compact source table and 7/14/30-day delivery view using the existing pages; hourly/manual refresh and lazy drill-down. Claude/Ops implementation lane.
+- [#80 read-only snapshot](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5900315655): once, after already-started trial work; effective catalog/CONFIG/STATE and preceding seven London days plus today of bounded retained run evidence. Maximum 24 read attempts / 8 MiB / 10 minutes. No table/log scan, fresh billing audit, provider call, activation, replay or deployment. Return partial at the bound.
+
+Source/code review, not fresh AWS evidence: API backline.js blob 4c3e46a still samples eight projection observations, combines creates/updates in intoBndyByDay, and can call a match-only summary publication. Ops main c30661f retains a six-run embedded sample and an acquisition-row pattern view. Existing acquisition DAY counters can be inflated by repeated report writes; they are not canonical delivery totals. Reuse existing run/operation records, summaries, tables/indexes and cache; no new metrics service/resource, per-gig CloudWatch metric, background job or provider spend is authorised.
+
+Last quantified retained delivery report: 24 hours ending 26 September 12:41 London, Lemonrock 1,019 Events, Scenic Eye 13, Fizgig 10, Gigs News 1. These are dated reported canonical creations, not current daily totals or run-streak proof. LBP has a 28 September retained run in the deployment receipt, without a qualified daily creation total. KLMA/OnTheCase/Insangel current natural-cycle health remains unverified from this review. BandForge unknown-origin restrictions remain; Music Live is deliberately parked; Fantastic All Library is manual-assisted. Current counts/cancellation coverage need the bounded snapshot and completed reporting contract.
+
+No runtime/UI/API change was made by this prioritisation. Assignments are ready, not running in the background. Keep the contextual reasoning trial and current human memory scope unchanged.
+
 ## Current state, 28 September
 
 **Reported live implementation: fadcb8ae525afe8d040a2ac90841f5c7cc520dc8.** BndyEnrichmentStack UPDATE_COMPLETE at **18:05:13Z**, eleven code-only Lambda updates. The corrected Stage A predecessor time is **13:10:01Z**, superseding the earlier 14:11:11Z report.
@@ -92,7 +113,7 @@ Accepted handback: [#80/5875912460](https://github.com/flowency-live/bndy-work/i
 | V1-01 | fadcb8a live; 6632b28 contextual proposals implemented/off; real-model qualification #80 next | Canonical lookup correctness: conflict-aware identity; rename/delete invalidation; bounded retry of incomplete writes; human corrections precede cached matches. Positive and negative regression cases must prove the decision. | Backline-owned. Inspect current code before design; preserve canonical API resolution where context cannot decide. |
 | V1-02 | Partial: bill containment and attribution implemented | Billing and title interpretation: one decision per bill; preserve real composite acts and evidenced lineups; no invented fragment acts; stamp source on creation. | Existing billing containment policy; any model activation remains separately bounded/approved. |
 | V1-03 | Partial: trace/owner guard; API contract pending | Existing event identity across import keys; explicit traced lookup before creation; preserve distinct performances and bill relationships. | Reuse existing API deduplication, do not duplicate it. API gaps become work orders. |
-| V1-04 | Partial: producer attribution/retry repair; API work order issued | P3 accounting: complete entity inventory; existing/new/unknown separate from canonical effects; partial successes retained; retries/pages/parent-child totals reconcile. | #82 backend contract, #79 UI. Backline producer here; API portion via VSCode work order. |
+| V1-04 | Priority: source health/daily delivery contract; API and UI assignments ready; bounded live snapshot requested | P3 accounting: complete entity inventory; existing/new/unknown separate from canonical effects; partial successes retained; retries/pages/parent-child totals reconcile. | #82 backend contract, #79 UI. Backline producer here; API portion via VSCode work order. |
 | V1-05 | API work orders issued; implementation pending | Curator V1: authorised immediate canonical edits, durable actor/scope/provenance, feedback convergence, stable human memory, delete/ownership protection. | [#37 API work order](https://github.com/flowency-live/bndy-work/issues/37#issuecomment-5846352119), coordinated with #87. No API worker is assumed active. |
 | V1-06 | Pending | Profile facts and governed application: close historical/current feedback gaps; reuse PR111; claimed Artist exclusion, Venue links only. | #81/API work order. Optional profiles never block valid gigs. |
 | V1-07 | Pending | Lemonrock supported discovery/change/cancellation scope and <=24h freshness with measured budget and bounded recovery. | #59; weekly known-ID refresh is not daily coverage. No new live crawl allowance implied. |

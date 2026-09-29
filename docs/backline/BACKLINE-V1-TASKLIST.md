@@ -26,19 +26,33 @@ Tie technical subtasks to an existing user outcome. If a task cannot explain tha
 
 ## Active user story and task
 
-**User story:** As a curator, I want Backline to interpret the listing alongside bndy's established identities, gig history and human decisions, so I only answer genuine unresolved questions.
+**User story:** As a curator, I want Backline to interpret ambiguous listings using the evidence bndy has accumulated, so I only answer questions that evidence cannot settle.
 
-**Task now:** API revision **615138ca999190cf22d3c2bf7a68a0f3731f3611** reviewed. Guard-order/read-error repairs accepted; remaining finite evidence corrections are in [#81/5899575531](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5899575531). Enrichment 9e6bbef remains committed/tested but undeployed. Contextual AI reasoning in enrichment remains outstanding and is NOT blocked wholesale on API work.
+**Task now:** Implement one bounded contextual Artist reasoning step in bndy-enrichment using the existing provider/worker/evidence infrastructure. This implementation is outstanding, not running in the background. API support work must not become the whole programme.
 
-**Done when:** A connected-evidence decision demonstrates a supported existing match, a justified different-act conclusion or a precise remaining question; safe application and live verification remain separate gates.
+**Done when:** The actual reasoning path assembles available canonical candidates, gig/venue history, native identities, source provenance and current human decisions; produces an evidence-referenced existing-act/different-act/unresolved proposal; validates authority, IDs and contradictions before any application; retains the result for reuse. Demonstrate a supported alias, a genuine competing act and insufficient/conflicting evidence. Distinguish real provider output from mocked/offline tests and deployed behaviour.
 
-**Backline impact:** Canonical knowledge must influence the reasoning outcome. Passing safety tests, preserving richer context or finding official profiles alone does not complete the intelligence story.
+**Backline impact:** Connected evidence influences an explained decision. Website discovery, test counts and safe holds alone are not acceptance.
 
-**Execution rule, owner correction 29 September:** Before coding/delegating, state the identity decision, evidence available/missing, chosen reasoning method and observable decision improvement. Exact IDs/human instructions may be deterministic; ambiguous context may require bounded AI interpretation. Supporting infrastructure/guards stay subordinate. Do not declare completion from tests, deployments or safer holds.
+**Immediate implementation sequence:** Inspect/reuse existing structured reasoner and projection/worker hooks; assemble one bounded evidence context; produce a structured proposal and validate it; persist/reuse evidence and result; evaluate the three contrasting cases. Missing live evidence remains explicit. Request only demonstrated API dependencies; do not invent the held bands' histories.
 
-**Ownership:** ChatGPT implements contextual reasoning in bndy-enrichment; the owner's VSCode API agent owns reliable canonical reads/ordinary resolution and safe writes under #87. Do not send contextual AI reasoning to the API lane or wait for that lane before inspecting/implementing owned enrichment reasoning.
+## Mandatory delivery and delegation check
 
-**Memory decision unchanged:** Earlier holds are disposable tests. Applied cutoff **2026-09-28T16:23:54.000Z**; later decisions retained. No migration; a real post-cutoff correction demonstration remains open.
+Use this short check inside the existing task/work order, not another document or owner approval process:
+
+1. What user-visible decision/capability improves?
+2. What evidence is available, missing, discarded or not used?
+3. What belongs in deterministic authority/identifier/write checks, and what needs contextual interpretation?
+4. What observable before/after outcome will prove the improvement, including a contrasting case that must not be wrongly accepted?
+5. Does each supporting repair remove a demonstrated blocker to that outcome? If not, defer it.
+
+Apply before selecting work, before delegating, and when reviewing the handback. If a worker returns only guards/tests, accept those as support only and keep the outcome open. Do not add new speculative acceptance requirements on each review. Explain a genuine newly discovered blocker and keep its fix bounded. Continue other owned, unblocked outcome work.
+
+Keep updates succinct: implemented / verified / deployed / demonstrated, actual blocker and exact next action. No background-work claims. Owner should not have to detect architectural drift. This check supersedes earlier workflow wording that treated the API fix as blocking all enrichment reasoning.
+
+**API scope:** [#81/5899743194](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5899743194) limits work to reliable bounded evidence, retaining candidates and safe canonical application. Preserve accepted fixes/refactoring; do not expand the name/venue rule set. No deployment authorised.
+
+**Memory unchanged:** Applied disposable-test cutoff 2026-09-28T16:23:54.000Z; later human decisions retained. No migration.
 
 ## Current state, 28 September
 
@@ -256,12 +270,12 @@ Accepted handback: [#80/5875912460](https://github.com/flowency-live/bndy-work/i
 
 ## Current stop and exact restart
 
-1. API agent addresses only the remaining [615138c review](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5899575531): remove the unintended same-venue prerequisite; propagate partial history/Event evidence into decisions; preserve plausible candidates instead of returning likely-new with an empty list. Guard ordering and read-error propagation are accepted. Do not restart them or add more name-specific scoring.
-2. Technical owner correction: the previous history-removal test request was too broad. Evidence contribution must be demonstrated without manufacturing a policy that every act must already have played each venue.
-3. Return exact scope/command/exit result behind the reported 509 passes, including the former write/auth failures. No new broad audit or test programme. Deployment is not cleared.
-4. ChatGPT owns bounded contextual AI interpretation over canonical/source/human evidence in enrichment. Inspect/reuse the existing structured reasoner; retain cited proposals and contradictions, validate authority/application separately. The API support work does not block all owned reasoning work and is not intelligence completion.
-5. Enrichment remains 9e6bbefa8b2fe3d2c8930d29abefba93f069c387, tested but undeployed. API reviewed 615138c, not claimed live. Reported live enrichment remains fadcb8a. No migration/reset/bulk replay.
-6. User outcome: supported existing act, justified different act, or a precise unresolved question based on connected evidence. Neither passing safeguards nor safer holds establishes this.
+1. Next owned implementation is the contextual Artist reasoning step above, on enrichment main in the existing checkout. Read current main/AGENTS and inspect the existing structured reasoner before introducing any new component. Claim precise files on #7 before edits.
+2. Use the three decision outcomes as acceptance, not another round of identity-rule fixes. Maintain evidence provenance and contradictory/human authority. Model confidence alone is insufficient.
+3. API agent follows the superseding [evidence/application support scope](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5899743194); #87 owns auth integration. Enrichment reasoning is not blocked wholesale on that lane.
+4. Last verified enrichment main 9e6bbefa8b2fe3d2c8930d29abefba93f069c387, tested but undeployed. Last reviewed API 615138c; no deployment receipt. Reported live enrichment fadcb8a. Refresh pins before edits.
+5. No new deployment, model-spend expansion, migration, reset, broad audit or bulk replay. Live provider qualification/application must use the existing authorised controls and a concrete bounded #80 order where needed.
+6. This checkpoint records the corrected working method only. Contextual reasoning has not yet been implemented or demonstrated; do not count this documentation as product progress.
 
 ### 29 September — owner hold examples: diagnosis checkpoint
 

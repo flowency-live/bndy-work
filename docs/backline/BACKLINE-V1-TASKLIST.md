@@ -1,6 +1,6 @@
 # Backline V1 working tasklist and session handover
 
-Updated 29 September 2026. Accountable technical owner: current ChatGPT session, programme [#7](https://github.com/flowency-live/bndy-work/issues/7).
+Updated 30 September 2026. Accountable technical owner: current ChatGPT session, programme [#7](https://github.com/flowency-live/bndy-work/issues/7).
 
 ## Owner instructions, 26 September
 
@@ -24,11 +24,35 @@ Use clean, succinct language, normally four short lines. At completion or a bloc
 
 Tie technical subtasks to an existing user outcome. If a task cannot explain that connection, reconsider its scope before expanding it. Tests, code volume, audits and deployments are evidence or means, not the product outcome. This communication rule creates no new approval gate or document workflow.
 
+## 30 September handbacks: qualification failed; source errors need exact causes
+
+**User story:** As the owner, I want Backline to keep importing gigs and explain uncertain Artist matches reliably.
+**Task now:** Narrow diagnostic continuation in [#80/5910009404](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5910009404), using retained local execution evidence and existing failed source reports. No further model call or deployment yet.
+**Done when:** The precise failing stage/error is available for an evidenced CTO fix and controlled retry. Generic blocker categories are not root causes.
+**Backline impact:** Restores source delivery and enables evaluation of actual intelligence proposals.
+
+Owner-reported qualification on worker 6632b28 executed two jobs, Originals and Undercovers. Both retained unresolved/unavailable results, with no proposal; the contrasting case was not tested. The catch currently discards the original error, so configuration/secret retrieval, prompt/cost preflight, HTTP, output parsing and missing usage can all appear as identity-reasoning-unavailable. This is an enrichment-owned diagnostic omission. Reported $0 cost and two provider calls remain unverified without failure-stage/usage evidence. Actual model quality remains unqualified.
+
+Job identities retained in #80. Re-running the same jobs reuses their unavailable results. Do not delete reservations/results, modify factual context to evade caching, or consume the remaining third provider slot blindly. Request exact input/invocation and any retained original exception first; offline prompt-size/configuration inspection needs no model call. No raw error/secret material in public issues.
+
+Owner's source snapshot as of 30 September 11:00 London:
+- Recent successful acquisition: Gigs News, Lemonrock gig hydration, LBP, OnTheCase, Scenic Eye and Rigger. Successful runs are not confirmed daily publication totals or complete scheduled-cycle coverage.
+- Recent failure cluster: KLMA/Fizgig/Eleven/Sugarmill/Hairy Dog last succeeded around28 September. A common deployment/runtime cause is a hypothesis pending actual error signatures.
+- Prolonged failures: Lemonrock Artist/Venue hydration, last success18 September, reported145/157 failures. Diagnose independently of the recent cluster.
+- Lemonrock new-gigs/cancellations roots report recent successful shadow acquisition. Shadow root acquisition with live detail children must not be called a publication outage merely from mode.
+- Future reconciliation is stale since22 September, even though idle/shadow. Need effective schedule/checkpoint evidence, not a blanket enablement.
+- Insangel's active flag with missing last-run/success timestamps is unverified activity, not proof a run is in progress.
+- Music Live parked; BandForge origin-restricted/disabled; Fantastic All Library manual-assisted. Historical failures remain separate from expected policy mode.
+
+The supplied23–30 September run-day table records successful activity on eight dates for several sources. Today is incomplete; the summary does not prove every expected hourly/daily run succeeded or establish uninterrupted uptime. New/update/cancellation counts remain unqualified.
+
+Source diagnostic follow-up uses at most8 further keyed/report reads,2 MiB,3 minutes, cumulative maximum18 of the original24 source reads. Reuse the already-collected CONFIG/STATE and report pointers. No scan, broad log search, crawl, provider call, restart, mutation, config change or deployment. #82/#79 telemetry remains prioritised. External worker is not assumed running; this session made no AWS/provider calls or application edits during this review.
+
 ## Active user story and task
 
 **User story:** As a curator, I want Backline to interpret ambiguous listings using the evidence bndy has accumulated, so I only answer questions that evidence cannot settle.
 
-**Task now:** Contextual reasoning is implemented on main at **6632b28eb0c8f581fd67769b681a878fa697675f**, proposal-only and default off. The next task is bounded real-model qualification using the reviewed worker locally, ordered in [#80/5900192251](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5900192251). No deployment or automatic matching activation is needed for that trial. No executor is assumed running.
+**Task now:** Contextual reasoning is implemented on main at **6632b28eb0c8f581fd67769b681a878fa697675f**, proposal-only and default off. The first two qualification jobs in [#80/5900192251](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5900192251) returned unavailable, with no model proposal. Next is exact failure diagnosis under the 30 September continuation above. No deployment or automatic matching activation is needed for that trial. No executor is assumed running.
 
 **Done when:** The actual reasoning path assembles available canonical candidates, gig/venue history, native identities, source provenance and current human decisions; produces an evidence-referenced existing-act/different-act/unresolved proposal; validates authority, IDs and contradictions before any application; retains the result for reuse. Demonstrate a supported alias, a genuine competing act and insufficient/conflicting evidence. Distinguish real provider output from mocked/offline tests and deployed behaviour.
 
@@ -110,7 +134,7 @@ Accepted handback: [#80/5875912460](https://github.com/flowency-live/bndy-work/i
 
 | ID | State | Work and acceptance | Dependency / evidence |
 | --- | --- | --- | --- |
-| V1-01 | fadcb8a live; 6632b28 contextual proposals implemented/off; real-model qualification #80 next | Canonical lookup correctness: conflict-aware identity; rename/delete invalidation; bounded retry of incomplete writes; human corrections precede cached matches. Positive and negative regression cases must prove the decision. | Backline-owned. Inspect current code before design; preserve canonical API resolution where context cannot decide. |
+| V1-01 | fadcb8a reported live; 6632b28 proposals off; two qualification attempts failed, exact error diagnosis #80 next | Canonical lookup correctness: conflict-aware identity; rename/delete invalidation; bounded retry of incomplete writes; human corrections precede cached matches. Positive and negative regression cases must prove the decision. | Backline-owned. Inspect current code before design; preserve canonical API resolution where context cannot decide. |
 | V1-02 | Partial: bill containment and attribution implemented | Billing and title interpretation: one decision per bill; preserve real composite acts and evidenced lineups; no invented fragment acts; stamp source on creation. | Existing billing containment policy; any model activation remains separately bounded/approved. |
 | V1-03 | Partial: trace/owner guard; API contract pending | Existing event identity across import keys; explicit traced lookup before creation; preserve distinct performances and bill relationships. | Reuse existing API deduplication, do not duplicate it. API gaps become work orders. |
 | V1-04 | Priority: source health/daily delivery contract; API and UI assignments ready; bounded live snapshot requested | P3 accounting: complete entity inventory; existing/new/unknown separate from canonical effects; partial successes retained; retries/pages/parent-child totals reconcile. | #82 backend contract, #79 UI. Backline producer here; API portion via VSCode work order. |

@@ -24,6 +24,21 @@ Use clean, succinct language, normally four short lines. At completion or a bloc
 
 Tie technical subtasks to an existing user outcome. If a task cannot explain that connection, reconsider its scope before expanding it. Tests, code volume, audits and deployments are evidence or means, not the product outcome. This communication rule creates no new approval gate or document workflow.
 
+## 30 September implementation checkpoint: failure diagnostics fixed
+
+**User story:** As the owner, I want the reasoning trial to return an explained proposal or a precise technical failure.
+**Task completed:** Enrichment main **fe6e63ca6d3994c065ca907990394d1232032d30** retains safe failure stage/code, prompt size/input allowance, HTTP attempt/response state, status and allowlisted provider status. Configuration/secret failures are separated before Gemini HTTP. Arbitrary exception/provider prose and credentials are omitted.
+**Verified:** Build and required full check exited0:199 Vitest files,2632 passed/5 skipped and56 recovery passes;40 focused checks passed. Tests prove raw Observation context reconstructs the actual worker prompt, including after unavailable results. No model, matching, budget, retry or infrastructure change. Not deployed and no real provider call made here.
+**Backline impact:** Diagnosable reasoning execution; this is supporting work, not completed model-quality qualification or restored source delivery.
+
+The handback's claim that ArtistInvestigation context was never retained conflicts with6632b28: the raw Observation JSON includes top-level context, reasoning and assessment. Follow the existing Claim/Observation evidenceKey; Claim.value alone is insufficient. [Exact retrieval correction](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5911478269) permits at most four keyed/object reads,2 MiB,three minutes, no retry. Reuse existing downloaded evidence first. Use the original pinned prompt to measure the original input. If the raw object does not match the reviewed writer, report that exact discrepancy.
+
+Next: AWSCLI executes that retained-input check and returns the missing original source report errors. [Diagnostic code receipt](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5911531793). Existing failed jobs remain cached and immutable; no new paid call, deletion, fabricated context/version or retry authorised. The original error was discarded and cannot be retroactively recovered by deploying this fix.
+
+Source handback still has no precise exceptions or Insangel terminal correlation. Do not convert suspected rate limiting/site changes/shared deployment into diagnoses. Do not clear Insangel activity fields merely from age; that would not establish restored ingestion. Future-reconcile shadow mode does not explain absent scheduled runs. Existing bounded #80 source error request remains open, with cumulative allowance and no general log audit or runtime mutation.
+
+Single main checkout clean, local/remote tree1f2c2e1c5cf1be8496c44d001c3eb835e39d5489 matched. No executor assumed active. The earlier30 September review below is retained as history.
+
 ## 30 September handbacks: qualification failed; source errors need exact causes
 
 **User story:** As the owner, I want Backline to keep importing gigs and explain uncertain Artist matches reliably.
@@ -52,7 +67,7 @@ Source diagnostic follow-up uses at most8 further keyed/report reads,2 MiB,3 min
 
 **User story:** As a curator, I want Backline to interpret ambiguous listings using the evidence bndy has accumulated, so I only answer questions that evidence cannot settle.
 
-**Task now:** Contextual reasoning is implemented on main at **6632b28eb0c8f581fd67769b681a878fa697675f**, proposal-only and default off. The first two qualification jobs in [#80/5900192251](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5900192251) returned unavailable, with no model proposal. Next is exact failure diagnosis under the 30 September continuation above. No deployment or automatic matching activation is needed for that trial. No executor is assumed running.
+**Task now:** Contextual reasoning and failure diagnostics are implemented on main at **fe6e63ca6d3994c065ca907990394d1232032d30**, proposal-only and default off. The first two qualification jobs in [#80/5900192251](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5900192251) returned unavailable, with no model proposal. Next is exact failure diagnosis under the 30 September continuation above. No deployment or automatic matching activation is needed for that trial. No executor is assumed running.
 
 **Done when:** The actual reasoning path assembles available canonical candidates, gig/venue history, native identities, source provenance and current human decisions; produces an evidence-referenced existing-act/different-act/unresolved proposal; validates authority, IDs and contradictions before any application; retains the result for reuse. Demonstrate a supported alias, a genuine competing act and insufficient/conflicting evidence. Distinguish real provider output from mocked/offline tests and deployed behaviour.
 
@@ -134,7 +149,7 @@ Accepted handback: [#80/5875912460](https://github.com/flowency-live/bndy-work/i
 
 | ID | State | Work and acceptance | Dependency / evidence |
 | --- | --- | --- | --- |
-| V1-01 | fadcb8a reported live; 6632b28 proposals off; two qualification attempts failed, exact error diagnosis #80 next | Canonical lookup correctness: conflict-aware identity; rename/delete invalidation; bounded retry of incomplete writes; human corrections precede cached matches. Positive and negative regression cases must prove the decision. | Backline-owned. Inspect current code before design; preserve canonical API resolution where context cannot decide. |
+| V1-01 | fadcb8a reported live; fe6e63c proposals off/diagnostics fixed; retained-input and source-error evidence #80 next | Canonical lookup correctness: conflict-aware identity; rename/delete invalidation; bounded retry of incomplete writes; human corrections precede cached matches. Positive and negative regression cases must prove the decision. | Backline-owned. Inspect current code before design; preserve canonical API resolution where context cannot decide. |
 | V1-02 | Partial: bill containment and attribution implemented | Billing and title interpretation: one decision per bill; preserve real composite acts and evidenced lineups; no invented fragment acts; stamp source on creation. | Existing billing containment policy; any model activation remains separately bounded/approved. |
 | V1-03 | Partial: trace/owner guard; API contract pending | Existing event identity across import keys; explicit traced lookup before creation; preserve distinct performances and bill relationships. | Reuse existing API deduplication, do not duplicate it. API gaps become work orders. |
 | V1-04 | Priority: source health/daily delivery contract; API and UI assignments ready; bounded live snapshot requested | P3 accounting: complete entity inventory; existing/new/unknown separate from canonical effects; partial successes retained; retries/pages/parent-child totals reconcile. | #82 backend contract, #79 UI. Backline producer here; API portion via VSCode work order. |

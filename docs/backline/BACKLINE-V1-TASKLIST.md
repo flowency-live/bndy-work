@@ -24,6 +24,23 @@ Use clean, succinct language, normally four short lines. At completion or a bloc
 
 Tie technical subtasks to an existing user outcome. If a task cannot explain that connection, reconsider its scope before expanding it. Tests, code volume, audits and deployments are evidence or means, not the product outcome. This communication rule creates no new approval gate or document workflow.
 
+## 30 September current task: execute the finite diagnostic
+
+**User story:** As the owner, I want Backline to explain Artist matches using bndy's evidence and keep importing gigs.
+**Task now:** AWSCLI execution of [one retained-input reasoning diagnostic and three exact source error windows](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5912305547). This supersedes the earlier wait for input recovery; it does not reopen broad qualification or source audits.
+**Done when:** One validated proposal or a safe precise failure diagnostic is retained, together with correlated source exceptions or explicitly bounded-search misses.
+**Backline impact:** Enables the actual AI/provider and ingestion repair. Reasoning quality and source recovery are not yet demonstrated.
+
+- Owner's corrected handback confirms both raw Observations retain context, reasoning and assessment. Prompt sizes are 6,858 bytes (Undercovers) and 2,916 (Originals); neither exceeds the 12,000 bound. The separate four-read correction allowance is fully consumed.
+- Size is ruled out for those reconstructed prompts. HTTP attempt remains unknown because configuration/secret setup can fail earlier. Original exceptions were discarded.
+- Reviewed main remains **fe6e63ca6d3994c065ca907990394d1232032d30**, clean, safe diagnostics implemented/tested but undeployed. Reported live remains fadcb8a.
+- #80 now explicitly permits one local direct reasonArtistIdentity diagnostic using unchanged retained Originals context and fixed operation ID **artist-identity-diagnostic-20260930-originals-01**. It uses the existing control store and same identity-provider daily budget partition. Only a new started reservation permits a call; existing/resumed/ambiguous operations never retry. The original cached Claims and investigation IDs remain intact.
+- This uses the remaining third model attempt under the original three-attempt envelope, unchanged $0.04 estimated per-job reservation and token/deadline limits. Provider cost remains unknown without actual usage evidence. A has a new explicit cap of six AWS attempts / 1 MiB / five minutes for config/secret/control operations, no automatic retries.
+- B has a separate new cap of six AWS reads / 2 MiB / five minutes: exact SourceWorker KLMA 11:54–11:56 UTC, exact BrowserSourceWorker Fizgig 13:10–13:12, exact SourceWorker Lemonrock Artist hydration 03:15–03:18, all30 September. Resolve at most one missing physical resource map; no wildcard/day-wide search. Retained exact failed-report objects may replace log reads within the same allowance.
+- Code review shows runner failures attempt to write a failed report. Absence is possible, not universal. Fizgig complete:true/itemCount616 proves capture only for that observation until correlated to the failed run.
+- No deployment, original-result deletion, canonical/Claim writes, projection, source activation, model substitution, migration or Insangel clear. Diagnostic control reservation/outcome are the only authorised writes. Do not imply successful local qualification proves the Lambda role.
+- Order is posted for the owner's AWSCLI worker; no executor assumed active. This session made no AWS/provider calls. Next technical-owner step is the evidenced fix, then remaining actual proposal-quality acceptance; telemetry work in #82/#79 remains open.
+
 ## 30 September implementation checkpoint: failure diagnostics fixed
 
 **User story:** As the owner, I want the reasoning trial to return an explained proposal or a precise technical failure.
@@ -33,7 +50,7 @@ Tie technical subtasks to an existing user outcome. If a task cannot explain tha
 
 The handback's claim that ArtistInvestigation context was never retained conflicts with6632b28: the raw Observation JSON includes top-level context, reasoning and assessment. Follow the existing Claim/Observation evidenceKey; Claim.value alone is insufficient. [Exact retrieval correction](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5911478269) permits at most four keyed/object reads,2 MiB,three minutes, no retry. Reuse existing downloaded evidence first. Use the original pinned prompt to measure the original input. If the raw object does not match the reviewed writer, report that exact discrepancy.
 
-Next: AWSCLI executes that retained-input check and returns the missing original source report errors. [Diagnostic code receipt](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5911531793). Existing failed jobs remain cached and immutable; no new paid call, deletion, fabricated context/version or retry authorised. The original error was discarded and cannot be retroactively recovered by deploying this fix.
+Historical next step, superseded by the current diagnostic order above: AWSCLI was to execute that retained-input check and return the missing original source report errors. [Diagnostic code receipt](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5911531793). Existing failed jobs remain cached and immutable; no new paid call, deletion, fabricated context/version or retry authorised. The original error was discarded and cannot be retroactively recovered by deploying this fix.
 
 Source handback still has no precise exceptions or Insangel terminal correlation. Do not convert suspected rate limiting/site changes/shared deployment into diagnoses. Do not clear Insangel activity fields merely from age; that would not establish restored ingestion. Future-reconcile shadow mode does not explain absent scheduled runs. Existing bounded #80 source error request remains open, with cumulative allowance and no general log audit or runtime mutation.
 
@@ -67,7 +84,7 @@ Source diagnostic follow-up uses at most8 further keyed/report reads,2 MiB,3 min
 
 **User story:** As a curator, I want Backline to interpret ambiguous listings using the evidence bndy has accumulated, so I only answer questions that evidence cannot settle.
 
-**Task now:** Contextual reasoning and failure diagnostics are implemented on main at **fe6e63ca6d3994c065ca907990394d1232032d30**, proposal-only and default off. The first two qualification jobs in [#80/5900192251](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5900192251) returned unavailable, with no model proposal. Next is exact failure diagnosis under the 30 September continuation above. No deployment or automatic matching activation is needed for that trial. No executor is assumed running.
+**Task now:** Contextual reasoning and failure diagnostics are implemented on main at **fe6e63ca6d3994c065ca907990394d1232032d30**, proposal-only and default off. The first two qualification jobs in [#80/5900192251](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5900192251) returned unavailable, with no model proposal. Next is the explicitly bounded diagnostic execution under the current 30 September task above. No deployment or automatic matching activation is needed for that trial. No executor is assumed running.
 
 **Done when:** The actual reasoning path assembles available canonical candidates, gig/venue history, native identities, source provenance and current human decisions; produces an evidence-referenced existing-act/different-act/unresolved proposal; validates authority, IDs and contradictions before any application; retains the result for reuse. Demonstrate a supported alias, a genuine competing act and insufficient/conflicting evidence. Distinguish real provider output from mocked/offline tests and deployed behaviour.
 
@@ -332,7 +349,7 @@ Accepted handback: [#80/5875912460](https://github.com/flowency-live/bndy-work/i
 - No BAU Artist investigation observed. Release completion accepted; intelligence-quality and seven-day V1 acceptance are not implied. A genuine post-cutoff human correction also remains to be demonstrated.
 - [Accepted handback and next task](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5875912460). Status updated at doc-only main 833ab8455896ea1b014e9dcbf3f864422c9ba213; local/remote tree matched. No runtime code change, test rerun, new AWS order or audit.
 
-## Current stop and exact restart
+## Historical stop and restart (superseded by the current task above)
 
 1. Next owned implementation is the contextual Artist reasoning step above, on enrichment main in the existing checkout. Read current main/AGENTS and inspect the existing structured reasoner before introducing any new component. Claim precise files on #7 before edits.
 2. Use the three decision outcomes as acceptance, not another round of identity-rule fixes. Maintain evidence provenance and contradictory/human authority. Model confidence alone is insufficient.

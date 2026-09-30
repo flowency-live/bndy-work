@@ -24,7 +24,32 @@ Use clean, succinct language, normally four short lines. At completion or a bloc
 
 Tie technical subtasks to an existing user outcome. If a task cannot explain that connection, reconsider its scope before expanding it. Tests, code volume, audits and deployments are evidence or means, not the product outcome. This communication rule creates no new approval gate or document workflow.
 
-## Current blocker, 30 September: actual handback files not transferred
+## Current checkpoint, 30 September: artifacts reviewed; real qualifier ready
+
+**User story:** As a curator, I want Backline to explain Artist matches using bndy's accumulated evidence while source gig identities remain dependable.
+**Task completed:** Reviewed all three uploaded files and replaced the improvised diagnostic with a repository-owned qualification command at **0b22420221a59b4180162a4fb2c264b1f2a350df**.
+**Done when:** The next AWS execution returns a real proposal/rejection and the actual old/new source rows with stored identities.
+**Backline impact:** Removes the execution bypass and enables safe reconciliation. No live AI proposal or restored source delivery is claimed.
+
+### Findings from actual uploads
+
+- diagnostic-originals-01-script-for-review.mjs confirms custom reservation/budget namespaces and direct fetch. It is incomplete (undefined variables, omitted secret/reservation execution), not a full runnable history. Reject as application qualification. Do not fix only its key prefix.
+- Its embedded Originals context does reproduce original jobec0af02f... and SHA256110deb5034557933c7af8446b5ab03e0826cc7df266c7b11e140cf84deb6c978; offline prompt2916bytes.
+- billing-reconciliation-manifest.json has only inventory rows. KLMA40 of55 reported rows,18 of24 reported native groups; final four-act group truncated at2. Fizgig16 rows/14 unique keys/7 groups; two duplicate keys. Only its Paul Sherry + Band pair is proposed; one speculative part is literally Band. No current whole-bill rows, baseline pointer proof, snapshot hashes, retrieved Candidate records, canonical IDs or supportingClaimIds.
+- Do not infer published state from generated candidateKey strings or missing IDs. Do not collapse legitimate source-supplied performers. Uploaded COMPLETE reconciliation label is rejected; guard/baselines remain.
+- Upload SHA256s: script cd19ff541f67691d75359a51ac1359cfc69f78111fd893b82b1481ef3b9c87f1; handback789b45a9a1e5b0a63c1ccfe038d56009619a1fd4fdeeb3105956deb16b92c555; manifest1ae4bac8b28ffaef38dab26b384c52f8311c201bfd4e88dd53c9dc0d40235ee3. Do not copy the script's internal configuration identifiers into public issues.
+
+### Implementation and exact next execution
+
+- Seven files; single main checkout, local/remote treebb696607c0ca5bf20f99c903e91b3fc6f698f40c matches. No branch/PR/worktree or infra change. Shared secret loader/daily limits/reasoner factory moved from the Lambda handler without changing its policy/defaults.
+- New src/cli/qualify-artist-identity.ts does offline plan by default, checking retained context identity/hash and prompt allowance. Explicit apply requires expected clean repo pin and a new private receipt directory. It uses the actual DynamoEntityEnrichmentControlStore and GeminiStructuredEnrichmentReasoner through the shared reasonArtistIdentity path. Only started permits one call. No alternative HTTP payload/store, Claim, Observation, projection or canonical writer.
+- Numbered receipts precede model execution and terminal control outcome; record pin/compiled command hash/ledger/result. Private bounded provider rejection is retained with exact key redacted. No response-loss retry. Existing/custom diagnostic01 records and original results stay untouched.
+- Build and required npm run check exited0:200 Vitest files,2638 passed/5 skipped,56 recovery. Six focused cases;28 focused checks passed. Offline CLI plan passed on the actual supplied context, zero AWS/model calls.
+- [Executable #80 order5915508216](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5915508216) supplies the exact command for the already-authorised unused diagnostic02. One provider attempt/$0.04 estimated reservation/unchanged token limits. A retains8 AWS attempts/1MiB/5minutes; no SDK retries. No deployment required for local qualification.
+- Source order requests full raw old/current snapshots plus effective CONFIG/STATE and actual strong CandidateStore responses, not another shortened summary. B grants at most10 additional exact reads/8MiB/5minutes beyond the previously reported6; cumulative ledger starts6. At most100 derived keys, no bucket list/scan/crawl/automatic retry. Preserve unprocessed/missing keys as incomplete. No source repair authorised before review.
+- Await AWSCLI execution, not another owner policy decision. No executor assumed active. No model/AWS/deployment/source mutation performed here. Reported live remains fadcb8a; main is not deployed. #82/#79 reporting remains open; Lemonrock EBUSY root cause is still unproved.
+
+## Earlier blocker, 30 September (files now reviewed above)
 
 **User story:** As a curator, I want Backline's real AI reasoning qualified and existing gig identities preserved.
 **Task now:** Review the diagnostic script and billing reconciliation manifest already produced by AWSCLI.
@@ -113,7 +138,7 @@ Source diagnostic follow-up uses at most8 further keyed/report reads,2 MiB,3 min
 
 **User story:** As a curator, I want Backline to interpret ambiguous listings using the evidence bndy has accumulated, so I only answer questions that evidence cannot settle.
 
-**Task now:** Contextual reasoning, failure diagnostics and the request compatibility fix are implemented on main at **7aea0ed71addfd31e28e55e8b3ee8b24212de41d**, proposal-only and default off. The first two qualification jobs in [#80/5900192251](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5900192251) returned unavailable, with no model proposal. Next is post-fix qualification and the two-source reconciliation manifest under the current task above. No deployment or automatic matching activation is needed for that trial. No executor is assumed running.
+**Task now:** Contextual reasoning, failure diagnostics, request compatibility and the real qualification command are implemented on main at **0b22420221a59b4180162a4fb2c264b1f2a350df**, proposal-only and default off. The first two qualification jobs in [#80/5900192251](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5900192251) returned unavailable, with no model proposal. Next is post-fix qualification and the two-source reconciliation manifest under the current task above. No deployment or automatic matching activation is needed for that trial. No executor is assumed running.
 
 **Done when:** The actual reasoning path assembles available canonical candidates, gig/venue history, native identities, source provenance and current human decisions; produces an evidence-referenced existing-act/different-act/unresolved proposal; validates authority, IDs and contradictions before any application; retains the result for reuse. Demonstrate a supported alias, a genuine competing act and insufficient/conflicting evidence. Distinguish real provider output from mocked/offline tests and deployed behaviour.
 

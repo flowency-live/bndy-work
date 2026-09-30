@@ -24,7 +24,22 @@ Use clean, succinct language, normally four short lines. At completion or a bloc
 
 Tie technical subtasks to an existing user outcome. If a task cannot explain that connection, reconsider its scope before expanding it. Tests, code volume, audits and deployments are evidence or means, not the product outcome. This communication rule creates no new approval gate or document workflow.
 
-## 30 September current task: execute the finite diagnostic
+## Current task, 30 September: qualify the request fix and reconcile source bills
+
+**User story:** As a curator, I want Backline to explain ambiguous Artist listings while new gigs keep flowing.
+**Task now:** Request compatibility fix is committed/tested at **7aea0ed71addfd31e28e55e8b3ee8b24212de41d**. [Next AWSCLI order](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5912883104) qualifies it locally and retrieves the exact KLMA/Fizgig bill transitions.
+**Done when:** One validated proposal or precise provider rejection is retained, plus an old/new bill manifest with existing candidate identities sufficient to plan repair.
+**Backline impact:** Enables AI reasoning and safe source reconciliation. Actual proposal quality and restored ingestion remain unproved.
+
+- Handback reports fe6e63c diagnostic01 reached Gemini and received HTTP400; secret/preflight succeeded. No validated proposal or actual usage. The receipt was reportedly deleted. Reported reservation key/code differ from reviewed code; new order checks the actual script before any paid continuation.
+- Google's current Interactions GenerationConfig omits temperature; code now removes that field while preserving model, endpoint, evidence/schema, thinking/output limits and application boundary. Model gemini-3.6-flash and /v1beta/interactions remain documented. This is a request-contract fix, not a proven attribution of the specific400.
+- Four files changed; one request-field removal, existing contract assertion strengthened, status/investigation docs updated. No new tests or matching rules. Required npm run check exited0: build,199 Vitest files,2632 passed/5 skipped,56 recovery. Local/remote commit/tree29168900d4c55708ea2d6288dd4683db28a9f83b matched, clean main. Not deployed; reported live remains fadcb8a.
+- New explicitly bounded diagnostic02 permits one further model attempt after the fix, $0.04 estimated reservation, existing daily provider partition and token/deadline limits. Prior three-attempt allowance is exhausted. Only a verified existing execution path and new started reservation permit the call; keep original jobs and prior reservations unchanged. Retain private script/receipt and provider rejection details rather than discard them. A: at most8 AWS attempts/1 MiB/5minutes.
+- KLMA and Fizgig failures correlate to billing-key-transition-requires-reconciliation. The prior shared release qualification omitted these active sources while checking Lemonrock/LBP. CTO owns the gap. Preserve guard and baselines; obtain exact prior/current normalised rows and up to40 derived candidate identities. B: at most12 AWS reads/8 MiB/5minutes, no automatic retries. Source repair implementation depends on these concrete identities, not another general health audit.
+- Lemonrock Artist hydration sample is getaddrinfo EBUSY against DynamoDB. It is a DNS lookup failure; root cause and applicability to145 historical failures are unknown. Use existing stack frames first; no speculative concurrency/DNS/IAM change.
+- No AWS/model calls, deployment, source reset, canonical mutation or billing repair executed here. Diagnostic reservation/outcome writes must be reported separately from no canonical/source mutations. No external worker assumed active. #82/#79 telemetry remains open.
+
+## Earlier 30 September diagnostic order (completed handback above)
 
 **User story:** As the owner, I want Backline to explain Artist matches using bndy's evidence and keep importing gigs.
 **Task now:** AWSCLI execution of [one retained-input reasoning diagnostic and three exact source error windows](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5912305547). This supersedes the earlier wait for input recovery; it does not reopen broad qualification or source audits.
@@ -84,7 +99,7 @@ Source diagnostic follow-up uses at most8 further keyed/report reads,2 MiB,3 min
 
 **User story:** As a curator, I want Backline to interpret ambiguous listings using the evidence bndy has accumulated, so I only answer questions that evidence cannot settle.
 
-**Task now:** Contextual reasoning and failure diagnostics are implemented on main at **fe6e63ca6d3994c065ca907990394d1232032d30**, proposal-only and default off. The first two qualification jobs in [#80/5900192251](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5900192251) returned unavailable, with no model proposal. Next is the explicitly bounded diagnostic execution under the current 30 September task above. No deployment or automatic matching activation is needed for that trial. No executor is assumed running.
+**Task now:** Contextual reasoning, failure diagnostics and the request compatibility fix are implemented on main at **7aea0ed71addfd31e28e55e8b3ee8b24212de41d**, proposal-only and default off. The first two qualification jobs in [#80/5900192251](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5900192251) returned unavailable, with no model proposal. Next is post-fix qualification and the two-source reconciliation manifest under the current task above. No deployment or automatic matching activation is needed for that trial. No executor is assumed running.
 
 **Done when:** The actual reasoning path assembles available canonical candidates, gig/venue history, native identities, source provenance and current human decisions; produces an evidence-referenced existing-act/different-act/unresolved proposal; validates authority, IDs and contradictions before any application; retains the result for reuse. Demonstrate a supported alias, a genuine competing act and insufficient/conflicting evidence. Distinguish real provider output from mocked/offline tests and deployed behaviour.
 

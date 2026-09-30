@@ -24,7 +24,21 @@ Use clean, succinct language, normally four short lines. At completion or a bloc
 
 Tie technical subtasks to an existing user outcome. If a task cannot explain that connection, reconsider its scope before expanding it. Tests, code volume, audits and deployments are evidence or means, not the product outcome. This communication rule creates no new approval gate or document workflow.
 
-## Current task, 30 September: qualify the request fix and reconcile source bills
+## Current blocker, 30 September: actual handback files not transferred
+
+**User story:** As a curator, I want Backline's real AI reasoning qualified and existing gig identities preserved.
+**Task now:** Review the diagnostic script and billing reconciliation manifest already produced by AWSCLI.
+**Done when:** The actual artifacts support an executable corrected qualification and an identity-preserving source repair.
+**Backline impact:** Enables the reasoning/ingestion repair without another broad diagnostic or invented matching rule.
+
+- Owner confirms diagnostic01 bypassed the reviewed control store and reasoner, using custom ENRICHMENT_RESERVATION and direct fetch. It is not application qualification. The prior attribution of its400 to execution of fe6e63c is withdrawn; temperature remains a documented request-contract mismatch corrected at7aea0ed, not a proved cause of the original worker failures.
+- PartA stopped correctly under the script-discrepancy condition; diagnostic02 is not reported executed.
+- PartB reports KLMA332 events/55 billing rows/24 bills/40 candidates and Fizgig278/16/7/16. These are unreviewed inventory counts, not demonstrated reconciliation coverage. Need actual old/new rows, baseline provenance and retrieved candidate/canonical identities. Candidate counts do not establish actual reads.
+- Reported ledger:6 AWS calls including S3 listing and2 downloads;5 files generated. Listing diverges from the exact-object/no-list order. Preserve the actual ledger; do not rerun to reconstruct it.
+- The named Windows-local script and manifest are not accessible here or attached to#80. [Artifact handoff request](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5914611482) requests existing files, with credentials removed and referenced already-downloaded rows included. No new AWS/model work or cleanup.
+- Latest implemented main stays7aea0ed71addfd31e28e55e8b3ee8b24212de41d, tested and undeployed. No application edit/test rerun in this review. No source state, baseline, reservation or canonical mutation authorised. No worker assumed active. Resume with file review; do not treat the summary's COMPLETE label as acceptance.
+
+## Previous task, 30 September: request fix and reconciliation order
 
 **User story:** As a curator, I want Backline to explain ambiguous Artist listings while new gigs keep flowing.
 **Task now:** Request compatibility fix is committed/tested at **7aea0ed71addfd31e28e55e8b3ee8b24212de41d**. [Next AWSCLI order](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5912883104) qualifies it locally and retrieves the exact KLMA/Fizgig bill transitions.

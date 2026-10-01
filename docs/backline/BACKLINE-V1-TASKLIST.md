@@ -1,6 +1,6 @@
 # Backline V1 working tasklist and session handover
 
-Updated 30 September 2026. Accountable technical owner: current ChatGPT session, programme [#7](https://github.com/flowency-live/bndy-work/issues/7).
+Updated 1 October 2026. Accountable technical owner: current ChatGPT session, programme [#7](https://github.com/flowency-live/bndy-work/issues/7).
 
 ## Owner instructions, 26 September
 
@@ -24,7 +24,27 @@ Use clean, succinct language, normally four short lines. At completion or a bloc
 
 Tie technical subtasks to an existing user outcome. If a task cannot explain that connection, reconsider its scope before expanding it. Tests, code volume, audits and deployments are evidence or means, not the product outcome. This communication rule creates no new approval gate or document workflow.
 
-## Current checkpoint, 30 September: artifacts reviewed; real qualifier ready
+## Current checkpoint, 1 October: evidence reviewed and CTO handover ready
+
+**User story:** As a curator, I want explained evidence-based decisions, remembered corrections and reliable daily gig delivery.
+**Task completed:** Processed the full diagnostic/source bundle; refreshed source-agent progress and the issue-by-issue handover.
+**Done next:** Fix/qualify the provider request and implement identity-preserving source reconciliation, then demonstrate the curator loop and daily telemetry.
+**Backline impact:** Precise continuation of the intelligence layer. V1 is not yet accepted; no new deployment or runtime repair.
+
+Read [the current CTO handover](BACKLINE-CTO-HANDOVER-2026-10-01.md) first. It contains the complete current issue map and supersedes older checkpoint status below.
+
+- Actual qualifier at 0b224202 returned HTTP 400 through the real runtime/control store. Full provider body is generic invalid_request; no rejected field, no validated proposal. Original context and prompt reproduced. Diagnostic02 is consumed, no automatic rerun.
+- All four source snapshot hashes match. Repository transition logic finds KLMA **55 old rows / 24 bills**, Fizgig **2 / 1**. Worker slug reimplementation omitted four ampersand-name keys.
+- Returned candidate evidence covers 53 old expanded keys only; four old keys and 25 replacement keys were not queried. Request lacks ConsistentRead. No canonicalEntityId is not proof nothing published. Publication-state evidence and conditional reconciliation remain outstanding.
+- Same billing text survives for 16/24 KLMA bills and the Fizgig bill. Do not label structural normalisation as cancellation or collapse genuine lineups. Keep guard/baselines.
+- Source read ledger is six prior plus nine additional = fifteen. Qualifier used four AWS calls. No allowances reset in this review.
+- Latest remote enrichment main observed **9741eaf703aedcc9136f62b1fb0c9afb27c0714a** includes KLMA HTML fallback **bbf0f400** and Diane reader **9741eaf7**, both source-reported build/full-check passed and undeployed. Diane still needs CTO registration/scheduling review.
+- Reported production remains **fadcb8ae**. Current local checkout is older and has an unrelated Music Live document modification: preserve it. Refresh remote pins before implementation/release.
+- No AWS/model call, runtime code edit, new tests, deployment, source reset or canonical mutation in this handover. No worker assumed active. Public issues contain sanitized status; private receipts remain in the owner's bundle.
+- Priority: actual reasoning qualification; KLMA/Fizgig recovery; current-human/command-recovery acceptance; #82/#79 daily telemetry; specific Lemonrock/Insangel/venue gaps. #81/#82 API implementation stays with VSCode/#87. All runtime orders go through #80.
+- The owner's disposable-test memory decision is settled. No migration, graph infrastructure or per-name matching rules. Every new task begins with user story, precise task, done outcome and Backline impact.
+
+## Previous checkpoint, 30 September: artifacts reviewed; real qualifier ready
 
 **User story:** As a curator, I want Backline to explain Artist matches using bndy's accumulated evidence while source gig identities remain dependable.
 **Task completed:** Reviewed all three uploaded files and replaced the improvised diagnostic with a repository-owned qualification command at **0b22420221a59b4180162a4fb2c264b1f2a350df**.

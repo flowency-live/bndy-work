@@ -24,6 +24,19 @@ Use clean, succinct language, normally four short lines. At completion or a bloc
 
 Tie technical subtasks to an existing user outcome. If a task cannot explain that connection, reconsider its scope before expanding it. Tests, code volume, audits and deployments are evidence or means, not the product outcome. This communication rule creates no new approval gate or document workflow.
 
+## 1 October: Wessex full sweep authorised; human new-Artist routing fixed
+
+**User story:** Complete Wessex gig/profile evidence reaches governed canonical processing; the owner's saved new-Artist decisions reach creation.
+**Implemented:** enrichment main **befe888e98bc0c4d6f71b4757f1a8aec0be68f7e**, full npm run check EXIT 0. Explicit Wessex predicate allowlist added; aggregator human-confirmed-new decisions now enter the existing human confirmNew path rather than the source-only resolver.
+**Next:** [Execute managed release, full sweep and named verification #80](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5933397717).
+**Impact:** Fixes demonstrated delivery/authority routing omissions without new matching rules.
+
+- Owner reports 5e41086 deployed; two initial Wessex events held at missing allowlist. The omission was CTO integration responsibility. Source unchanged repeats do not prove canonical publication.
+- Owner now authorises full sweep and canonical writes. Earlier keep-roots-disabled qualification instruction is superseded by the new order: activate three daily roots serially with all nine children and complete directory/month/event/profile graph; preserve policy, state and bounded transport.
+- Latest three-Artist trace reports facts saved and retries completed but re-held. Concrete code defect: aggregator source-evidenced branch preceded the human confirmNew flow and rejected likely-new responses with candidates. The correction reuses the existing human-authorised path; ordinary source ambiguity still holds.
+- Recovery order retries one exact existing hold per Artist once; reads actual canonical outcomes. #37 durable new-decision-to-created-Artist association remains open, so do not repeatedly create or claim all remaining group gigs recovered. Biography notes are retained, not structured Artist bio facts.
+- This session has not deployed or executed AWS. Source docs and #128/#37 contain status. No API code changes or infrastructure changes. Unrelated Music Live document edit preserved.
+
 ## 1 October: Wessex family integration complete, initial runtime qualification next
 
 **User story:** Curators need Salisbury, Andover and Winchester gigs with Artist Facebook links and Venue facts available to evidence-based decisions.

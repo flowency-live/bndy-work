@@ -24,6 +24,19 @@ Use clean, succinct language, normally four short lines. At completion or a bloc
 
 Tie technical subtasks to an existing user outcome. If a task cannot explain that connection, reconsider its scope before expanding it. Tests, code volume, audits and deployments are evidence or means, not the product outcome. This communication rule creates no new approval gate or document workflow.
 
+## 1 October follow-on: Diane's Gig List launch authorised and integrated
+
+**User story:** As a curator, I want Diane's gigs in bndy and kept current daily.
+**Task completed:** Catalogue/runtime integration committed on enrichment main **9cd8f7cd7279f2f853a842b9b816990a63a08828**, atop 9741eaf7. Build/full check EXIT 0; local/remote tree matched. No runtime execution here.
+**Done next:** AWSCLI performs [the authorised managed launch](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5929917876), initial/repeat canonical verification and then natural-cycle BAU evidence.
+**Backline impact:** Daily static-index evidence and governed gig delivery; no additional directory/profile crawl.
+
+- Owner explicitly requested live ingestion and BAU after the CTO handover. This supersedes Diane's earlier planned/disabled integration status, but is not a claim that live registration/deployment has occurred.
+- Code definition: live AWS writer, daily 06:20 Europe/London, registry schedule, 26h freshness; create/update evidence-gated; incremental omission never cancels. One page per run, 4 MiB/20 seconds, no browser or profile fanout; event/action gates 1,000.
+- Applied catalogue/runtime patch and removed the patch file. Runtime CONFIG/catalogue installation is exact-source-only through the existing store, not an unfiltered seed. No API change is required for this adapter integration.
+- [Source result #119](https://github.com/flowency-live/bndy-work/issues/119#issuecomment-5929930649). Source docs contain rollout. Claimed shared integration files released; unrelated local Music Live document modification preserved. No worker assumed active.
+- Reported live enrichment remains fadcb8ae until #80 returns the release receipt. Provider qualification, KLMA/Fizgig reconciliation and other CTO priorities remain open and are not included in this source activation.
+
 ## Current checkpoint, 1 October: evidence reviewed and CTO handover ready
 
 **User story:** As a curator, I want explained evidence-based decisions, remembered corrections and reliable daily gig delivery.

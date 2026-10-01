@@ -136,6 +136,8 @@ Dates matter: source health statements below are the 30 September snapshot unles
 | [#107](https://github.com/flowency-live/bndy-work/issues/107) | Public verification | Issue comment reports live route checked and closed; legacy absent verification intentionally reads unchecked. | Preserve response contract and privacy. No blanket backfill. |
 | [#87](https://github.com/flowency-live/bndy-work/issues/87) | API refactor | Separate API build/auth consolidation remains a coordination constraint. Later #81 suite reportedly passed, but current integrated runtime not independently qualified here. | API agent owns code. Preserve concurrent changes; #81/#82 carry Backline requirements, #80 carries reviewed runtime execution. |
 | [#58](https://github.com/flowency-live/bndy-work/issues/58) | API routing | Standing wider API work log remains active for other product lanes. | Backline runtime is #80; Backline implementation dependencies #81/#82, coordinated with #87. Do not resurrect old Backline release pins. |
+| [#19](https://github.com/flowency-live/bndy-work/issues/19) | Performance variants | Approved backlog; no new implementation or merge evidence in this handover. | Preserve billed-name testimony and distinguish variants from separate acts. Reuse existing identity foundation; no blanket Artist merge. |
+| [#20](https://github.com/flowency-live/bndy-work/issues/20) | Artist lifecycle | Approved lifecycle/discovery backlog; no new delivery evidence in this handover. | Retain canonical historical/dormant identities for reasoning. Separate discovery visibility from existence; do not delete useful evidence-backed artists. |
 
 ## Resume without repeating work
 

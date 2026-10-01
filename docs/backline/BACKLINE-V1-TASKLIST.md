@@ -24,6 +24,20 @@ Use clean, succinct language, normally four short lines. At completion or a bloc
 
 Tie technical subtasks to an existing user outcome. If a task cannot explain that connection, reconsider its scope before expanding it. Tests, code volume, audits and deployments are evidence or means, not the product outcome. This communication rule creates no new approval gate or document workflow.
 
+## 1 October: Wessex family integration complete, initial runtime qualification next
+
+**User story:** Curators need Salisbury, Andover and Winchester gigs with Artist Facebook links and Venue facts available to evidence-based decisions.
+**Task completed:** Reviewed c301b226 and integrated the complete twelve-source family on main at **5e41086e307101b6774ec3f7bdf914117f753ae3**. Full npm run check EXIT 0; no AWS execution here.
+**Done next:** Execute [#80 initial cohort order](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5932273738), return actual canonical/held/failed/pending results and unchanged repeat. Then size and activate the full discovery graph.
+**Backline impact:** Rich attributable identity evidence and maintained gig updates; no new matching heuristics.
+
+- #128 is family implementation index, with #129/#130 for local coverage. Reader retains Facebook profile URLs, addresses, websites and source-native identities; one publisher, not independent corroboration.
+- Integrated runtime/catalogue, three daily London roots at 06:30/06:40/06:50 and nine discovery-only children. Corrected additive-only update blockage and one-event gate to the existing four-act maximum. Governed create/update only; explicit cancellation application remains disabled.
+- First runtime order installs roots disabled/no schedule and enables only finite named detail/profile work. Complete directories and all advertised months remain required follow-on, not waived; publisher pacing, full volume, cross-site dedup and canonical profile application are not live-proven. No claim of full BAU.
+- Source handoff updated; obsolete integration.patch removed. Seven owned files only; unrelated Music Live document edit preserved. Shared files released. No API implementation or new infrastructure.
+- Owner reports Diane 9cd8f7c deployed and 489 valid listings ingested; canonical totals remain missing. #119/#80 track the existing outcome read-back. Sources overview HTTP 500 reported separately; [targeted incident #80](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5930966805), API repair #82. Neither incident nor ingestion counts establish source canonical delivery.
+- Incoming CTO provider/KLMA/Fizgig work remains separate and must preserve these newer source commits.
+
 ## 1 October follow-on: Diane's Gig List launch authorised and integrated
 
 **User story:** As a curator, I want Diane's gigs in bndy and kept current daily.

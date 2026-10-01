@@ -24,6 +24,20 @@ Use clean, succinct language, normally four short lines. At completion or a bloc
 
 Tie technical subtasks to an existing user outcome. If a task cannot explain that connection, reconsider its scope before expanding it. Tests, code volume, audits and deployments are evidence or means, not the product outcome. This communication rule creates no new approval gate or document workflow.
 
+## 1 October: containment ordered; interpretation preparation committed
+
+**Story:** Routine gigs are interpreted and resolved automatically; curator review is for genuine uncertainty.
+**AWS action:** [Execute Wessex pause #80/5934988802](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5934988802). Authorised by owner; execution not yet reported. Disable/shadow exactly twelve sources, preserve evidence and verify in-flight effects separately.
+**Implementation:** enrichment main **215e5a5ba94d57024e2dfd80b768a0446aa0aeed**, seven owned files, parent befe888e. Local/remote commit and tree matched; unrelated Music Live edit preserved.
+**Done so far:** Wessex original title/description/categories/related native links survive as source-listing-context Claims. Unresolved links stay leads. Identity prompt receives role warnings and bounded context prioritises human/listing evidence. Shared semantic interpretation component uses the existing structured provider and validates cited quotations, performer names and native-profile refs; distinguishes performance/session/festival/excluded/unresolved.
+**Not done:** That component is NOT wired to automatic queue/projection; it does not yet fix publication or clear holds. Mock model responses prove contract handling, not semantic quality. Existing Artist proposals remain unresolved awaiting qualification.
+
+- Full npm run check EXIT 0: build, 204 Vitest files, 2712 passed/5 skipped; 56 recovery passed. No paid model calls, AWS mutation, source crawl or deployment here.
+- [Implementation boundary/next integration](https://github.com/flowency-live/bndy-enrichment/blob/main/docs/BACKLINE-LISTING-INTERPRETATION.md).
+- [API implementation order #81/5935057449](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5935057449): existing authenticated resolution route applies supported decisions idempotently, preserves current conflicts/ownership and records reusable canonical identity; coordinate #87/#37. Current confirmNew is manual matching bypass and must not be used as AI authority. The existing refactor moved resolution.js to artists-lambda/routes/resolution.js.
+- Next owned integration uses the actual returned API contract and existing provider correction/qualification, then connects listing interpretation before bill/identity failure through the existing budgeted queue with retained results. No assumed API endpoint or unqualified model output may publish. Provider HTTP implementation remains the other CTO lane; no duplicate diagnostic.
+- Source keys unchanged. Added evidence can produce updated content on a later observation; no baseline reset or mass replay is authorised. Catalogue repair remains a specific retained-evidence manifest after decision correctness is proven.
+
 ## 1 October, owner quality review: 549 holds; decision delivery is the priority
 
 **User story:** As a curator, I want Backline to interpret listings and create or reuse supported Artists, so I review genuine uncertainty rather than routine intake.

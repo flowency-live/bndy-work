@@ -24,7 +24,44 @@ Use clean, succinct language, normally four short lines. At completion or a bloc
 
 Tie technical subtasks to an existing user outcome. If a task cannot explain that connection, reconsider its scope before expanding it. Tests, code volume, audits and deployments are evidence or means, not the product outcome. This communication rule creates no new approval gate or document workflow.
 
-## 1 October: Wessex full sweep authorised; human new-Artist routing fixed
+## 1 October, owner quality review: 549 holds; decision delivery is the priority
+
+**User story:** As a curator, I want Backline to interpret listings and create or reuse supported Artists, so I review genuine uncertainty rather than routine intake.
+**Task now:** Review completed against the constitution, both owner attachments and main befe888e. Implementation plan below; no new runtime change or live repair executed.
+**Done when:** A representative retained cohort demonstrates correct publication, exclusion/session routing, remembered identities and explicit remaining questions, followed by controlled recovery and a natural daily cycle.
+**Backline impact:** Complete evidence-to-decision-to-canonical application, not further scraper expansion.
+
+### What is established
+
+- Owner reports 549 open gigs. Attachments contain 58 listed Diane gigs in 14 groups and 70 listed Wessex gigs in 57 groups. These are UI rows, not 128 unique events or a census of all holds; inline examples overlap.
+- Main source-evidenced Artist creation rejects likely-new whenever candidates.length is nonzero (src/projection/source-evidence-artist.ts). Retrieval alternatives are therefore a hard block even when they may be irrelevant. Do not simply remove the guard and force-create.
+- Assessment v3 in src/enrichment/worker.ts retains EVERY model proposal as unresolved / identity-proposal-awaiting-qualification. A successful model response alone cannot currently complete existing-act or different-act publication. Provider success/application remains unproven in reviewed evidence; coordinate with the existing #34 provider lane, not a duplicate diagnostic programme.
+- Wessex parse.ts falls back to event title as artistName, attaches native Artist identity only for an exact title/name equality, and parks based on a narrow category/descriptor exclusion. Related Artist pages are fetched but unmatched role links are not supplied as performer assertions. Source profile availability does not prove it influenced the decision.
+- Shared billing relies on title/splitting/unnameable rules; source text can become a speculative bill or no-act exception before identity reasoning. Wessex event-level interpretation is inadequate for the supplied promotional, classical and session examples.
+- Existing candidate labels such as Jake Ward's Jingle Ball 2026, Halloween Party, Salisbury Chamber programme titles and highway child does blues brothers supported by kingfast suggest catalogue pollution. Origin/creation time is NOT established: do not blame today's release for every candidate or delete by name.
+- Repeated Bitter listings across Wessex sites need canonical deduplication, not three independent corroborating votes. Real same-name acts (Roosters), venue postcode conflicts and outdoor-place modelling remain distinct.
+- Owner reports befe888 deployed and three roots dispatched. This proves neither source quality nor all canonical outcomes. Handback says 47 sources seeded despite order limiting changes to 12 Wessex CONFIGs: inspect retained before/after receipts for unintended policy changes; no blind registry rollback. Three saved-human retries remain undemonstrated.
+
+### Ordered delivery plan
+
+1. **Contain Wessex risk (#128 / #80).** Recommend temporarily suspending Wessex automatic canonical writes and new discovery while preserving evidence, queued work, current human decisions and existing canonical records. Exact supported controls must be checked for already-queued work; disabling roots alone is not a write fence. This review has NOT paused production. No global stop, queue purge or automatic cleanup.
+2. **Interpret evidence before Artist resolution (enrichment CTO / #128, shared #34).** Keep raw title, description, source categories, all role-labelled native/profile links and Facebook facts. Use existing exact structured evidence when sufficient; use the existing bounded model path for genuinely semantic bill/type interpretation. Produce cited performer identities separately from event/promoter title, session, festival or excluded category. Preserve an eligible live act within a mixed fundraiser rather than reject on a keyword. No expanded regex/name exception catalogue.
+3. **Complete governed reasoning application (#34 / #81).** Qualify the real existing provider path once its evidenced request defect is fixed. Compare plausible candidates using source facts, canonical history, profiles and human memory. Carry a validated decision through to reuse OR genuinely new Artist creation, with fresh canonical conflict/ownership checks and idempotent writes. Reject irrelevant retrieval hits with an evidence-backed explanation. No website prerequisite; labelled performing region may come from the gig, not invented home. Technical/provider failures go to operational recovery, not curator identity questions. Canonical API changes, if required, go to VSCode via #81; no source-specific resolver duplication.
+4. **Remember and reuse (#37).** Bind a successful new-Artist decision to its canonical ID and relevant source identities, preserving human scope and invalidation. Apply to sibling gigs and cross-source evidence only when identity is established. One decision should not create many Artists or repeatedly ask the owner.
+5. **Recover quality, then resume (#128 / #80).** Assemble a finite manifest from retained supplied cases and referenced canonical IDs: accepted gig, correct existing Artist, correct new Artist, excluded classical, session/deferred festival, real collision and technical failure. Confirm polluted canonical records and ownership/references before proposing specific repairs; no name-based delete/merge. Re-evaluate the supplied cohort after fix, inspect actual effects and duplicate counts, then expand recovery using existing holds without new full sweeps. Preserve source event keys/baselines or plan any necessary transitions explicitly.
+
+### Acceptance examples and execution discipline
+
+- Blink Daze/Blind Eye, Thunderslug/Thunderhead, Speared Art/Speakeasy: weak name similarity alone cannot force a curator question; decide using actual evidence, not pre-label every case new.
+- Seth Lakeman: Freedom Fields and The Rozzers billing: separate performer from programme and use existing identity evidence.
+- Open Mic/NYE/Band Night: no invented Artist; route sessions or missing performer detail distinctly. Choir/classical exclusions are retained policy decisions, not identity holds.
+- Charity Golf Day with Jake Ward, Wilton festival bill and folk duo: inspect performer roles and event scope; promotional or festival words alone neither prove rejection nor a new Artist.
+- Roosters and incomplete venue evidence: genuine conflicts must survive automated processing.
+- Existing polluted Artists must not become unquestioned positive identity evidence. Display casing comes from supported identity text, with original billing retained.
+- Release acceptance requires actual decisions and canonical outcomes plus contrasting non-match/excluded cases. Parser success, queued work and passing mocks are insufficient. Measure unnecessary holds, wrong creations/merges, reused decisions and provider spend per resolved identity.
+- No code or AWS mutation in this review; no model calls or source crawling. The next implementation is the shared interpretation/application outcome above, coordinated with the other CTO's provider/telemetry work. No new infrastructure or graph database proposed.
+
+## Historical checkpoint: Wessex full sweep authorised; human new-Artist routing fixed
 
 **User story:** Complete Wessex gig/profile evidence reaches governed canonical processing; the owner's saved new-Artist decisions reach creation.
 **Implemented:** enrichment main **befe888e98bc0c4d6f71b4757f1a8aec0be68f7e**, full npm run check EXIT 0. Explicit Wessex predicate allowlist added; aggregator human-confirmed-new decisions now enter the existing human confirmNew path rather than the source-only resolver.

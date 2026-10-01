@@ -24,7 +24,21 @@ Use clean, succinct language, normally four short lines. At completion or a bloc
 
 Tie technical subtasks to an existing user outcome. If a task cannot explain that connection, reconsider its scope before expanding it. Tests, code volume, audits and deployments are evidence or means, not the product outcome. This communication rule creates no new approval gate or document workflow.
 
-## 1 October: containment ordered; interpretation preparation committed
+## 1 October evening: Wessex pause reported complete; API contract approved
+
+**User story:** Backline applies a supported Artist decision once and reuses that identity across gigs.
+**Task completed:** Reviewed the worker's contract against current API resolution route, unique-gate implementation and SAM template. [Corrected implementation order #81/5941545767](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5941545767) authorises coding now, without another design round trip.
+**Done next:** API agent returns strict atomic application, exact wire contract/hash examples and verified retry/conflict behavior; enrichment integrates that actual contract. No deployment in this checkpoint.
+**Backline impact:** Enables safe application of reasoning and human memory; the reasoning/publication loop remains incomplete.
+
+- Wessex pause reported 21:32:38.695Z: 12/12 disabled/shadow, schedules removed, 24 writes and 48 reads. The 40-read bound was exceeded by eight; existing-ledger explanation requested, no renewed reads. Post-timeout canonical-outcome check is not supplied and remains unverified.
+- Pre-pause enabled roots were authorised by #80/5933397717's later full-sweep order, not evidence of drift. A 47-row catalogue count does not establish the earlier seed write set; only reuse retained command receipts for clarification.
+- API decisions/bindings use existing bndy-unique-keys with distinct namespaces and no TTL. Do not put metadata in Artist rows or add a StateTable dependency/new table.
+- Stable persisted decision ID plus server-computed fingerprint of the full versioned semantic request; native identity namespace shared across event/profile routes, explicit evidence scopes for sources without native Artist IDs, separate mandatory Claim/observation refs, existing performing-region evidence semantics.
+- Critical code finding: current gatedPut can fail open in off/log/missing-table cases. New command needs a dedicated strict atomic path preserving legacy callers, with no plain-put fallback. Artist/sentinels/binding/receipt commit together; reuse checks revisions/lifecycle. Replay never counts as a fresh creation or recreates an invalidated/deleted target.
+- Current enrichment main remains 215e5a5, no new code/tests/model/AWS execution this contract review. Interpretation queue/projection integration remains outstanding, not claimed blocked in its entirety on the API. Other CTO provider lane remains separate.
+
+## Historical checkpoint: containment ordered; interpretation preparation committed
 
 **Story:** Routine gigs are interpreted and resolved automatically; curator review is for genuine uncertainty.
 **AWS action:** [Execute Wessex pause #80/5934988802](https://github.com/flowency-live/bndy-work/issues/80#issuecomment-5934988802). Authorised by owner; execution not yet reported. Disable/shadow exactly twelve sources, preserve evidence and verify in-flight effects separately.

@@ -24,7 +24,16 @@ Use clean, succinct language, normally four short lines. At completion or a bloc
 
 Tie technical subtasks to an existing user outcome. If a task cannot explain that connection, reconsider its scope before expanding it. Tests, code volume, audits and deployments are evidence or means, not the product outcome. This communication rule creates no new approval gate or document workflow.
 
-## 2 October morning: 0589340 reviewed; concrete application defects block acceptance
+## 2 October morning: correction handback repeats unchanged code; actual new commit required
+
+**Story:** Backline interprets listings, makes evidence-backed Artist decisions and continues gigs automatically.
+**Current review:** Owner supplied an "eight corrections complete / deployed" handback still naming 0589340. Fresh GitHub reads show current API master **f4a85ba6d0006a004cc2bcfd48ef91c3811440f2** is only one unrelated map commit ahead. Artist resolution remains the identical reviewed blob; the managed apply-decision route is still missing from template.yaml.
+**Outcome / next:** [Handback reconciliation #81/5949162998](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5949162998) requests the actual corrected commit and, if deployment occurred, its existing receipt. Do not redo corrections already present locally. No new design round or AWS inspection authorised. Claimed deployment is unverified, not established absent.
+**Impact:** Enables acceptance of the Artist application boundary. Intelligence remains the central delivery: prepared listing interpretation must be connected to reasoning, application and continued gig processing. Enrichment main 215e5a5 remains tested but not deployed; that integration is incomplete and not wholly blocked by this API handback.
+
+Wessex stays reported paused. No code, AWS state or model usage changed in this review. Tests were reported against the old SHA and were not rerun here.
+
+### Retained review of 0589340
 
 **Story:** Supported Artist decisions publish once and their identity is reusable across gigs.
 **Review completed:** Exact API **0589340e1cf07f65b00ead2a0e166158ee82e8a1** is now accessible. Read route/tests, entity/region helpers, ordinary write paths and SAM template. [One consolidated correction order #81/5948114377](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5948114377).

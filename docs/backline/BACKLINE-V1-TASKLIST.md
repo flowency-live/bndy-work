@@ -24,7 +24,27 @@ Use clean, succinct language, normally four short lines. At completion or a bloc
 
 Tie technical subtasks to an existing user outcome. If a task cannot explain that connection, reconsider its scope before expanding it. Tests, code volume, audits and deployments are evidence or means, not the product outcome. This communication rule creates no new approval gate or document workflow.
 
-## 2 October: #81 local completion reported; shared implementation unavailable
+## 2 October morning: 0589340 reviewed; concrete application defects block acceptance
+
+**Story:** Supported Artist decisions publish once and their identity is reusable across gigs.
+**Review completed:** Exact API **0589340e1cf07f65b00ead2a0e166158ee82e8a1** is now accessible. Read route/tests, entity/region helpers, ordinary write paths and SAM template. [One consolidated correction order #81/5948114377](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5948114377).
+**Outcome:** Not accepted for integration/deployment. Wessex stays reported paused. Reported 26 focused / 538 full tests do not cover the demonstrated failures.
+**Impact:** Prevents routine reuse becoming another hold and prevents unsafe/invalid canonical creation.
+
+Executed the committed application function in a local isolated Node harness with mocked dependencies, no AWS/model/network:
+- Receipt replay with missing canonical target returns 200 success.
+- Existing scope binding to the intended Artist returns 409 instead of compatible reuse.
+- Failed read of a rejected candidate is swallowed; reuse writes and succeeds.
+- Create skips compared candidates entirely.
+- Empty performingRegionEvidence permits blank-location creation in the harness.
+- Reordered equivalent nested scope properties produce a different fingerprint.
+These are branch/contract checks, not a real DynamoDB concurrency test.
+
+Static findings: missing SAM apply-decision route; create writes external_ids as an object rather than canonical array and omits ordinary record/provenance fields; does not require resolvable business uniqueness; reuse lacks revision/lifecycle transaction guards; newly minted revision masks normal updated_at changes; transaction failure reconciliation and real current-context lookup incomplete. Correct via existing API record builder/strict transaction module, not another matcher. Detailed exact correction and test guidance is on #81.
+
+No API code changed by CTO, no extra source/model/AWS execution and no deployment order. Enrichment main stays 215e5a5. Full before-identity semantic queue/projection integration remains owned and incomplete; this API review does not claim intelligence delivered or block all independent enrichment work.
+
+## Historical checkpoint: #81 local completion reported; shared implementation unavailable
 
 **Story:** Apply a supported Artist decision once and reuse its canonical identity across gigs.
 **Task:** Review the implementation handback before enrichment integration.

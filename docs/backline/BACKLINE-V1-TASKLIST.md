@@ -27,19 +27,19 @@ Tie technical subtasks to an existing user outcome. If a task cannot explain tha
 ## 2 October: API corrections still partial; listing interpreter connected to enrichment worker
 
 **Story:** Backline understands the advertised bill, applies evidence-backed Artist decisions and continues eligible gigs; curators review genuine uncertainty.
-**API review:** Exact **0f17f2e57ca492392473e287826dc0d30514a592** is now pushed, not deployed. Accept SAM route, encoded binding components and nested-property-order hashing. The prior unchanged-commit/deployment discrepancy is resolved. [Remaining original corrections #81/5949486162](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5949486162).
+**API review:** Exact **68bf257f209a445e18fda0ca73a6be5dedfe3a86**, not deployed. Accept initial replay target/binding validation, failed candidate reads stopping reuse, supplied sibling revision prechecks, conditional Artist Put and corrected array/timestamp fields. Strict location/current-create context, transaction revision/binding guards, common recovery validation and agreed input contract remain incomplete. [Remaining original corrections #81/5951012060](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5951012060).
 **Enrichment progress:** Main **97d1c50aa3d44f0b89d1f6de7a1f06e8c974e13e**, parent 215e5a5. Existing queue/publisher/Lambda accept a typed interpret-listing job. Same structured provider and shared budget; cited result and original evidence refs retained before reprojection. Repeated delivery repairs send from retained result without repeating paid reasoning. Unavailable/invalid output is parked as operational work with no curator question or automatic reprojection.
 **Impact / remaining:** The interpreter is now executable through the actual worker. Projection still does not automatically submit these jobs or consume interpreted performers. Artist proposal application is also unfinished. This is not intelligence acceptance, live quality proof or hold recovery.
 
 ### Latest API evidence
 
-Isolated execution of 0f17f2e's committed handler with mocked dependencies reproduced:
-- Create with empty region evidence and a compared candidate returns 201, reads only receipt/binding and writes the old invalid record shape.
-- Replay with missing canonical target returns 200 success.
-- Reuse after failed candidate read still writes; transaction only guards existence/deleted, not the relied-on revisions.
-- New same-target sibling path accepts stale selected revision and writes a standalone receipt.
+Isolated execution of 68bf257's committed handler with mocked dependencies:
+- Empty performing-region evidence with the legacy default log mode still returns 201. New resolvable guard only rejects in enforce mode; the new command must be strict independently.
+- Create with a stale compared candidate returns 201 and reads only receipt/binding. The fresh applicable lookup/checks remain absent.
+- Static revision plus newer updated_at returns 200 reuse; the transaction checks existence/deleted only.
+- Fixed: missing-target replay returns 409 INVALIDATED_CONTEXT; failed candidate read returns 500 SERVICE_ERROR with no transaction.
 
-Original input/provenance validation, maintained revision guards, current create lookup and full replay/uncertain-write reconciliation remain incomplete. Tests were not changed in this commit; reported API suite success was not independently rerun. No new design round requested.
+These are branch checks, not live DynamoDB concurrency proof. Reported API full-suite success was not independently rerun. The only test edit adds a binding fixture to the old replay case. Common validated creation/context, replay/reconciliation and versioned evidence contract remain the same outstanding order, not new requirements. No code, deployment, AWS/model usage or source state changed in this review.
 
 ### Next owned work and handover
 

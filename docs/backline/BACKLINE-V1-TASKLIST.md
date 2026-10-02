@@ -1,6 +1,6 @@
 # Backline V1 working tasklist and session handover
 
-Updated 1 October 2026. Accountable technical owner: current ChatGPT session, programme [#7](https://github.com/flowency-live/bndy-work/issues/7).
+Updated 2 October 2026. Accountable technical owner: current ChatGPT session, programme [#7](https://github.com/flowency-live/bndy-work/issues/7).
 
 ## Owner instructions, 26 September
 
@@ -23,6 +23,17 @@ For every task, including AWS/API work orders and handoffs, tell the owner brief
 Use clean, succinct language, normally four short lines. At completion or a blocker, report against that same outcome and state the next step. Distinguish implemented, deployed and demonstrated behaviour. Keep the active story and outcome in the shared tasklist so a new session can resume it.
 
 Tie technical subtasks to an existing user outcome. If a task cannot explain that connection, reconsider its scope before expanding it. Tests, code volume, audits and deployments are evidence or means, not the product outcome. This communication rule creates no new approval gate or document workflow.
+
+## 2 October: #81 local completion reported; shared implementation unavailable
+
+**Story:** Apply a supported Artist decision once and reuse its canonical identity across gigs.
+**Task:** Review the implementation handback before enrichment integration.
+**Finding:** Owner reports 532 tests and handleApplyDecision implemented locally. Exact shared API master **d23595f5baad6e7b93e031bc833322505266328b** lacks the handler/route, decision tests and named decision-store file. Local work may exist; it has not been reviewed or accepted.
+**Next:** API agent pushes the existing owned implementation on current master, preserves refactor work and returns exact SHA/final corrected contract. No reimplementation or new design round required merely because it is unpushed.
+
+The supplied summary uses earlier producer-source binding keys, optional claimRefs, bare performingRegion, incomplete candidate revisions and idempotent/fingerprint response semantics. Agent must confirm/correct actual code against #81/5941545767, including strict atomic effects, technical error separation and durable replay. Claimed-profile protection must not ban ordinary identity reuse/gig publication. Tests were reported, not independently rerun.
+
+Wessex remains reported paused. No API/enrichment code, runtime, provider call, source restart or deployment changed in this review. Enrichment still 215e5a5; automatic interpretation/application remains incomplete.
 
 ## 1 October evening: Wessex pause reported complete; API contract approved
 

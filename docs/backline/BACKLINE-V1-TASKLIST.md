@@ -24,14 +24,31 @@ Use clean, succinct language, normally four short lines. At completion or a bloc
 
 Tie technical subtasks to an existing user outcome. If a task cannot explain that connection, reconsider its scope before expanding it. Tests, code volume, audits and deployments are evidence or means, not the product outcome. This communication rule creates no new approval gate or document workflow.
 
-## 2 October morning: correction handback repeats unchanged code; actual new commit required
+## 2 October: API corrections still partial; listing interpreter connected to enrichment worker
 
-**Story:** Backline interprets listings, makes evidence-backed Artist decisions and continues gigs automatically.
-**Current review:** Owner supplied an "eight corrections complete / deployed" handback still naming 0589340. Fresh GitHub reads show current API master **f4a85ba6d0006a004cc2bcfd48ef91c3811440f2** is only one unrelated map commit ahead. Artist resolution remains the identical reviewed blob; the managed apply-decision route is still missing from template.yaml.
-**Outcome / next:** [Handback reconciliation #81/5949162998](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5949162998) requests the actual corrected commit and, if deployment occurred, its existing receipt. Do not redo corrections already present locally. No new design round or AWS inspection authorised. Claimed deployment is unverified, not established absent.
-**Impact:** Enables acceptance of the Artist application boundary. Intelligence remains the central delivery: prepared listing interpretation must be connected to reasoning, application and continued gig processing. Enrichment main 215e5a5 remains tested but not deployed; that integration is incomplete and not wholly blocked by this API handback.
+**Story:** Backline understands the advertised bill, applies evidence-backed Artist decisions and continues eligible gigs; curators review genuine uncertainty.
+**API review:** Exact **0f17f2e57ca492392473e287826dc0d30514a592** is now pushed, not deployed. Accept SAM route, encoded binding components and nested-property-order hashing. The prior unchanged-commit/deployment discrepancy is resolved. [Remaining original corrections #81/5949486162](https://github.com/flowency-live/bndy-work/issues/81#issuecomment-5949486162).
+**Enrichment progress:** Main **97d1c50aa3d44f0b89d1f6de7a1f06e8c974e13e**, parent 215e5a5. Existing queue/publisher/Lambda accept a typed interpret-listing job. Same structured provider and shared budget; cited result and original evidence refs retained before reprojection. Repeated delivery repairs send from retained result without repeating paid reasoning. Unavailable/invalid output is parked as operational work with no curator question or automatic reprojection.
+**Impact / remaining:** The interpreter is now executable through the actual worker. Projection still does not automatically submit these jobs or consume interpreted performers. Artist proposal application is also unfinished. This is not intelligence acceptance, live quality proof or hold recovery.
 
-Wessex stays reported paused. No code, AWS state or model usage changed in this review. Tests were reported against the old SHA and were not rerun here.
+### Latest API evidence
+
+Isolated execution of 0f17f2e's committed handler with mocked dependencies reproduced:
+- Create with empty region evidence and a compared candidate returns 201, reads only receipt/binding and writes the old invalid record shape.
+- Replay with missing canonical target returns 200 success.
+- Reuse after failed candidate read still writes; transaction only guards existence/deleted, not the relied-on revisions.
+- New same-target sibling path accepts stale selected revision and writes a standalone receipt.
+
+Original input/provenance validation, maintained revision guards, current create lookup and full replay/uncertain-write reconciliation remain incomplete. Tests were not changed in this commit; reported API suite success was not independently rerun. No new design round requested.
+
+### Next owned work and handover
+
+1. CTO: connect projection admission/consumption before bill/identity rejection, assemble retained listing/profile/current human context, separate pending/technical outcomes from human review, preserve current canonical mappings/source keys and source pause. This is not wholly blocked by the API lane.
+2. API agent: finish the existing correction order and return a new SHA/final wire contract/hash vectors/actual verification.
+3. CTO: integrate governed Artist application against the accepted API contract, then prove contrasting examples end to end and issue a finite #80 release/recovery order. Provider qualification remains with its existing owner; no repeat paid diagnostic here.
+4. Wessex stays reported paused. No deployment, source resume, AWS/model calls, hold clearing or canonical repair executed in this session.
+
+Enrichment validation: required npm run check EXIT 0 (build, 205 Vitest files / 2720 passed / 5 skipped, 56 recovery passed). Eight focused worker-delivery cases use supplied model responses, not live model quality. Exact local/remote tree **7c231efa891b1e281a4042e0a5698a29c065c04b** matches; one main checkout, no branches/PRs/worktrees. Unrelated dirty docs/sources/MLE-001-CTO-INTEGRATION-2026-09-17.md preserved. [Implementation boundary and next steps](https://github.com/flowency-live/bndy-enrichment/blob/main/docs/BACKLINE-LISTING-INTERPRETATION.md).
 
 ### Retained review of 0589340
 
